@@ -1,5 +1,6 @@
-﻿#!/bin/sh
+#!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-echo '🚀 Building Project'
+echo '>> Building Project'
 dotnet build
+echo '>> Building success!'
