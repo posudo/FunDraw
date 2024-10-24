@@ -29,7 +29,17 @@
         private void InitializeComponent()
         {
             label1 = new Label();
+            button1 = new Button();
             SuspendLayout();
+            // 
+            // button1
+            // 
+            button1.Location = new Point(442, 147);
+            button1.Name = "button1";
+            button1.Size = new Size(75, 23);
+            button1.TabIndex = 0;
+            button1.Text = "FunDraw";
+            button1.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -46,6 +56,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(label1);
+            Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -53,6 +64,8 @@
         }
 
         #endregion
+
+        private Button button1;
 
         private Label label1;
     }
