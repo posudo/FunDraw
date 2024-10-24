@@ -29,3 +29,23 @@ git push
 ![pr-page](./docs/pr-page.png)
 - Chọn nhánh bạn đang phát triển và nhấn tạo Pull Request
 ![pr-create](./docs/pr-create.png)
+- Nếu nhánh của bạn không thể merge như hình dưới, hãy [resolve conflict](#resolve-conflict)
+![pr-cantmerge](./docs/pr-cantmerge.png)
+
+### Resolve conflict
+1. Quay trở lại Visual Studio, trên nhánh hiện tại bạn đang phát triển, pull main về
+```
+git pull origin main
+```
+![merge](./docs/merge-1.png)
+2. Theo thông báo `CONFLICT`, tìm và mở từng file bị conflict
+`CONFLICT (content): Merge conflict in Form1.Designer.cs`: Tìm file `Form1.Designer.cs`
+![merge](./docs/merge-2.png)
+3. Mở Merge Editor
+![merge](./docs/merge-3.png)
+4. Giải quyết Conflict
+Tick vào ô ở bên phải code bị conflict để giữ, tick bên nào thì giữ bên đó, tick cả hai thì giữ cả hai
+![merge](./docs/merge-4.png)
+5. Nhấn Accept Merge sau khi giải quyết Conflict xong
+![merge](./docs/merge-5.png)
+6. Tiếp tục commit, push code lên remote và tạo Pull Request mới
