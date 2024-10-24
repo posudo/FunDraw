@@ -25,3 +25,7 @@ git commit -m "feat: new feature"
 git push
 ```
 5. Tạo một pull request vào nhánh main
+- Vào trang [Pull Request](https://github.com/Group-10-NT016-P13/FunDraw/pulls) và tạo Pull Request
+![pr-page](./docs/pr-page.png)
+- Chọn nhánh bạn đang phát triển và nhấn tạo Pull Request
+![pr-create](./docs/pr-create.png)
