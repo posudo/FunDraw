@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            label1 = new Label();
             button1 = new Button();
             SuspendLayout();
             // 
@@ -40,19 +41,32 @@
             button1.Text = "FunDraw";
             button1.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(15, 9);
+            label1.Name = "label1";
+            label1.Size = new Size(54, 15);
+            label1.TabIndex = 0;
+            label1.Text = "FunDraw";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(label1);
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Button button1;
+
+        private Label label1;
     }
 }
