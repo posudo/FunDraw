@@ -14,7 +14,7 @@ namespace FunDraw
         public In_Game_Guesser()
         {
             InitializeComponent();
-            
+
         }
 
         private void guna2PictureBox1_Click(object sender, EventArgs e)
@@ -25,6 +25,10 @@ namespace FunDraw
         private void guna2GroupBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
         }
     }
 }
