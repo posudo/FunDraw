@@ -15,6 +15,7 @@ namespace FunDraw
         public main_menu()
         {
             InitializeComponent();
+            this.MinimumSize = new Size(883, 500);
         }
 
         private void tbMaPhong_Enter(object sender, EventArgs e)
