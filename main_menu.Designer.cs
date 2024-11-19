@@ -146,6 +146,8 @@
             tbMaPhong.ShadowDecoration.CustomizableEdges = customizableEdges7;
             tbMaPhong.Size = new Size(174, 39);
             tbMaPhong.TabIndex = 8;
+            tbMaPhong.Enter += tbMaPhong_Enter;
+            tbMaPhong.Leave += tbMaPhong_Leave;
             // 
             // btDangXuat
             // 

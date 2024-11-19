@@ -17,5 +17,22 @@ namespace FunDraw
             InitializeComponent();
         }
 
+        private void tbMaPhong_Enter(object sender, EventArgs e)
+        {
+            if (tbMaPhong.Text == "Mã phòng")
+            {
+                tbMaPhong.Text = "";
+                tbMaPhong.ForeColor = Color.Black;
+            }
+        }
+
+        private void tbMaPhong_Leave(object sender, EventArgs e)
+        {
+            if (tbMaPhong.Text == "")
+            {
+                tbMaPhong.Text = "Mã phòng";
+                tbMaPhong.ForeColor = Color.FromArgb(125, 137, 149);
+            }
+        }
     }
 }
