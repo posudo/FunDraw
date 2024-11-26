@@ -22,11 +22,6 @@ namespace FunDraw
 
         }
 
-        private void guna2GroupBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void guna2Button1_Click(object sender, EventArgs e)
         {
         }
