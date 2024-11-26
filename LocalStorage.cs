@@ -10,9 +10,12 @@ namespace FunDraw
 {
     public class LocalStorage
     {
-        static string dataPath = "./localStorage.json";
+        static string documentsPath = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+        static string directoryPath = Path.Combine(documentsPath, "FunDraw");
+        static string dataPath = Path.Combine(documentsPath, "FunDraw", "./user.json");
         private static string ReadStorage(string key)
         {
+            AppDirectoryCheck();
             try
             {
                 using (StreamReader sr = new StreamReader(dataPath))
@@ -30,6 +33,7 @@ namespace FunDraw
 
         private static string WriteStorage(string key, string value)
         {
+            AppDirectoryCheck();
             try
             {
                 Dictionary<string, object> jsonData;
@@ -54,6 +58,14 @@ namespace FunDraw
             }
         }
 
+        private static void AppDirectoryCheck()
+        {
+            if (!Directory.Exists(directoryPath))
+            {
+                Directory.CreateDirectory(directoryPath);
+            }
+        }
+
         public static string GetAccessToken()
         {
             string _accessToken = ReadStorage("accessToken");
@@ -66,6 +78,16 @@ namespace FunDraw
             string _refreshToken = ReadStorage("refreshToken");
 
             return _refreshToken;
+        }
+
+        public static string SetAccessToken(string accessToken)
+        {
+            return WriteStorage("accessToken", accessToken);
+        }
+
+        public static string SetRefreshToken(string refreshToken)
+        {
+            return WriteStorage("refreshToken", refreshToken);
         }
     }
 }
