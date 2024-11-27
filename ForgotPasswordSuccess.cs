@@ -7,23 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+
 namespace FunDraw
 {
-    public partial class In_Game_Guesser : Form
+    public partial class ForgotPasswordSuccess : Form
     {
-        public In_Game_Guesser()
+        public ForgotPasswordSuccess()
         {
             InitializeComponent();
-
-        }
-
-        private void guna2PictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
         }
     }
 }
