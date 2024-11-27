@@ -16,5 +16,24 @@ namespace FunDraw
         {
             InitializeComponent();
         }
+
+        private async void btRegister_Click(object sender, EventArgs e)
+        {
+            if (tbPassword.Text == tbComfirmPassword.Text)
+            {
+                await Session.Register(tbUsername.Text, tbPassword.Text, tbEmail.Text);
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Password and Confirm Password do not match");
+                return;
+            }
+        }
+
+        private void lbLogin_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

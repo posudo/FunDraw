@@ -55,12 +55,12 @@
             cpbLogo.BackColor = SystemColors.ButtonHighlight;
             cpbLogo.FillColor = Color.Gainsboro;
             cpbLogo.ImageRotate = 0F;
-            cpbLogo.Location = new Point(419, 58);
-            cpbLogo.Margin = new Padding(5, 4, 5, 4);
+            cpbLogo.Location = new Point(367, 44);
+            cpbLogo.Margin = new Padding(4, 3, 4, 3);
             cpbLogo.Name = "cpbLogo";
             cpbLogo.ShadowDecoration.CustomizableEdges = customizableEdges1;
             cpbLogo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            cpbLogo.Size = new Size(199, 188);
+            cpbLogo.Size = new Size(174, 141);
             cpbLogo.TabIndex = 11;
             cpbLogo.TabStop = false;
             // 
@@ -79,15 +79,15 @@
             tbUsername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbUsername.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbUsername.Location = new Point(348, 288);
-            tbUsername.Margin = new Padding(5, 7, 5, 7);
+            tbUsername.Location = new Point(304, 216);
+            tbUsername.Margin = new Padding(4, 5, 4, 5);
             tbUsername.Name = "tbUsername";
             tbUsername.PasswordChar = '\0';
             tbUsername.PlaceholderForeColor = Color.Gainsboro;
             tbUsername.PlaceholderText = "";
             tbUsername.SelectedText = "";
             tbUsername.ShadowDecoration.CustomizableEdges = customizableEdges3;
-            tbUsername.Size = new Size(330, 52);
+            tbUsername.Size = new Size(289, 39);
             tbUsername.TabIndex = 12;
             // 
             // tbPassword
@@ -105,15 +105,15 @@
             tbPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbPassword.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbPassword.Location = new Point(348, 354);
-            tbPassword.Margin = new Padding(5, 7, 5, 7);
+            tbPassword.Location = new Point(304, 266);
+            tbPassword.Margin = new Padding(4, 5, 4, 5);
             tbPassword.Name = "tbPassword";
             tbPassword.PasswordChar = '\0';
             tbPassword.PlaceholderForeColor = Color.Gainsboro;
             tbPassword.PlaceholderText = "";
             tbPassword.SelectedText = "";
             tbPassword.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            tbPassword.Size = new Size(330, 52);
+            tbPassword.Size = new Size(289, 39);
             tbPassword.TabIndex = 13;
             // 
             // tbComfirmPassword
@@ -131,15 +131,15 @@
             tbComfirmPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbComfirmPassword.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbComfirmPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbComfirmPassword.Location = new Point(348, 420);
-            tbComfirmPassword.Margin = new Padding(5, 7, 5, 7);
+            tbComfirmPassword.Location = new Point(304, 315);
+            tbComfirmPassword.Margin = new Padding(4, 5, 4, 5);
             tbComfirmPassword.Name = "tbComfirmPassword";
             tbComfirmPassword.PasswordChar = '\0';
             tbComfirmPassword.PlaceholderForeColor = Color.Gainsboro;
             tbComfirmPassword.PlaceholderText = "";
             tbComfirmPassword.SelectedText = "";
             tbComfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges7;
-            tbComfirmPassword.Size = new Size(330, 52);
+            tbComfirmPassword.Size = new Size(289, 39);
             tbComfirmPassword.TabIndex = 14;
             // 
             // tbEmail
@@ -157,15 +157,15 @@
             tbEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbEmail.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbEmail.Location = new Point(348, 486);
-            tbEmail.Margin = new Padding(5, 7, 5, 7);
+            tbEmail.Location = new Point(304, 364);
+            tbEmail.Margin = new Padding(4, 5, 4, 5);
             tbEmail.Name = "tbEmail";
             tbEmail.PasswordChar = '\0';
             tbEmail.PlaceholderForeColor = Color.Gainsboro;
             tbEmail.PlaceholderText = "";
             tbEmail.SelectedText = "";
             tbEmail.ShadowDecoration.CustomizableEdges = customizableEdges9;
-            tbEmail.Size = new Size(330, 52);
+            tbEmail.Size = new Size(289, 39);
             tbEmail.TabIndex = 15;
             // 
             // btRegister
@@ -181,13 +181,14 @@
             btRegister.FillColor = Color.FromArgb(160, 210, 235);
             btRegister.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btRegister.ForeColor = Color.Black;
-            btRegister.Location = new Point(419, 568);
-            btRegister.Margin = new Padding(5, 4, 5, 4);
+            btRegister.Location = new Point(367, 426);
+            btRegister.Margin = new Padding(4, 3, 4, 3);
             btRegister.Name = "btRegister";
             btRegister.ShadowDecoration.CustomizableEdges = customizableEdges11;
-            btRegister.Size = new Size(190, 53);
+            btRegister.Size = new Size(166, 40);
             btRegister.TabIndex = 16;
             btRegister.Text = "Đăng ký";
+            btRegister.Click += btRegister_Click;
             // 
             // lbLogin
             // 
@@ -195,20 +196,21 @@
             lbLogin.BackColor = Color.Transparent;
             lbLogin.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbLogin.ForeColor = SystemColors.Highlight;
-            lbLogin.Location = new Point(430, 637);
-            lbLogin.Margin = new Padding(5, 4, 5, 4);
+            lbLogin.Location = new Point(376, 478);
+            lbLogin.Margin = new Padding(4, 3, 4, 3);
             lbLogin.Name = "lbLogin";
-            lbLogin.Size = new Size(168, 26);
+            lbLogin.Size = new Size(128, 20);
             lbLogin.TabIndex = 17;
             lbLogin.Text = "Quay lại đăng nhập";
             lbLogin.TextAlignment = ContentAlignment.MiddleCenter;
+            lbLogin.Click += lbLogin_Click;
             // 
             // Register
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(1026, 676);
+            ClientSize = new Size(898, 507);
             Controls.Add(lbLogin);
             Controls.Add(btRegister);
             Controls.Add(tbEmail);
@@ -216,6 +218,7 @@
             Controls.Add(tbPassword);
             Controls.Add(tbUsername);
             Controls.Add(cpbLogo);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Register";
             Text = "Register";
             ((System.ComponentModel.ISupportInitialize)cpbLogo).EndInit();
