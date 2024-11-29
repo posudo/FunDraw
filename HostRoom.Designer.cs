@@ -64,6 +64,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
             listBox1 = new ListBox();
@@ -90,6 +92,7 @@
             lbThamGia = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -100,6 +103,8 @@
             cobPlayers = new Guna.UI2.WinForms.Guna2ComboBox();
             cobDrawtime = new Guna.UI2.WinForms.Guna2ComboBox();
             cobRounds = new Guna.UI2.WinForms.Guna2ComboBox();
+            cobGameMode = new Guna.UI2.WinForms.Guna2ComboBox();
+            cobWordCount = new Guna.UI2.WinForms.Guna2ComboBox();
             cobHints = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -498,6 +503,18 @@
             guna2HtmlLabel2.TabIndex = 19;
             guna2HtmlLabel2.Text = "Rounds";
             // 
+            // guna2HtmlLabel3
+            // 
+            guna2HtmlLabel3.BackColor = Color.FromArgb(224, 224, 224);
+            guna2HtmlLabel3.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2HtmlLabel3.ForeColor = Color.Black;
+            guna2HtmlLabel3.Location = new Point(215, 125);
+            guna2HtmlLabel3.Margin = new Padding(4, 3, 4, 3);
+            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
+            guna2HtmlLabel3.Size = new Size(86, 20);
+            guna2HtmlLabel3.TabIndex = 20;
+            guna2HtmlLabel3.Text = "Game Mode";
+            // 
             // guna2HtmlLabel4
             // 
             guna2HtmlLabel4.BackColor = Color.FromArgb(224, 224, 224);
@@ -694,6 +711,46 @@
             cobRounds.Size = new Size(330, 24);
             cobRounds.TabIndex = 31;
             // 
+            // cobGameMode
+            // 
+            cobGameMode.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cobGameMode.BackColor = Color.Transparent;
+            cobGameMode.CustomizableEdges = customizableEdges31;
+            cobGameMode.DrawMode = DrawMode.OwnerDrawFixed;
+            cobGameMode.DropDownStyle = ComboBoxStyle.DropDownList;
+            cobGameMode.FocusedColor = Color.FromArgb(94, 148, 255);
+            cobGameMode.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cobGameMode.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cobGameMode.ForeColor = Color.Black;
+            cobGameMode.ItemHeight = 18;
+            cobGameMode.Items.AddRange(new object[] { "Normal", "Hidden", "Combination" });
+            cobGameMode.Location = new Point(484, 121);
+            cobGameMode.Margin = new Padding(4, 3, 4, 3);
+            cobGameMode.Name = "cobGameMode";
+            cobGameMode.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            cobGameMode.Size = new Size(330, 24);
+            cobGameMode.TabIndex = 32;
+            // 
+            // cobWordCount
+            // 
+            cobWordCount.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            cobWordCount.BackColor = Color.Transparent;
+            cobWordCount.CustomizableEdges = customizableEdges33;
+            cobWordCount.DrawMode = DrawMode.OwnerDrawFixed;
+            cobWordCount.DropDownStyle = ComboBoxStyle.DropDownList;
+            cobWordCount.FocusedColor = Color.FromArgb(94, 148, 255);
+            cobWordCount.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            cobWordCount.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cobWordCount.ForeColor = Color.Black;
+            cobWordCount.ItemHeight = 18;
+            cobWordCount.Items.AddRange(new object[] { "1", "2", "3", "4", "5" });
+            cobWordCount.Location = new Point(484, 147);
+            cobWordCount.Margin = new Padding(4, 3, 4, 3);
+            cobWordCount.Name = "cobWordCount";
+            cobWordCount.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            cobWordCount.Size = new Size(330, 24);
+            cobWordCount.TabIndex = 33;
+            // 
             // cobHints
             // 
             cobHints.Anchor = AnchorStyles.Top | AnchorStyles.Right;
@@ -758,6 +815,8 @@
             ClientSize = new Size(1047, 512);
             Controls.Add(guna2ComboBox1);
             Controls.Add(cobHints);
+            Controls.Add(cobWordCount);
+            Controls.Add(cobGameMode);
             Controls.Add(cobRounds);
             Controls.Add(cobDrawtime);
             Controls.Add(cobPlayers);
@@ -768,6 +827,7 @@
             Controls.Add(guna2HtmlLabel6);
             Controls.Add(guna2HtmlLabel5);
             Controls.Add(guna2HtmlLabel4);
+            Controls.Add(guna2HtmlLabel3);
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(guna2HtmlLabel1);
             Controls.Add(lbThamGia);
@@ -821,6 +881,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lbThamGia;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
@@ -831,6 +892,8 @@
         private Guna.UI2.WinForms.Guna2ComboBox cobPlayers;
         private Guna.UI2.WinForms.Guna2ComboBox cobDrawtime;
         private Guna.UI2.WinForms.Guna2ComboBox cobRounds;
+        private Guna.UI2.WinForms.Guna2ComboBox cobGameMode;
+        private Guna.UI2.WinForms.Guna2ComboBox cobWordCount;
         private Guna.UI2.WinForms.Guna2ComboBox cobHints;
         private Guna.UI2.WinForms.Guna2PictureBox guna2PictureBox1;
         private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
