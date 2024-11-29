@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using FunDraw.Types;
 using System.Net.Http.Headers;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Net;
 
 namespace FunDraw
 {
@@ -24,18 +25,17 @@ namespace FunDraw
 
         public static async Task Login(string username, string password)
         {
-            var userCredentials = new Dictionary<string, string>
-            {
-                { "username", username },
-                { "password", password }
-            };
+            //var userCredentials = new Dictionary<string, string>
+            //{
+            //    { "username", username },
+            //    { "password", password }
+            //};
 
-            JObject response = await HTTPClient.PostFormUrlEncodedAsync($"{AppConfig.APP_API_HOST}/auth/login", userCredentials);
-            if (response.ContainsKey("Error")) return;
-            var data = JsonConvert.DeserializeObject<Types.Login>(response.ToString());
-            LocalStorage.SetAccessToken(data.data.accessToken);
-            LocalStorage.SetRefreshToken(data.data.refreshToken);
-        }
+            //JObject response = await HTTPClient.PostFormUrlEncodedAsync($"{AppConfig.APP_API_HOST}/auth/login", userCredentials);
+            //if (response.ContainsKey("Error")) return;
+            //var data = JsonConvert.DeserializeObject<Types.Login>(response.ToString());
+            //LocalStorage.SetAccessToken(data.data.accessToken);
+            //LocalStorage.SetRefreshToken(data.data.refreshToken);
 
         public static async Task Register(string username, string password, string email)
         {
@@ -154,6 +154,18 @@ namespace FunDraw
                 return false;
             }
         }
+
+        public static async Task<JObject> GET(string path, string? queryParams = "")
+        {
+            string accessToken = LocalStorage.GetAccessToken();
+            Dictionary<string, string> headers = new Dictionary<string, string>
+            {
+                { "Authorization", $"Bearer {accessToken}" }
+            };
+            JObject response = await HTTPClient.GetAsync($"{AppConfig.APP_API_HOST}/{path}", queryParams, headers);
+            return response;
+        }
+
 
     }
 }
