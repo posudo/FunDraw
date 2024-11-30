@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FunDraw.Types;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FunDraw
 {
@@ -76,7 +77,12 @@ namespace FunDraw
                     return;
                 }
 
-                JObject response = await HTTPClient.PostAsync($"{AppConfig.APP_API_HOST}/users/reset-password", $"email={email}");
+                var requestData = new Dictionary<string,string>
+                {
+                { "username", email },
+                };
+
+                JObject response = await HTTPClient.PostFormUrlEncodedAsync($"{AppConfig.APP_API_HOST}/users/reset-password", requestData);
 
                 if (response.ContainsKey("Error"))
                 {
