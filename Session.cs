@@ -66,5 +66,32 @@ namespace FunDraw
             JObject response = await HTTPClient.GetAsync($"{AppConfig.APP_API_HOST}/{path}", queryParams, headers);
             return response;
         }
+        public static async Task ForgotPassword(string email)
+        {
+            try
+            {
+                if (string.IsNullOrWhiteSpace(email))
+                {
+                    Debug.WriteLine("Error: Email is required.");
+                    return;
+                }
+
+                JObject response = await HTTPClient.PostAsync($"{AppConfig.APP_API_HOST}/users/reset-password", $"email={email}");
+
+                if (response.ContainsKey("Error"))
+                {
+                    Debug.WriteLine("Error: " + response["Error"]);
+                    return;
+                }
+
+                Debug.WriteLine("Forgot Password Email Sent Successfully");
+                return;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("An error occurred: " + ex.Message);
+                return;
+            }
+        }
     }
 }
