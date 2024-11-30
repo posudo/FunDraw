@@ -44,10 +44,10 @@
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Microsoft Sans Serif", 28.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel2.ForeColor = SystemColors.WindowText;
-            guna2HtmlLabel2.Location = new Point(269, 105);
-            guna2HtmlLabel2.Margin = new Padding(5, 4, 5, 4);
+            guna2HtmlLabel2.Location = new Point(235, 79);
+            guna2HtmlLabel2.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(335, 56);
+            guna2HtmlLabel2.Size = new Size(276, 46);
             guna2HtmlLabel2.TabIndex = 17;
             guna2HtmlLabel2.Text = "Quên mật khẩu\r\n";
             guna2HtmlLabel2.TextAlignment = ContentAlignment.MiddleCenter;
@@ -58,10 +58,10 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Microsoft Sans Serif", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2HtmlLabel1.ForeColor = SystemColors.WindowText;
-            guna2HtmlLabel1.Location = new Point(142, 205);
-            guna2HtmlLabel1.Margin = new Padding(5, 4, 5, 4);
+            guna2HtmlLabel1.Location = new Point(157, 154);
+            guna2HtmlLabel1.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(592, 31);
+            guna2HtmlLabel1.Size = new Size(445, 24);
             guna2HtmlLabel1.TabIndex = 18;
             guna2HtmlLabel1.Text = "Một email sẽ được gửi về để bạn có thể đặt lại mật khẩu";
             guna2HtmlLabel1.TextAlignment = ContentAlignment.MiddleCenter;
@@ -81,15 +81,15 @@
             tbEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbEmail.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbEmail.Location = new Point(204, 276);
-            tbEmail.Margin = new Padding(5, 7, 5, 7);
+            tbEmail.Location = new Point(178, 207);
+            tbEmail.Margin = new Padding(4, 5, 4, 5);
             tbEmail.Name = "tbEmail";
             tbEmail.PasswordChar = '\0';
             tbEmail.PlaceholderForeColor = Color.Gainsboro;
             tbEmail.PlaceholderText = "";
             tbEmail.SelectedText = "";
             tbEmail.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            tbEmail.Size = new Size(468, 52);
+            tbEmail.Size = new Size(410, 39);
             tbEmail.TabIndex = 19;
             // 
             // btSend
@@ -105,23 +105,25 @@
             btSend.FillColor = Color.FromArgb(160, 210, 235);
             btSend.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btSend.ForeColor = Color.Black;
-            btSend.Location = new Point(341, 384);
-            btSend.Margin = new Padding(5, 4, 5, 4);
+            btSend.Location = new Point(298, 288);
+            btSend.Margin = new Padding(4, 3, 4, 3);
             btSend.Name = "btSend";
             btSend.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btSend.Size = new Size(190, 53);
+            btSend.Size = new Size(166, 40);
             btSend.TabIndex = 20;
             btSend.Text = "Gửi";
+            btSend.Click += btSend_Click;
             // 
             // ForgotPassword
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(893, 544);
+            ClientSize = new Size(781, 408);
             Controls.Add(btSend);
             Controls.Add(tbEmail);
             Controls.Add(guna2HtmlLabel1);
             Controls.Add(guna2HtmlLabel2);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "ForgotPassword";
             Text = "ForgotPasswordcs";
             ResumeLayout(false);
