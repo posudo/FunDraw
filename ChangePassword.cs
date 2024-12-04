@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace FunDraw
 {
-    public partial class ForgotPasswordSuccess : Form
+    public partial class ChangePassword : Form
     {
-        public ForgotPasswordSuccess()
+        public ChangePassword()
         {
             InitializeComponent();
         }
