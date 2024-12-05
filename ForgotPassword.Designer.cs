@@ -91,6 +91,8 @@
             tbEmail.ShadowDecoration.CustomizableEdges = customizableEdges2;
             tbEmail.Size = new Size(410, 39);
             tbEmail.TabIndex = 19;
+            tbEmail.Enter += tbEmail_Enter;
+            tbEmail.Leave += tbEmail_Leave;
             // 
             // btSend
             // 
