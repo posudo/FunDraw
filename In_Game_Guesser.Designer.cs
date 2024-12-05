@@ -100,11 +100,11 @@
             guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.FillColor = Color.Gainsboro;
             guna2Panel1.ForeColor = SystemColors.AppWorkspace;
-            guna2Panel1.Location = new Point(1042, 9);
+            guna2Panel1.Location = new Point(1122, 9);
             guna2Panel1.Margin = new Padding(3, 2, 3, 2);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Panel1.Size = new Size(206, 600);
+            guna2Panel1.Size = new Size(206, 680);
             guna2Panel1.TabIndex = 0;
             // 
             // guna2TextBox1
@@ -124,7 +124,7 @@
             guna2TextBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             guna2TextBox1.ForeColor = Color.Black;
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(0, 560);
+            guna2TextBox1.Location = new Point(0, 640);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
             guna2TextBox1.PlaceholderForeColor = Color.DarkGray;
@@ -143,7 +143,7 @@
             listBox1.Location = new Point(0, 24);
             listBox1.Margin = new Padding(3, 2, 3, 2);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(206, 529);
+            listBox1.Size = new Size(206, 604);
             listBox1.TabIndex = 0;
             // 
             // guna2PictureBox1
@@ -156,7 +156,7 @@
             guna2PictureBox1.Margin = new Padding(3, 2, 3, 2);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2PictureBox1.Size = new Size(833, 486);
+            guna2PictureBox1.Size = new Size(913, 566);
             guna2PictureBox1.TabIndex = 1;
             guna2PictureBox1.TabStop = false;
             guna2PictureBox1.Paint += guna2PictureBox1_Paint;
@@ -489,9 +489,9 @@
             panel1.Controls.Add(Elipse);
             panel1.Controls.Add(button2);
             panel1.Controls.Add(button1);
-            panel1.Location = new Point(203, 524);
+            panel1.Location = new Point(203, 604);
             panel1.Name = "panel1";
-            panel1.Size = new Size(833, 88);
+            panel1.Size = new Size(913, 88);
             panel1.TabIndex = 7;
             // 
             // button3
@@ -604,7 +604,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(1259, 624);
+            ClientSize = new Size(1339, 704);
             Controls.Add(panel1);
             Controls.Add(label3);
             Controls.Add(label2);
@@ -613,6 +613,7 @@
             Controls.Add(guna2PictureBox1);
             Controls.Add(guna2Panel1);
             ForeColor = SystemColors.ControlDark;
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(3, 2, 3, 2);
             Name = "In_Game_Guesser";
             Text = "Form2";
