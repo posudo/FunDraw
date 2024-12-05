@@ -78,8 +78,6 @@ namespace FunDraw
 
                 JObject response = await HTTPClient.PostFormUrlEncodedAsync($"{AppConfig.APP_API_HOST}/users/reset-password", requestData);
 
-                if (response.ContainsKey("Error")) return false;
-
                 if (response.ContainsKey("message") && response["message"].ToString() == "User not found!")
                 {
                     return false;
