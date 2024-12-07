@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FunDraw.Types;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace FunDraw
 {
@@ -65,6 +66,31 @@ namespace FunDraw
             };
             JObject response = await HTTPClient.GetAsync($"{AppConfig.APP_API_HOST}/{path}", queryParams, headers);
             return response;
+        }
+        public static async Task<bool> ForgotPassword(string email)
+        {
+            try
+            {
+                var requestData = new Dictionary<string,string>
+                {
+                { "email", email },
+                };
+
+                JObject response = await HTTPClient.PostFormUrlEncodedAsync($"{AppConfig.APP_API_HOST}/users/reset-password", requestData);
+
+                if (response.ContainsKey("error"))
+                {
+                    return false;
+                }
+                       
+                Debug.WriteLine("Forgot Password Email Sent Successfully");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("An error occurred: " + ex.Message);
+                return false;
+            }
         }
     }
 }
