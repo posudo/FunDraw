@@ -104,7 +104,7 @@ namespace FunDraw
             JObject response = await HTTPClient.GetAsync($"{AppConfig.APP_API_HOST}/{path}", queryParams, headers);
             return response;
         }
-      
+
         public static async Task<bool> ChangePassword(string new_pass)
         {
             try
@@ -115,20 +115,27 @@ namespace FunDraw
                    { "confirm_password", new_pass }
                 };
 
-                if (await RefreshTokenForFeature("/users/reset-password",requestData))
+                if (await RefreshTokenForFeature("/users/reset-password", requestData))
                 {
                     Debug.WriteLine("Changed Password Successfully");
                     return true;
                 }
-                else return false; 
-              
+                else return false;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("An error occurred: " + ex.Message);
+                return false;
+            }
+        }
+
         public static async Task<bool> ForgotPassword(string email)
         {
             try
             {
-                var requestData = new Dictionary<string,string>
+                var requestData = new Dictionary<string, string>
                 {
-                { "email", email },
+                { "email", email }
                 };
 
                 JObject response = await HTTPClient.PostFormUrlEncodedAsync($"{AppConfig.APP_API_HOST}/users/reset-password", requestData);
@@ -137,7 +144,7 @@ namespace FunDraw
                 {
                     return false;
                 }
-                       
+
                 Debug.WriteLine("Forgot Password Email Sent Successfully");
                 return true;
             }
@@ -147,5 +154,6 @@ namespace FunDraw
                 return false;
             }
         }
+
     }
 }
