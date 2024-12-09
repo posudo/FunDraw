@@ -160,7 +160,6 @@
             guna2PictureBox1.TabIndex = 1;
             guna2PictureBox1.TabStop = false;
             guna2PictureBox1.Paint += guna2PictureBox1_Paint;
-            guna2PictureBox1.Click += guna2PictureBox1_Click;
             guna2PictureBox1.MouseDown += guna2PictureBox1_MouseDown;
             guna2PictureBox1.MouseMove += guna2PictureBox1_MouseMove;
             guna2PictureBox1.MouseUp += guna2PictureBox1_MouseUp;
@@ -423,7 +422,6 @@
             guna2Button1.Size = new Size(182, 38);
             guna2Button1.TabIndex = 0;
             guna2Button1.TextOffset = new Point(10, 0);
-            guna2Button1.Click += guna2Button1_Click;
             // 
             // label1
             // 

@@ -155,17 +155,6 @@ namespace FunDraw
             }
         }
 
-        public static async Task<JObject> GET(string path, string? queryParams = "")
-        {
-            string accessToken = LocalStorage.GetAccessToken();
-            Dictionary<string, string> headers = new Dictionary<string, string>
-            {
-                { "Authorization", $"Bearer {accessToken}" }
-            };
-            JObject response = await HTTPClient.GetAsync($"{AppConfig.APP_API_HOST}/{path}", queryParams, headers);
-            return response;
-        }
-
 
     }
 }
