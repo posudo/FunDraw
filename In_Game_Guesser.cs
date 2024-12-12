@@ -42,7 +42,7 @@ namespace FunDraw
             try
             {
                 // Replace with your WebSocket server URL
-                await webSocket.ConnectAsync(new Uri("https://ws-test-fundraw.lt.id.vn/"), cancellationTokenSource.Token);
+                await webSocket.ConnectAsync(new Uri("wss://ws-test-fundraw.lt.id.vn/game"), cancellationTokenSource.Token);
 
                 // Start receiving messages
                 _ = ReceiveMessagesAsync();
@@ -169,10 +169,6 @@ namespace FunDraw
             }
         }
 
-        void Receive(CancellationToken token)
-        {
-            // Implementation of the Receive method
-        }
 
 
         protected override void OnResize(EventArgs e)
