@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HoSoNgChoi));
             guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             Player = new Label();
             label2 = new Label();
@@ -140,9 +141,10 @@
             Controls.Add(label2);
             Controls.Add(Player);
             Controls.Add(guna2CirclePictureBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "HoSoNgChoi";
-            Text = "HoSoNgChoi";
+            Text = "User Profile";
             Load += HoSoNgChoi_Load;
             Resize += HoSoNgChoi_Resize;
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
