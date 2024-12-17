@@ -52,7 +52,6 @@
             cpbAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             panel_main = new Panel();
             lbPlayer = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            lbDangChoi = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lbThamGia = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)cpbLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)cpbAvatar).BeginInit();
@@ -66,7 +65,7 @@
             shPlayer.BorderColor = Color.Transparent;
             shPlayer.BorderThickness = 0;
             shPlayer.FillColor = Color.FromArgb(224, 224, 224);
-            shPlayer.Location = new Point(-1, 96);
+            shPlayer.Location = new Point(-1, 72);
             shPlayer.Margin = new Padding(4, 3, 4, 3);
             shPlayer.Name = "shPlayer";
             shPlayer.PolygonSkip = 1;
@@ -92,7 +91,7 @@
             btThamGia.FillColor = Color.FromArgb(160, 210, 235);
             btThamGia.Font = new Font("Segoe UI", 12F);
             btThamGia.ForeColor = Color.Black;
-            btThamGia.Location = new Point(372, 378);
+            btThamGia.Location = new Point(372, 354);
             btThamGia.Margin = new Padding(4, 3, 4, 3);
             btThamGia.Name = "btThamGia";
             btThamGia.ShadowDecoration.CustomizableEdges = customizableEdges3;
@@ -114,7 +113,7 @@
             btHoSo.FillColor = Color.FromArgb(160, 210, 235);
             btHoSo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btHoSo.ForeColor = Color.Black;
-            btHoSo.Location = new Point(44, 329);
+            btHoSo.Location = new Point(44, 305);
             btHoSo.Margin = new Padding(4, 3, 4, 3);
             btHoSo.Name = "btHoSo";
             btHoSo.ShadowDecoration.CustomizableEdges = customizableEdges5;
@@ -137,7 +136,7 @@
             tbMaPhong.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbMaPhong.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             tbMaPhong.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbMaPhong.Location = new Point(372, 329);
+            tbMaPhong.Location = new Point(372, 305);
             tbMaPhong.Margin = new Padding(4, 5, 4, 5);
             tbMaPhong.Name = "tbMaPhong";
             tbMaPhong.PasswordChar = '\0';
@@ -164,7 +163,7 @@
             btDangXuat.FillColor = Color.FromArgb(255, 107, 107);
             btDangXuat.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             btDangXuat.ForeColor = Color.Black;
-            btDangXuat.Location = new Point(44, 375);
+            btDangXuat.Location = new Point(44, 351);
             btDangXuat.Margin = new Padding(4, 3, 4, 3);
             btDangXuat.Name = "btDangXuat";
             btDangXuat.ShadowDecoration.CustomizableEdges = customizableEdges9;
@@ -185,7 +184,7 @@
             btTaoPhong.FillColor = Color.FromArgb(160, 210, 235);
             btTaoPhong.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btTaoPhong.ForeColor = Color.Black;
-            btTaoPhong.Location = new Point(372, 226);
+            btTaoPhong.Location = new Point(372, 202);
             btTaoPhong.Margin = new Padding(4, 3, 4, 3);
             btTaoPhong.Name = "btTaoPhong";
             btTaoPhong.ShadowDecoration.CustomizableEdges = customizableEdges11;
@@ -200,12 +199,12 @@
             cpbLogo.FillColor = Color.Gainsboro;
             cpbLogo.Image = Properties.Resources.dsadsad;
             cpbLogo.ImageRotate = 0F;
-            cpbLogo.Location = new Point(204, -138);
+            cpbLogo.Location = new Point(209, -162);
             cpbLogo.Margin = new Padding(4, 3, 4, 3);
             cpbLogo.Name = "cpbLogo";
             cpbLogo.ShadowDecoration.CustomizableEdges = customizableEdges12;
             cpbLogo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            cpbLogo.Size = new Size(444, 358);
+            cpbLogo.Size = new Size(503, 340);
             cpbLogo.TabIndex = 9;
             cpbLogo.TabStop = false;
             // 
@@ -215,7 +214,7 @@
             cpbAvatar.BackColor = Color.FromArgb(224, 224, 224);
             cpbAvatar.FillColor = Color.LightGray;
             cpbAvatar.ImageRotate = 0F;
-            cpbAvatar.Location = new Point(65, 156);
+            cpbAvatar.Location = new Point(65, 132);
             cpbAvatar.Margin = new Padding(4, 3, 4, 3);
             cpbAvatar.Name = "cpbAvatar";
             cpbAvatar.ShadowDecoration.CustomizableEdges = customizableEdges13;
@@ -228,7 +227,6 @@
             // 
             panel_main.Controls.Add(cpbLogo);
             panel_main.Controls.Add(lbPlayer);
-            panel_main.Controls.Add(lbDangChoi);
             panel_main.Controls.Add(lbThamGia);
             panel_main.Controls.Add(cpbAvatar);
             panel_main.Controls.Add(btTaoPhong);
@@ -241,7 +239,7 @@
             panel_main.Location = new Point(0, 0);
             panel_main.Margin = new Padding(4, 3, 4, 3);
             panel_main.Name = "panel_main";
-            panel_main.Size = new Size(908, 555);
+            panel_main.Size = new Size(908, 506);
             panel_main.TabIndex = 12;
             // 
             // lbPlayer
@@ -249,7 +247,7 @@
             lbPlayer.Anchor = AnchorStyles.None;
             lbPlayer.BackColor = Color.FromArgb(224, 224, 224);
             lbPlayer.Font = new Font("Microsoft Sans Serif", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbPlayer.Location = new Point(90, 259);
+            lbPlayer.Location = new Point(90, 235);
             lbPlayer.Margin = new Padding(4, 3, 4, 3);
             lbPlayer.Name = "lbPlayer";
             lbPlayer.Size = new Size(50, 22);
@@ -257,25 +255,12 @@
             lbPlayer.Text = "Player";
             lbPlayer.TextAlignment = ContentAlignment.MiddleCenter;
             // 
-            // lbDangChoi
-            // 
-            lbDangChoi.Anchor = AnchorStyles.None;
-            lbDangChoi.BackColor = Color.Transparent;
-            lbDangChoi.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbDangChoi.Location = new Point(357, 440);
-            lbDangChoi.Margin = new Padding(4, 3, 4, 3);
-            lbDangChoi.Name = "lbDangChoi";
-            lbDangChoi.Size = new Size(210, 20);
-            lbDangChoi.TabIndex = 13;
-            lbDangChoi.Text = "Hiện đang có 0 người đang chơi";
-            lbDangChoi.TextAlignment = ContentAlignment.MiddleCenter;
-            // 
             // lbThamGia
             // 
             lbThamGia.Anchor = AnchorStyles.None;
             lbThamGia.BackColor = Color.Transparent;
             lbThamGia.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbThamGia.Location = new Point(407, 301);
+            lbThamGia.Location = new Point(407, 277);
             lbThamGia.Margin = new Padding(4, 3, 4, 3);
             lbThamGia.Name = "lbThamGia";
             lbThamGia.Size = new Size(99, 20);
@@ -288,7 +273,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 250, 250);
-            ClientSize = new Size(908, 555);
+            ClientSize = new Size(908, 506);
             Controls.Add(panel_main);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
@@ -312,7 +297,6 @@
         private Guna.UI2.WinForms.Guna2CirclePictureBox cpbAvatar;
         private System.Windows.Forms.Panel panel_main;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbThamGia;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbDangChoi;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbPlayer;
     }
 }
