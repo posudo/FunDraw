@@ -198,13 +198,14 @@
             cpbLogo.Anchor = AnchorStyles.None;
             cpbLogo.BackColor = Color.FromArgb(250, 250, 250);
             cpbLogo.FillColor = Color.Gainsboro;
+            cpbLogo.Image = Properties.Resources.dsadsad;
             cpbLogo.ImageRotate = 0F;
-            cpbLogo.Location = new Point(372, 26);
+            cpbLogo.Location = new Point(204, -138);
             cpbLogo.Margin = new Padding(4, 3, 4, 3);
             cpbLogo.Name = "cpbLogo";
             cpbLogo.ShadowDecoration.CustomizableEdges = customizableEdges12;
             cpbLogo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            cpbLogo.Size = new Size(174, 164);
+            cpbLogo.Size = new Size(444, 358);
             cpbLogo.TabIndex = 9;
             cpbLogo.TabStop = false;
             // 
