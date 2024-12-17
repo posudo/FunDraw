@@ -91,6 +91,8 @@
             tbUsername.ShadowDecoration.CustomizableEdges = customizableEdges3;
             tbUsername.Size = new Size(289, 39);
             tbUsername.TabIndex = 12;
+            tbUsername.Enter += tbUsername_Enter;
+            tbUsername.Leave += tbUsername_Leave;
             // 
             // tbPassword
             // 
@@ -110,13 +112,16 @@
             tbPassword.Location = new Point(304, 266);
             tbPassword.Margin = new Padding(4, 5, 4, 5);
             tbPassword.Name = "tbPassword";
-            tbPassword.PasswordChar = '\0';
+            tbPassword.PasswordChar = '●';
             tbPassword.PlaceholderForeColor = Color.Gainsboro;
             tbPassword.PlaceholderText = "";
             tbPassword.SelectedText = "";
             tbPassword.ShadowDecoration.CustomizableEdges = customizableEdges5;
             tbPassword.Size = new Size(289, 39);
             tbPassword.TabIndex = 13;
+            tbPassword.UseSystemPasswordChar = true;
+            tbPassword.Enter += tbPassword_Enter;
+            tbPassword.Leave += tbPassword_Leave;
             // 
             // tbComfirmPassword
             // 
@@ -143,6 +148,8 @@
             tbComfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges7;
             tbComfirmPassword.Size = new Size(289, 39);
             tbComfirmPassword.TabIndex = 14;
+            tbComfirmPassword.Enter += tbComfirmPassword_Enter;
+            tbComfirmPassword.Leave += tbComfirmPassword_Leave;
             // 
             // tbEmail
             // 
@@ -169,6 +176,8 @@
             tbEmail.ShadowDecoration.CustomizableEdges = customizableEdges9;
             tbEmail.Size = new Size(289, 39);
             tbEmail.TabIndex = 15;
+            tbEmail.Enter += tbEmail_Enter;
+            tbEmail.Leave += tbEmail_Leave;
             // 
             // btRegister
             // 
@@ -197,7 +206,7 @@
             lbLogin.BackColor = Color.Transparent;
             lbLogin.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbLogin.ForeColor = SystemColors.Highlight;
-            lbLogin.Location = new Point(376, 478);
+            lbLogin.Location = new Point(386, 475);
             lbLogin.Margin = new Padding(4, 3, 4, 3);
             lbLogin.Name = "lbLogin";
             lbLogin.Size = new Size(128, 20);

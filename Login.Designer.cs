@@ -87,6 +87,8 @@
             tbUsername.ShadowDecoration.CustomizableEdges = customizableEdges3;
             tbUsername.Size = new Size(289, 39);
             tbUsername.TabIndex = 11;
+            tbUsername.Enter += tbUsername_Enter;
+            tbUsername.Leave += tbUsername_Leave;
             // 
             // tbPassword
             // 
@@ -106,13 +108,16 @@
             tbPassword.Location = new Point(299, 250);
             tbPassword.Margin = new Padding(4, 5, 4, 5);
             tbPassword.Name = "tbPassword";
-            tbPassword.PasswordChar = '\0';
+            tbPassword.PasswordChar = '●';
             tbPassword.PlaceholderForeColor = Color.Gainsboro;
             tbPassword.PlaceholderText = "";
             tbPassword.SelectedText = "";
             tbPassword.ShadowDecoration.CustomizableEdges = customizableEdges5;
             tbPassword.Size = new Size(289, 39);
             tbPassword.TabIndex = 12;
+            tbPassword.UseSystemPasswordChar = true;
+            tbPassword.Enter += tbPassword_Enter;
+            tbPassword.Leave += tbPassword_Leave;
             // 
             // lbForgetPassword
             // 
@@ -141,7 +146,7 @@
             btLogin.FillColor = Color.FromArgb(160, 210, 235);
             btLogin.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btLogin.ForeColor = Color.Black;
-            btLogin.Location = new Point(373, 353);
+            btLogin.Location = new Point(373, 341);
             btLogin.Margin = new Padding(4, 3, 4, 3);
             btLogin.Name = "btLogin";
             btLogin.ShadowDecoration.CustomizableEdges = customizableEdges7;
@@ -155,7 +160,7 @@
             lbRegister.BackColor = Color.Transparent;
             lbRegister.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbRegister.ForeColor = SystemColors.Highlight;
-            lbRegister.Location = new Point(481, 412);
+            lbRegister.Location = new Point(492, 394);
             lbRegister.Margin = new Padding(4, 3, 4, 3);
             lbRegister.Name = "lbRegister";
             lbRegister.Size = new Size(61, 22);
@@ -169,7 +174,7 @@
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2HtmlLabel2.ForeColor = SystemColors.WindowText;
-            guna2HtmlLabel2.Location = new Point(331, 412);
+            guna2HtmlLabel2.Location = new Point(342, 394);
             guna2HtmlLabel2.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(140, 22);
