@@ -22,7 +22,7 @@ namespace FunDraw
         public static string accessToken { get; set; } = "";
         public static string refreshToken { get; set; } = "";
 
-        public static async Task Login(string username, string password)
+        public static async Task<bool> Login(string username, string password)
         {
             var userCredentials = new Dictionary<string, string>
             {
@@ -31,21 +31,38 @@ namespace FunDraw
             };
 
             JObject response = await HTTPClient.PostFormUrlEncodedAsync($"{AppConfig.APP_API_HOST}/auth/login", userCredentials);
-            if (response.ContainsKey("Error")) return;
+            if (response.ContainsKey("error")) return false;
             var data = JsonConvert.DeserializeObject<Types.Login>(response.ToString());
-            LocalStorage.SetAccessToken(data.data.accessToken);
-            LocalStorage.SetRefreshToken(data.data.refreshToken);
+            if (data?.data?.accessToken != null && data?.data?.refreshToken != null)
+            {
+                LocalStorage.SetAccessToken(data.data.accessToken);
+                LocalStorage.SetRefreshToken(data.data.refreshToken);
+                return true;
+            }
+            return false;
         }
 
-        public static async Task Register(string username, string password, string email)
+        public static async Task<bool> Logout()
+        {
+            string refreshToken = LocalStorage.GetRefreshToken();
+            JObject response = await HTTPClient.PostAsync($"{AppConfig.APP_API_HOST}/auth/logout", $"refreshToken={refreshToken}");
+            if (response.ContainsKey("error")) return false;
+            LocalStorage.SetAccessToken(string.Empty);
+            LocalStorage.SetRefreshToken(string.Empty);
+            return true;
+        }
+
+        public static async Task<bool> Register(string username, string password, string email)
         {
             var userCredentials = new Dictionary<string, string>
             {
                 { "username", username },
-                { "password", password }
+                { "password", password },
+                { "email", email }
             };
 
-            JObject response = await HTTPClient.PostFormUrlEncodedAsync($"{AppConfig.APP_API_HOST}/auth/login", userCredentials);
+            JObject response = await HTTPClient.PostFormUrlEncodedAsync($"{AppConfig.APP_API_HOST}/auth/register", userCredentials);
+            return !response.ContainsKey("error");
         }
 
         public static async Task RefreshToken()

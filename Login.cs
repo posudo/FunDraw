@@ -28,8 +28,24 @@ namespace FunDraw
 
         private async void btLogin_Click(object sender, EventArgs e)
         {
-            await Session.Login(tbUsername.Text, tbPassword.Text);
-
+            if (await Session.Login(tbUsername.Text, tbPassword.Text))
+            {
+                JObject result = await Session.GET("users/profile", "");
+                if (result != null)
+                {
+                    MessageBox.Show("Login successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Form1 form1 = new Form1();
+                    form1.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Login failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Login failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void lbRegister_Click(object sender, EventArgs e)
