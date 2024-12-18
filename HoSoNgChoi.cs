@@ -15,13 +15,16 @@ namespace FunDraw
         private Rectangle circle;
         private Rectangle click_pic;
         private Rectangle player;
+        private Rectangle playerDisplay;
         private Rectangle id;
+        private Rectangle IDDisplay;
         private Rectangle tham_gia;
+        private Rectangle thamgiaDisplay;
         private Rectangle email;
-        private Rectangle password;
+        private Rectangle emailDisplay;
         private Rectangle forgot_pass;
         private Types.UserProfile userProfile;
-        public HoSoNgChoi(Types.UserProfile profile = null)
+        public HoSoNgChoi(Types.UserProfile? profile = null)
         {
             InitializeComponent();
             this.Resize += HoSoNgChoi_Resize;
@@ -29,9 +32,13 @@ namespace FunDraw
             circle = new Rectangle(guna2CirclePictureBox1.Location, guna2CirclePictureBox1.Size);
             click_pic = new Rectangle(Click_pic.Location, Click_pic.Size);
             player = new Rectangle(lbPlayer.Location, lbPlayer.Size);
+            playerDisplay = new Rectangle(lbPlayer.Location, lbPlayer.Size);
             id = new Rectangle(label2.Location, label2.Size);
+            IDDisplay = new Rectangle(lbID.Location, lbID.Size);
             tham_gia = new Rectangle(label3.Location, label3.Size);
+            thamgiaDisplay = new Rectangle(lbJoin.Location, lbJoin.Size);
             email = new Rectangle(label4.Location, label4.Size);
+            emailDisplay = new Rectangle(lbEmail.Location, lbEmail.Size);
             forgot_pass = new Rectangle(lbChangePassword.Location, lbChangePassword.Size);
             userProfile = profile ?? new Types.UserProfile
             {
@@ -44,10 +51,10 @@ namespace FunDraw
         }
         private void LoadUserProfile()
         {
-            lbPlayer.Text = $"Tên người chơi: {userProfile.Username}";
-            lbID.Text = $"ID: {userProfile.ID}";
-            lbJoin.Text = $"Ngày tham gia: {userProfile.JoinedDate:yyyy-MM-dd}";
-            lbEmail.Text = $"Email: {userProfile.Email}";
+            lbPlayer.Text = $"{userProfile.Username}";
+            lbID.Text = $"{userProfile.ID}";
+            lbJoin.Text = $"{userProfile.JoinedDate:yyyy-MM-dd}";
+            lbEmail.Text = $"{userProfile.Email}";
         }
         private async void UpdateUserProfile()
         {
@@ -82,14 +89,18 @@ namespace FunDraw
             c.Location = new Point(newX, newY);
             c.Size = new Size(newWidth, newHeight);
         }
-        private void HoSoNgChoi_Resize(object sender, EventArgs e)
+        private void HoSoNgChoi_Resize(object? sender, EventArgs e)
         {
             resize_control(guna2CirclePictureBox1, circle);
             resize_control(Click_pic, click_pic);
             resize_control(lbPlayer, player);
+            resize_control(lbPlayer, playerDisplay);
             resize_control(label2, id);
+            resize_control(lbID, IDDisplay);
             resize_control(label3, tham_gia);
+            resize_control(lbJoin, thamgiaDisplay);
             resize_control(label4, email);
+            resize_control(lbEmail, emailDisplay);
             resize_control(lbChangePassword, forgot_pass);
         }
 
@@ -98,7 +109,7 @@ namespace FunDraw
             try
             {
                 userProfile = await Session.GetUserProfile();
-                LoadUserProfile();
+                //LoadUserProfile();
             }
             catch (Exception ex)
             {
