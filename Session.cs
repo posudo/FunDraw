@@ -171,6 +171,24 @@ namespace FunDraw
                 return false;
             }
         }
+        public static async Task<Types.UserProfile> GetUserProfile()
+        {
+            string accessToken = LocalStorage.GetAccessToken();
+            Dictionary<string, string> headers = new Dictionary<string, string>
+    {
+        { "Authorization", $"Bearer {accessToken}" }
+    };
+
+            JObject response = await HTTPClient.GetAsync($"{AppConfig.APP_API_HOST}/users/profile", "", headers);
+
+            if (response.ContainsKey("error"))
+            {
+                throw new Exception("Unable to fetch user profile");
+            }
+            var profile = JsonConvert.DeserializeObject<Types.UserProfile>(response.ToString());
+            return profile;
+        }
+
 
     }
 }
