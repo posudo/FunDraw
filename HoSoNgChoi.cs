@@ -7,16 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-namespace FunDraw.Types
-{
-    public class UserProfile
-    {
-        public string Username { get; set; }
-        public string ID { get; set; }
-        public DateTime JoinedDate { get; set; }
-        public string Email { get; set; }
-    }
-}
 namespace FunDraw
 {
     public partial class HoSoNgChoi : Form

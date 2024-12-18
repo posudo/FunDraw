@@ -27,4 +27,11 @@ namespace FunDraw.Types
         public string accessToken;
         public string refreshToken;
     }
+    public class UserProfile
+    {
+        public string Username { get; set; }
+        public string ID { get; set; }
+        public DateTime JoinedDate { get; set; }
+        public string Email { get; set; }
+    }
 }
