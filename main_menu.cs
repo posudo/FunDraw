@@ -35,5 +35,18 @@ namespace FunDraw
                 tbMaPhong.ForeColor = Color.FromArgb(125, 137, 149);
             }
         }
+
+        private async void btDangXuat_Click(object sender, EventArgs e)
+        {
+            if (await Session.Logout())
+            {
+                MessageBox.Show("Đăng xuất thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Đăng xuất thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
