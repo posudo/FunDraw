@@ -37,7 +37,7 @@ namespace FunDraw
             {
                 if (await Session.ForgotPassword(user_email))
                 {
-                    MessageBox.Show("Password reset email has been sent. Please check your inbox.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Password has been sent to your email. Please check your inbox.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else MessageBox.Show($"Email not found. Please check the email address and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
