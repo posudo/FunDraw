@@ -611,10 +611,11 @@
             Controls.Add(guna2PictureBox1);
             Controls.Add(guna2Panel1);
             ForeColor = SystemColors.ControlDark;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(3, 2, 3, 2);
             Name = "In_Game_Guesser";
-            Text = "Form2";
+            Text = "Fun Draw";
             guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).EndInit();
             guna2Panel2.ResumeLayout(false);

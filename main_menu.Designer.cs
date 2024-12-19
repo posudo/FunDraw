@@ -1,4 +1,5 @@
-﻿namespace FunDraw
+﻿
+namespace FunDraw
 {
     partial class main_menu
     {
@@ -314,4 +315,3 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lbPlayer;
     }
 }
-

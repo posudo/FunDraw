@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ForgotPassword));
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             tbEmail = new Guna.UI2.WinForms.Guna2TextBox();
@@ -71,7 +72,7 @@
             tbEmail.Anchor = AnchorStyles.None;
             tbEmail.BorderRadius = 12;
             tbEmail.Cursor = Cursors.IBeam;
-            tbEmail.CustomizableEdges = customizableEdges1;
+            tbEmail.CustomizableEdges = customizableEdges5;
             tbEmail.DefaultText = "Email";
             tbEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -88,7 +89,7 @@
             tbEmail.PlaceholderForeColor = Color.Gainsboro;
             tbEmail.PlaceholderText = "";
             tbEmail.SelectedText = "";
-            tbEmail.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            tbEmail.ShadowDecoration.CustomizableEdges = customizableEdges6;
             tbEmail.Size = new Size(410, 39);
             tbEmail.TabIndex = 19;
             tbEmail.Enter += tbEmail_Enter;
@@ -99,7 +100,7 @@
             btSend.Anchor = AnchorStyles.None;
             btSend.Animated = true;
             btSend.BorderRadius = 12;
-            btSend.CustomizableEdges = customizableEdges3;
+            btSend.CustomizableEdges = customizableEdges7;
             btSend.DisabledState.BorderColor = Color.DarkGray;
             btSend.DisabledState.CustomBorderColor = Color.DarkGray;
             btSend.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -110,7 +111,7 @@
             btSend.Location = new Point(298, 288);
             btSend.Margin = new Padding(4, 3, 4, 3);
             btSend.Name = "btSend";
-            btSend.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btSend.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btSend.Size = new Size(166, 40);
             btSend.TabIndex = 20;
             btSend.Text = "Gửi";
@@ -125,9 +126,10 @@
             Controls.Add(tbEmail);
             Controls.Add(guna2HtmlLabel1);
             Controls.Add(guna2HtmlLabel2);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "ForgotPassword";
-            Text = "ForgotPasswordcs";
+            Text = "Forgot Password";
             ResumeLayout(false);
             PerformLayout();
         }
