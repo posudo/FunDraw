@@ -28,14 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             cpbLogo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             tbUsername = new Guna.UI2.WinForms.Guna2TextBox();
             tbPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -51,14 +50,13 @@
             cpbLogo.Anchor = AnchorStyles.None;
             cpbLogo.BackColor = SystemColors.ButtonHighlight;
             cpbLogo.FillColor = Color.Gainsboro;
-            cpbLogo.Image = Properties.Resources.dsadsad;
             cpbLogo.ImageRotate = 0F;
-            cpbLogo.Location = new Point(190, -161);
+            cpbLogo.Location = new Point(356, 29);
             cpbLogo.Margin = new Padding(4, 3, 4, 3);
             cpbLogo.Name = "cpbLogo";
-            cpbLogo.ShadowDecoration.CustomizableEdges = customizableEdges1;
+            cpbLogo.ShadowDecoration.CustomizableEdges = customizableEdges8;
             cpbLogo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            cpbLogo.Size = new Size(416, 353);
+            cpbLogo.Size = new Size(174, 141);
             cpbLogo.TabIndex = 10;
             cpbLogo.TabStop = false;
             // 
@@ -67,7 +65,7 @@
             tbUsername.Anchor = AnchorStyles.None;
             tbUsername.BorderRadius = 12;
             tbUsername.Cursor = Cursors.IBeam;
-            tbUsername.CustomizableEdges = customizableEdges2;
+            tbUsername.CustomizableEdges = customizableEdges9;
             tbUsername.DefaultText = "Tên đăng nhập";
             tbUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -84,18 +82,16 @@
             tbUsername.PlaceholderForeColor = Color.Gainsboro;
             tbUsername.PlaceholderText = "";
             tbUsername.SelectedText = "";
-            tbUsername.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            tbUsername.ShadowDecoration.CustomizableEdges = customizableEdges10;
             tbUsername.Size = new Size(289, 39);
             tbUsername.TabIndex = 11;
-            tbUsername.Enter += tbUsername_Enter;
-            tbUsername.Leave += tbUsername_Leave;
             // 
             // tbPassword
             // 
             tbPassword.Anchor = AnchorStyles.None;
             tbPassword.BorderRadius = 12;
             tbPassword.Cursor = Cursors.IBeam;
-            tbPassword.CustomizableEdges = customizableEdges4;
+            tbPassword.CustomizableEdges = customizableEdges11;
             tbPassword.DefaultText = "Mật khẩu";
             tbPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -108,16 +104,13 @@
             tbPassword.Location = new Point(299, 250);
             tbPassword.Margin = new Padding(4, 5, 4, 5);
             tbPassword.Name = "tbPassword";
-            tbPassword.PasswordChar = '●';
+            tbPassword.PasswordChar = '\0';
             tbPassword.PlaceholderForeColor = Color.Gainsboro;
             tbPassword.PlaceholderText = "";
             tbPassword.SelectedText = "";
-            tbPassword.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            tbPassword.ShadowDecoration.CustomizableEdges = customizableEdges12;
             tbPassword.Size = new Size(289, 39);
             tbPassword.TabIndex = 12;
-            tbPassword.UseSystemPasswordChar = true;
-            tbPassword.Enter += tbPassword_Enter;
-            tbPassword.Leave += tbPassword_Leave;
             // 
             // lbForgetPassword
             // 
@@ -132,13 +125,14 @@
             lbForgetPassword.TabIndex = 13;
             lbForgetPassword.Text = "Quên mật khẩu";
             lbForgetPassword.TextAlignment = ContentAlignment.MiddleCenter;
+            lbForgetPassword.Click += lbForgetPassword_Click;
             // 
             // btLogin
             // 
             btLogin.Anchor = AnchorStyles.None;
             btLogin.Animated = true;
             btLogin.BorderRadius = 12;
-            btLogin.CustomizableEdges = customizableEdges6;
+            btLogin.CustomizableEdges = customizableEdges13;
             btLogin.DisabledState.BorderColor = Color.DarkGray;
             btLogin.DisabledState.CustomBorderColor = Color.DarkGray;
             btLogin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -146,13 +140,14 @@
             btLogin.FillColor = Color.FromArgb(160, 210, 235);
             btLogin.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btLogin.ForeColor = Color.Black;
-            btLogin.Location = new Point(373, 341);
+            btLogin.Location = new Point(373, 353);
             btLogin.Margin = new Padding(4, 3, 4, 3);
             btLogin.Name = "btLogin";
-            btLogin.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            btLogin.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btLogin.Size = new Size(158, 40);
             btLogin.TabIndex = 14;
             btLogin.Text = "Đăng nhập";
+            btLogin.Click += btLogin_Click;
             // 
             // lbRegister
             // 
@@ -160,13 +155,14 @@
             lbRegister.BackColor = Color.Transparent;
             lbRegister.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbRegister.ForeColor = SystemColors.Highlight;
-            lbRegister.Location = new Point(492, 394);
+            lbRegister.Location = new Point(481, 412);
             lbRegister.Margin = new Padding(4, 3, 4, 3);
             lbRegister.Name = "lbRegister";
             lbRegister.Size = new Size(61, 22);
             lbRegister.TabIndex = 15;
             lbRegister.Text = "Đăng ký";
             lbRegister.TextAlignment = ContentAlignment.MiddleCenter;
+            lbRegister.Click += lbRegister_Click;
             // 
             // guna2HtmlLabel2
             // 
@@ -174,7 +170,7 @@
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             guna2HtmlLabel2.ForeColor = SystemColors.WindowText;
-            guna2HtmlLabel2.Location = new Point(342, 394);
+            guna2HtmlLabel2.Location = new Point(331, 412);
             guna2HtmlLabel2.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(140, 22);
@@ -195,7 +191,6 @@
             Controls.Add(tbPassword);
             Controls.Add(tbUsername);
             Controls.Add(cpbLogo);
-            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "Login";
             Text = "Login";

@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -17,76 +18,52 @@ namespace FunDraw
             InitializeComponent();
         }
 
-        private void tbUsername_Enter(object sender, EventArgs e)
+        private async void btRegister_Click(object sender, EventArgs e)
         {
-            if (tbUsername.Text == "Tên đăng nhập")
+
+            string user_email = tbEmail.Text;
+
+            if (string.IsNullOrWhiteSpace(user_email))
             {
-                tbUsername.Text = "";
-                tbUsername.ForeColor = Color.Black;
+                MessageBox.Show("Please enter your email address.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
+            if (!Regex.IsMatch(user_email, emailPattern))
+            {
+                MessageBox.Show("Please enter a valid email address.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (tbPassword.Text == tbComfirmPassword.Text)
+            {
+                try
+                {
+                    if (await Session.Register(tbUsername.Text, tbPassword.Text, tbEmail.Text))
+                    {
+                        MessageBox.Show("Registration successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Registration failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Password and Confirm Password do not match");
+                return;
             }
         }
 
-        private void tbUsername_Leave(object sender, EventArgs e)
+        private void lbLogin_Click(object sender, EventArgs e)
         {
-            if (tbUsername.Text == "")
-            {
-                tbUsername.Text = "Tên đăng nhập";
-                tbUsername.ForeColor = Color.FromArgb(125, 137, 149);
-            }
-        }
-
-        private void tbPassword_Enter(object sender, EventArgs e)
-        {
-            if (tbPassword.Text == "Mật khẩu")
-            {
-                tbPassword.Text = "";
-                tbPassword.ForeColor = Color.Black;
-            }
-        }
-
-        private void tbPassword_Leave(object sender, EventArgs e)
-        {
-            if (tbPassword.Text == "")
-            {
-                tbPassword.Text = "Mật khẩu";
-                tbPassword.ForeColor = Color.FromArgb(125, 137, 149);
-            }
-        }
-
-        private void tbComfirmPassword_Enter(object sender, EventArgs e)
-        {
-            if (tbComfirmPassword.Text == "Xác nhận mật khẩu")
-            {
-                tbComfirmPassword.Text = "";
-                tbComfirmPassword.ForeColor = Color.Black;
-            }
-        }
-
-        private void tbComfirmPassword_Leave(object sender, EventArgs e)
-        {
-            if (tbComfirmPassword.Text == "")
-            {
-                tbComfirmPassword.Text = "Xác nhận mật khẩu";
-                tbComfirmPassword.ForeColor = Color.FromArgb(125, 137, 149);
-            }
-        }
-
-        private void tbEmail_Enter(object sender, EventArgs e)
-        {
-            if (tbEmail.Text == "Email")
-            {
-                tbEmail.Text = "";
-                tbEmail.ForeColor = Color.Black;
-            }
-        }
-
-        private void tbEmail_Leave(object sender, EventArgs e)
-        {
-            if (tbEmail.Text == "")
-            {
-                tbEmail.Text = "Email";
-                tbEmail.ForeColor = Color.FromArgb(125, 137, 149);
-            }
+            Close();
         }
     }
 }

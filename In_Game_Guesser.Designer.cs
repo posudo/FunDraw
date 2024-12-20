@@ -73,6 +73,14 @@
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
+            button1 = new Button();
+            panel1 = new Panel();
+            button3 = new Button();
+            Clear = new Button();
+            Line = new Button();
+            Rectangle = new Button();
+            Elipse = new Button();
+            button2 = new Button();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             guna2Panel2.SuspendLayout();
@@ -80,6 +88,7 @@
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox3).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
+            panel1.SuspendLayout();
             SuspendLayout();
             // 
             // guna2Panel1
@@ -91,11 +100,11 @@
             guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.FillColor = Color.Gainsboro;
             guna2Panel1.ForeColor = SystemColors.AppWorkspace;
-            guna2Panel1.Location = new Point(830, 9);
+            guna2Panel1.Location = new Point(1122, 9);
             guna2Panel1.Margin = new Padding(3, 2, 3, 2);
             guna2Panel1.Name = "guna2Panel1";
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            guna2Panel1.Size = new Size(206, 488);
+            guna2Panel1.Size = new Size(206, 680);
             guna2Panel1.TabIndex = 0;
             // 
             // guna2TextBox1
@@ -115,7 +124,7 @@
             guna2TextBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
             guna2TextBox1.ForeColor = Color.Black;
             guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(0, 448);
+            guna2TextBox1.Location = new Point(0, 640);
             guna2TextBox1.Name = "guna2TextBox1";
             guna2TextBox1.PasswordChar = '\0';
             guna2TextBox1.PlaceholderForeColor = Color.DarkGray;
@@ -134,7 +143,7 @@
             listBox1.Location = new Point(0, 24);
             listBox1.Margin = new Padding(3, 2, 3, 2);
             listBox1.Name = "listBox1";
-            listBox1.Size = new Size(206, 424);
+            listBox1.Size = new Size(206, 604);
             listBox1.TabIndex = 0;
             // 
             // guna2PictureBox1
@@ -147,10 +156,13 @@
             guna2PictureBox1.Margin = new Padding(3, 2, 3, 2);
             guna2PictureBox1.Name = "guna2PictureBox1";
             guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            guna2PictureBox1.Size = new Size(621, 464);
+            guna2PictureBox1.Size = new Size(913, 566);
             guna2PictureBox1.TabIndex = 1;
             guna2PictureBox1.TabStop = false;
-            guna2PictureBox1.Click += guna2PictureBox1_Click;
+            guna2PictureBox1.Paint += guna2PictureBox1_Paint;
+            guna2PictureBox1.MouseDown += guna2PictureBox1_MouseDown;
+            guna2PictureBox1.MouseMove += guna2PictureBox1_MouseMove;
+            guna2PictureBox1.MouseUp += guna2PictureBox1_MouseUp;
             // 
             // guna2Panel2
             // 
@@ -410,7 +422,6 @@
             guna2Button1.Size = new Size(182, 38);
             guna2Button1.TabIndex = 0;
             guna2Button1.TextOffset = new Point(10, 0);
-            guna2Button1.Click += guna2Button1_Click;
             // 
             // label1
             // 
@@ -447,12 +458,152 @@
             label3.TabIndex = 5;
             label3.Text = "Tung Nguyen";
             // 
+            // button1
+            // 
+            button1.Cursor = Cursors.Hand;
+            button1.FlatAppearance.MouseDownBackColor = Color.Maroon;
+            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 0, 0);
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.ForeColor = Color.White;
+            button1.Image = (Image)resources.GetObject("button1.Image");
+            button1.ImageAlign = ContentAlignment.MiddleRight;
+            button1.Location = new Point(103, 12);
+            button1.Name = "button1";
+            button1.Size = new Size(56, 63);
+            button1.TabIndex = 6;
+            button1.Text = "Pencil";
+            button1.TextAlign = ContentAlignment.BottomCenter;
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
+            // panel1
+            // 
+            panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.BackColor = Color.FromArgb(64, 64, 64);
+            panel1.Controls.Add(button3);
+            panel1.Controls.Add(Clear);
+            panel1.Controls.Add(Line);
+            panel1.Controls.Add(Rectangle);
+            panel1.Controls.Add(Elipse);
+            panel1.Controls.Add(button2);
+            panel1.Controls.Add(button1);
+            panel1.Location = new Point(203, 604);
+            panel1.Name = "panel1";
+            panel1.Size = new Size(913, 88);
+            panel1.TabIndex = 7;
+            // 
+            // button3
+            // 
+            button3.Cursor = Cursors.Hand;
+            button3.FlatAppearance.MouseDownBackColor = Color.Maroon;
+            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 0, 0);
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.ForeColor = Color.White;
+            button3.Image = (Image)resources.GetObject("button3.Image");
+            button3.ImageAlign = ContentAlignment.TopRight;
+            button3.Location = new Point(492, 12);
+            button3.Name = "button3";
+            button3.Size = new Size(58, 63);
+            button3.TabIndex = 12;
+            button3.Text = "Color";
+            button3.TextAlign = ContentAlignment.BottomCenter;
+            button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // Clear
+            // 
+            Clear.FlatAppearance.MouseDownBackColor = Color.Maroon;
+            Clear.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 0, 0);
+            Clear.FlatStyle = FlatStyle.Flat;
+            Clear.ForeColor = Color.White;
+            Clear.ImageAlign = ContentAlignment.MiddleRight;
+            Clear.Location = new Point(27, 12);
+            Clear.Name = "Clear";
+            Clear.Size = new Size(56, 63);
+            Clear.TabIndex = 11;
+            Clear.Text = "Clear";
+            Clear.UseVisualStyleBackColor = true;
+            Clear.Click += Clear_Click;
+            // 
+            // Line
+            // 
+            Line.Cursor = Cursors.Hand;
+            Line.FlatAppearance.MouseDownBackColor = Color.Maroon;
+            Line.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 0, 0);
+            Line.FlatStyle = FlatStyle.Flat;
+            Line.ForeColor = Color.White;
+            Line.Image = (Image)resources.GetObject("Line.Image");
+            Line.ImageAlign = ContentAlignment.TopCenter;
+            Line.Location = new Point(412, 12);
+            Line.Name = "Line";
+            Line.Size = new Size(58, 63);
+            Line.TabIndex = 10;
+            Line.Text = "Line";
+            Line.TextAlign = ContentAlignment.BottomCenter;
+            Line.UseVisualStyleBackColor = true;
+            Line.Click += Line_Click;
+            // 
+            // Rectangle
+            // 
+            Rectangle.Cursor = Cursors.Hand;
+            Rectangle.FlatAppearance.MouseDownBackColor = Color.Maroon;
+            Rectangle.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 0, 0);
+            Rectangle.FlatStyle = FlatStyle.Flat;
+            Rectangle.ForeColor = Color.White;
+            Rectangle.Image = (Image)resources.GetObject("Rectangle.Image");
+            Rectangle.ImageAlign = ContentAlignment.TopCenter;
+            Rectangle.Location = new Point(333, 12);
+            Rectangle.Name = "Rectangle";
+            Rectangle.Size = new Size(58, 63);
+            Rectangle.TabIndex = 9;
+            Rectangle.Text = "Rectan";
+            Rectangle.TextAlign = ContentAlignment.BottomCenter;
+            Rectangle.UseVisualStyleBackColor = true;
+            Rectangle.Click += Rectangle_Click;
+            // 
+            // Elipse
+            // 
+            Elipse.Cursor = Cursors.Hand;
+            Elipse.FlatAppearance.MouseDownBackColor = Color.Maroon;
+            Elipse.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 0, 0);
+            Elipse.FlatStyle = FlatStyle.Flat;
+            Elipse.ForeColor = Color.White;
+            Elipse.Image = (Image)resources.GetObject("Elipse.Image");
+            Elipse.ImageAlign = ContentAlignment.TopCenter;
+            Elipse.Location = new Point(256, 12);
+            Elipse.Name = "Elipse";
+            Elipse.Size = new Size(58, 63);
+            Elipse.TabIndex = 8;
+            Elipse.Text = "Elipse";
+            Elipse.TextAlign = ContentAlignment.BottomCenter;
+            Elipse.UseVisualStyleBackColor = true;
+            Elipse.Click += Elipse_Click;
+            // 
+            // button2
+            // 
+            button2.Cursor = Cursors.Hand;
+            button2.FlatAppearance.MouseDownBackColor = Color.Maroon;
+            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 0, 0);
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.ForeColor = Color.White;
+            button2.Image = (Image)resources.GetObject("button2.Image");
+            button2.ImageAlign = ContentAlignment.TopRight;
+            button2.Location = new Point(181, 12);
+            button2.Name = "button2";
+            button2.Size = new Size(56, 63);
+            button2.TabIndex = 7;
+            button2.Text = "Eraser";
+            button2.TextAlign = ContentAlignment.BottomCenter;
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // In_Game_Guesser
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonFace;
-            ClientSize = new Size(1047, 512);
+            ClientSize = new Size(1339, 704);
+            Controls.Add(panel1);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -461,6 +612,7 @@
             Controls.Add(guna2Panel1);
             ForeColor = SystemColors.ControlDark;
             Icon = (Icon)resources.GetObject("$this.Icon");
+            FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(3, 2, 3, 2);
             Name = "In_Game_Guesser";
             Text = "Fun Draw";
@@ -472,6 +624,7 @@
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox3).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
+            panel1.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -502,5 +655,13 @@
         private Label label7;
         private Label label5;
         private Label label4;
+        private Button button1;
+        private Panel panel1;
+        private Button button2;
+        private Button Elipse;
+        private Button Rectangle;
+        private Button Line;
+        private Button Clear;
+        private Button button3;
     }
 }

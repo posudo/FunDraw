@@ -1,4 +1,5 @@
-﻿namespace FunDraw
+﻿
+namespace FunDraw
 {
     partial class Register
     {
@@ -39,7 +40,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             cpbLogo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             tbUsername = new Guna.UI2.WinForms.Guna2TextBox();
             tbPassword = new Guna.UI2.WinForms.Guna2TextBox();
@@ -55,14 +55,13 @@
             cpbLogo.Anchor = AnchorStyles.None;
             cpbLogo.BackColor = SystemColors.ButtonHighlight;
             cpbLogo.FillColor = Color.Gainsboro;
-            cpbLogo.Image = Properties.Resources.dsadsad;
             cpbLogo.ImageRotate = 0F;
-            cpbLogo.Location = new Point(195, -150);
+            cpbLogo.Location = new Point(367, 44);
             cpbLogo.Margin = new Padding(4, 3, 4, 3);
             cpbLogo.Name = "cpbLogo";
             cpbLogo.ShadowDecoration.CustomizableEdges = customizableEdges1;
             cpbLogo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            cpbLogo.Size = new Size(413, 376);
+            cpbLogo.Size = new Size(174, 141);
             cpbLogo.TabIndex = 11;
             cpbLogo.TabStop = false;
             // 
@@ -91,8 +90,6 @@
             tbUsername.ShadowDecoration.CustomizableEdges = customizableEdges3;
             tbUsername.Size = new Size(289, 39);
             tbUsername.TabIndex = 12;
-            tbUsername.Enter += tbUsername_Enter;
-            tbUsername.Leave += tbUsername_Leave;
             // 
             // tbPassword
             // 
@@ -112,16 +109,13 @@
             tbPassword.Location = new Point(304, 266);
             tbPassword.Margin = new Padding(4, 5, 4, 5);
             tbPassword.Name = "tbPassword";
-            tbPassword.PasswordChar = '●';
+            tbPassword.PasswordChar = '\0';
             tbPassword.PlaceholderForeColor = Color.Gainsboro;
             tbPassword.PlaceholderText = "";
             tbPassword.SelectedText = "";
             tbPassword.ShadowDecoration.CustomizableEdges = customizableEdges5;
             tbPassword.Size = new Size(289, 39);
             tbPassword.TabIndex = 13;
-            tbPassword.UseSystemPasswordChar = true;
-            tbPassword.Enter += tbPassword_Enter;
-            tbPassword.Leave += tbPassword_Leave;
             // 
             // tbComfirmPassword
             // 
@@ -148,8 +142,6 @@
             tbComfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges7;
             tbComfirmPassword.Size = new Size(289, 39);
             tbComfirmPassword.TabIndex = 14;
-            tbComfirmPassword.Enter += tbComfirmPassword_Enter;
-            tbComfirmPassword.Leave += tbComfirmPassword_Leave;
             // 
             // tbEmail
             // 
@@ -176,8 +168,6 @@
             tbEmail.ShadowDecoration.CustomizableEdges = customizableEdges9;
             tbEmail.Size = new Size(289, 39);
             tbEmail.TabIndex = 15;
-            tbEmail.Enter += tbEmail_Enter;
-            tbEmail.Leave += tbEmail_Leave;
             // 
             // btRegister
             // 
@@ -199,6 +189,7 @@
             btRegister.Size = new Size(166, 40);
             btRegister.TabIndex = 16;
             btRegister.Text = "Đăng ký";
+            btRegister.Click += btRegister_Click;
             // 
             // lbLogin
             // 
@@ -206,13 +197,14 @@
             lbLogin.BackColor = Color.Transparent;
             lbLogin.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbLogin.ForeColor = SystemColors.Highlight;
-            lbLogin.Location = new Point(386, 475);
+            lbLogin.Location = new Point(376, 478);
             lbLogin.Margin = new Padding(4, 3, 4, 3);
             lbLogin.Name = "lbLogin";
             lbLogin.Size = new Size(128, 20);
             lbLogin.TabIndex = 17;
             lbLogin.Text = "Quay lại đăng nhập";
             lbLogin.TextAlignment = ContentAlignment.MiddleCenter;
+            lbLogin.Click += lbLogin_Click;
             // 
             // Register
             // 
@@ -227,7 +219,6 @@
             Controls.Add(tbPassword);
             Controls.Add(tbUsername);
             Controls.Add(cpbLogo);
-            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
             Name = "Register";
             Text = "Register";

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,7 +9,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using FunDraw;
 namespace FunDraw
 {
     public partial class Login : Form
@@ -17,41 +20,38 @@ namespace FunDraw
             InitializeComponent();
         }
 
-        private void tbUsername_Enter(object sender, EventArgs e)
+        private void lbForgetPassword_Click(object sender, EventArgs e)
         {
-            if (tbUsername.Text == "Tên đăng nhập")
-            {
-                tbUsername.Text = "";
-                tbUsername.ForeColor = Color.Black;
-            }
-
+            ForgotPassword forgotPassword = new ForgotPassword();
+            forgotPassword.ShowDialog();
         }
 
-        private void tbUsername_Leave(object sender, EventArgs e)
+        private async void btLogin_Click(object sender, EventArgs e)
         {
-            if (tbUsername.Text == "")
+            if (await Session.Login(tbUsername.Text, tbPassword.Text))
             {
-                tbUsername.Text = "Tên đăng nhập";
-                tbUsername.ForeColor = Color.FromArgb(125, 137, 149);
+                JObject result = await Session.GET("users/profile", "");
+                if (result != null)
+                {
+                    MessageBox.Show("Login successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Form1 form1 = new Form1();
+                    form1.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("Login failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Login failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
-        private void tbPassword_Enter(object sender, EventArgs e)
+        private void lbRegister_Click(object sender, EventArgs e)
         {
-            if (tbPassword.Text == "Mật khẩu")
-            {
-                tbPassword.Text = "";
-                tbPassword.ForeColor = Color.Black;
-            }
-        }
-
-        private void tbPassword_Leave(object sender, EventArgs e)
-        {
-            if (tbPassword.Text == "")
-            {
-                tbPassword.Text = "Mật khẩu";
-                tbPassword.ForeColor = Color.FromArgb(125, 137, 149);
-            }
+            Register register = new Register();
+            register.ShowDialog();
         }
     }
 }
