@@ -169,6 +169,7 @@
             Controls.Add(guna2CirclePictureBox1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
             Name = "HoSoNgChoi";
             Text = "User Profile";
             Load += HoSoNgChoi_Load;
