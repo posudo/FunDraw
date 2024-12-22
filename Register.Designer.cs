@@ -1,4 +1,5 @@
-﻿namespace FunDraw
+﻿
+namespace FunDraw
 {
     partial class Register
     {

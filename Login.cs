@@ -28,12 +28,6 @@ namespace FunDraw
 
         private async void btLogin_Click(object sender, EventArgs e)
         {
-          if(string.IsNullOrEmpty(tbUsername.Text)|| string.IsNullOrEmpty(tbPassword.Text))
-            {
-                MessageBox.Show("Please enter all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                return;
-            }
-
             if (await Session.Login(tbUsername.Text, tbPassword.Text))
             {
                 JObject result = await Session.GET("users/profile", "");

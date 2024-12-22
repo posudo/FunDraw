@@ -22,13 +22,10 @@ namespace FunDraw
         {
 
             string user_email = tbEmail.Text;
-            string username = tbUsername.Text;
-            string password = tbPassword.Text;
-            string confirm = tbComfirmPassword.Text;
 
-            if (string.IsNullOrWhiteSpace(user_email)|| string.IsNullOrWhiteSpace(username)|| string.IsNullOrWhiteSpace(password)|| string.IsNullOrWhiteSpace(confirm))
+            if (string.IsNullOrWhiteSpace(user_email))
             {
-                MessageBox.Show("Please enter all required fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Please enter your email address.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
             string emailPattern = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";

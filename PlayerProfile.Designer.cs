@@ -1,6 +1,6 @@
 ﻿namespace FunDraw
 {
-    partial class HoSoNgChoi
+    partial class PlayerProfile
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayerProfile));
             guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            Player = new Label();
+            lbPlayer = new Label();
             label2 = new Label();
             Click_pic = new Label();
             label3 = new Label();
             label4 = new Label();
-            label5 = new Label();
-            label6 = new Label();
+            lbChangePassword = new Label();
+            lbID = new Label();
+            lbEmail = new Label();
+            lbJoin = new Label();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -48,21 +51,21 @@
             guna2CirclePictureBox1.Location = new Point(81, 47);
             guna2CirclePictureBox1.Margin = new Padding(3, 2, 3, 2);
             guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2CirclePictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges1;
             guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             guna2CirclePictureBox1.Size = new Size(143, 123);
             guna2CirclePictureBox1.TabIndex = 0;
             guna2CirclePictureBox1.TabStop = false;
             // 
-            // Player
+            // lbPlayer
             // 
-            Player.AutoSize = true;
-            Player.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            Player.Location = new Point(279, 47);
-            Player.Name = "Player";
-            Player.Size = new Size(85, 32);
-            Player.TabIndex = 1;
-            Player.Text = "Player";
+            lbPlayer.AutoSize = true;
+            lbPlayer.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbPlayer.Location = new Point(279, 47);
+            lbPlayer.Name = "lbPlayer";
+            lbPlayer.Size = new Size(85, 32);
+            lbPlayer.TabIndex = 1;
+            lbPlayer.Text = "Player";
             // 
             // label2
             // 
@@ -76,10 +79,11 @@
             // 
             // Click_pic
             // 
+            Click_pic.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
             Click_pic.AutoSize = true;
             Click_pic.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Click_pic.ForeColor = SystemColors.ButtonShadow;
-            Click_pic.Location = new Point(72, 188);
+            Click_pic.Location = new Point(63, 189);
             Click_pic.Name = "Click_pic";
             Click_pic.Size = new Size(183, 21);
             Click_pic.TabIndex = 3;
@@ -105,44 +109,69 @@
             label4.TabIndex = 5;
             label4.Text = "Email:";
             // 
-            // label5
+            // lbChangePassword
             // 
-            label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label5.Location = new Point(278, 188);
-            label5.Name = "label5";
-            label5.Size = new Size(78, 21);
-            label5.TabIndex = 6;
-            label5.Text = "Mật khẩu:";
+            lbChangePassword.AutoSize = true;
+            lbChangePassword.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbChangePassword.ForeColor = Color.DodgerBlue;
+            lbChangePassword.Location = new Point(279, 190);
+            lbChangePassword.Name = "lbChangePassword";
+            lbChangePassword.Size = new Size(103, 20);
+            lbChangePassword.TabIndex = 7;
+            lbChangePassword.Text = "Đổi mật khẩu";
+            lbChangePassword.Click += lbChangePassword_Click;
             // 
-            // label6
+            // lbID
             // 
-            label6.AutoSize = true;
-            label6.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label6.ForeColor = Color.DodgerBlue;
-            label6.Location = new Point(279, 225);
-            label6.Name = "label6";
-            label6.Size = new Size(103, 20);
-            label6.TabIndex = 7;
-            label6.Text = "Đổi mật khẩu";
+            lbID.AutoSize = true;
+            lbID.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbID.Location = new Point(313, 85);
+            lbID.Name = "lbID";
+            lbID.Size = new Size(25, 20);
+            lbID.TabIndex = 8;
+            lbID.Text = "ID";
+            // 
+            // lbEmail
+            // 
+            lbEmail.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbEmail.Location = new Point(361, 120);
+            lbEmail.Name = "lbEmail";
+            lbEmail.Size = new Size(92, 21);
+            lbEmail.TabIndex = 0;
+            lbEmail.Text = "Day";
+            // 
+            // lbJoin
+            // 
+            lbJoin.AutoSize = true;
+            lbJoin.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbJoin.ForeColor = SystemColors.ActiveCaptionText;
+            lbJoin.Location = new Point(335, 155);
+            lbJoin.Name = "lbJoin";
+            lbJoin.Size = new Size(47, 20);
+            lbJoin.TabIndex = 7;
+            lbJoin.Text = "Email";
             // 
             // HoSoNgChoi
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ButtonHighlight;
-            ClientSize = new Size(584, 283);
-            Controls.Add(label6);
-            Controls.Add(label5);
+            ClientSize = new Size(536, 274);
+            Controls.Add(lbEmail);
+            Controls.Add(lbJoin);
+            Controls.Add(lbID);
+            Controls.Add(lbChangePassword);
             Controls.Add(label4);
             Controls.Add(label3);
             Controls.Add(Click_pic);
             Controls.Add(label2);
-            Controls.Add(Player);
+            Controls.Add(lbPlayer);
             Controls.Add(guna2CirclePictureBox1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
             Name = "HoSoNgChoi";
-            Text = "HoSoNgChoi";
+            Text = "User Profile";
             Load += HoSoNgChoi_Load;
             Resize += HoSoNgChoi_Resize;
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).EndInit();
@@ -153,12 +182,14 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
-        private Label Player;
+        private Label lbPlayer;
         private Label label2;
         private Label Click_pic;
         private Label label3;
         private Label label4;
-        private Label label5;
-        private Label label6;
+        private Label lbChangePassword;
+        private Label lbID;
+        private Label lbEmail;
+        private Label lbJoin;
     }
 }
