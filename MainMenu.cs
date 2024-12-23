@@ -35,7 +35,7 @@ namespace FunDraw
             if (result != null)
             {
                 GameManager.roomId = result["id"].ToString();
-                GameManager.isHost = true;
+                FormState.HostRoomForm();
                 Invoke((MethodInvoker)(() => this.Close()));
             }
         }
@@ -54,6 +54,7 @@ namespace FunDraw
                 else
                 {
                     GameManager.roomId = result["id"].ToString();
+                    FormState.WaitingRoomForm();
                     Invoke((MethodInvoker)(() => this.Close()));
                 }
             }

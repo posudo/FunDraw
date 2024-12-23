@@ -13,22 +13,22 @@ namespace FunDraw
             ApplicationConfiguration.Initialize();
             Application.Run(new MainMenu());
 
-            if (GameManager.roomId != "" && !GameManager.gameStart)
-            {
-                if (GameManager.isHost)
-                {
-                    Application.Run(new HostRoom());
-                }
-                else
-                {
-                    Application.Run(new WaitingRoom());
-                }
-            }
+            //if (GameManager.roomId != "" && !GameManager.gameStart)
+            //{
+            //    if (GameManager.isHost)
+            //    {
+            //        Application.Run(new HostRoom());
+            //    }
+            //    else
+            //    {
+            //        Application.Run(new WaitingRoom());
+            //    }
+            //}
 
-            if (GameManager.roomId != "" && GameManager.gameStart)
-            {
-                Application.Run(new GameRoom());
-            }
+            //if (GameManager.roomId != "" && GameManager.gameStart)
+            //{
+            //    Application.Run(new GameRoom());
+            //}
         }
     }
 }

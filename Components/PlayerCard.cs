@@ -22,5 +22,11 @@ namespace FunDraw.Components
             get => lbl_playerName.Text;
             set => lbl_playerName.Text = value;
         }
+
+        public int PlayerScore
+        {
+            get => int.Parse(lbl_playerScore.Text.Replace("Score: ",""));
+            set => lbl_playerScore.Text = $"Score: {value}";
+        }
     }
 }

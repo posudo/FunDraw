@@ -12,6 +12,7 @@ namespace FunDraw
     {
         private static readonly Lazy<Gateway> _instance = new(() => new Gateway());
         private SocketIOClient.SocketIO _socket;
+        private bool socketState = false;
 
         public static Gateway Instance => _instance.Value;
 
@@ -19,8 +20,16 @@ namespace FunDraw
         {
             _socket = new SocketIOClient.SocketIO("ws://localhost:3000/game");
 
-            _socket.OnConnected += (sender, e) => Debug.WriteLine("Connected to WebSocket.");
-            _socket.OnDisconnected += (sender, reason) => Debug.WriteLine($"Disconnected: {reason}");
+            _socket.OnConnected += (sender, e) =>
+            {
+                Debug.WriteLine("Connected to WebSocket.");
+                socketState = true;
+            };
+            _socket.OnDisconnected += (sender, reason) =>
+            {
+                Debug.WriteLine($"Disconnected: {reason}");
+                socketState = false;
+            };
         }
 
         public async void Connect()
@@ -54,6 +63,11 @@ namespace FunDraw
 
         public async void Emit(string eventName, params object[] data)
         {
+            if (!socketState)
+            {
+                Debug.WriteLine("Socket is not connected.");
+                return;
+            }
             try
             {
                 await _socket.EmitAsync(eventName, data);

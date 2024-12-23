@@ -12,6 +12,7 @@ using Newtonsoft.Json;
 using SocketIOClient;
 using System.Diagnostics;
 using FunDraw.Components;
+using FunDraw.Types;
 namespace FunDraw
 {
     public partial class WaitingRoom : Form
@@ -22,8 +23,9 @@ namespace FunDraw
             flowLayoutPanel1.Controls.Clear();
 
             label1.Text = $"ID: {GameManager.roomId.Insert(4, "-")}";
-            
+
             Gateway.Instance.On("playerList", updatePlayerList);
+            Gateway.Instance.On("chatMessage", chatMessageHandler);
             Gateway.Instance.On("startGame", startGameHandler);
         }
 
@@ -34,19 +36,26 @@ namespace FunDraw
 
         private void updatePlayerList(SocketIOResponse response)
         {
-            var result = response.GetValue<string>();
-            var players = result.Split(",");
-            Debug.WriteLine(result);
+            PlayerList[] data = response.GetValue<PlayerList[]>();
 
             Invoke((MethodInvoker)(() => flowLayoutPanel1.Controls.Clear()));
 
-            for (int i = 0; i < players.Length; i++)
+            for (int i = 0; i < data.Length; i++)
             {
                 PlayerCard pc = new PlayerCard();
-                pc.PlayerName = $"{players[i]}";
+                pc.PlayerName = $"{data[i].id}";
+                pc.PlayerScore = data[i].score;
 
                 Invoke((MethodInvoker)(() => flowLayoutPanel1.Controls.Add(pc)));
             }
+        }
+
+        private void chatMessageHandler(SocketIOResponse response)
+        {
+            var result = response.GetValue<string>();
+            var data = JsonConvert.DeserializeObject<JObject>(result);
+
+            Invoke((MethodInvoker)(() => chatBox.AppendText($"{data["sender"]}: {data["message"]}\n")));
         }
 
         private void startGameHandler(SocketIOResponse response)
@@ -60,6 +69,7 @@ namespace FunDraw
                 return;
             }
             GameManager.gameStart = true;
+            FormState.GameRoomForm();
             Invoke((MethodInvoker)(() => this.Close()));
         }
 
@@ -67,6 +77,17 @@ namespace FunDraw
         {
             Clipboard.SetText(GameManager.roomId.Insert(4, "-"));
             MessageBox.Show("Copied room code to clipboard!");
-        }       
+        }
+
+        private void chatInput_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && chatInput.Focused)
+            {
+                Gateway.Instance.Emit("chatMessage", new { roomId = GameManager.roomId, message = chatInput.Text });
+                chatInput.Clear();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }

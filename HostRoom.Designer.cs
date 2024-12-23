@@ -50,8 +50,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HostRoom));
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            chatBox = new RichTextBox();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
+            chatInput = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
             lbWaiting = new Label();
             lbThamGia = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -73,6 +72,7 @@
             cobWordsCount = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
+            chatBox = new RichTextBox();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
@@ -82,7 +82,7 @@
             guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             guna2Panel1.BorderRadius = 20;
             guna2Panel1.Controls.Add(chatBox);
-            guna2Panel1.Controls.Add(guna2TextBox1);
+            guna2Panel1.Controls.Add(chatInput);
             guna2Panel1.CustomizableEdges = customizableEdges3;
             guna2Panel1.FillColor = Color.Gainsboro;
             guna2Panel1.ForeColor = SystemColors.AppWorkspace;
@@ -93,42 +93,34 @@
             guna2Panel1.Size = new Size(206, 487);
             guna2Panel1.TabIndex = 0;
             // 
-            // chatBox
+            // chatInput
             // 
-            chatBox.BackColor = Color.Gainsboro;
-            chatBox.BorderStyle = BorderStyle.None;
-            chatBox.Location = new Point(0, 24);
-            chatBox.Name = "chatBox";
-            chatBox.Size = new Size(206, 428);
-            chatBox.TabIndex = 2;
-            chatBox.Text = "";
-            // 
-            // guna2TextBox1
-            // 
-            guna2TextBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            guna2TextBox1.BorderRadius = 20;
+            chatInput.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            chatInput.BorderRadius = 20;
             customizableEdges1.TopLeft = false;
             customizableEdges1.TopRight = false;
-            guna2TextBox1.CustomizableEdges = customizableEdges1;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FillColor = Color.FromArgb(76, 175, 80);
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            guna2TextBox1.ForeColor = Color.Black;
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(0, 447);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderForeColor = Color.DarkGray;
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2TextBox1.Size = new Size(206, 40);
-            guna2TextBox1.TabIndex = 1;
+            chatInput.CustomizableEdges = customizableEdges1;
+            chatInput.DefaultText = "";
+            chatInput.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            chatInput.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            chatInput.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            chatInput.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            chatInput.FillColor = Color.FromArgb(76, 175, 80);
+            chatInput.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            chatInput.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            chatInput.ForeColor = Color.Black;
+            chatInput.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            chatInput.Location = new Point(0, 447);
+            chatInput.Name = "chatInput";
+            chatInput.PasswordChar = '\0';
+            chatInput.PlaceholderForeColor = Color.DarkGray;
+            chatInput.PlaceholderText = "";
+            chatInput.SelectedText = "";
+            chatInput.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            chatInput.Size = new Size(206, 40);
+            chatInput.TabIndex = 1;
+            chatInput.TextChanged += chatInput_TextChanged;
+            chatInput.KeyDown += chatInput_KeyDown;
             // 
             // label1
             // 
@@ -486,6 +478,16 @@
             flowLayoutPanel1.Size = new Size(185, 463);
             flowLayoutPanel1.TabIndex = 38;
             // 
+            // chatBox
+            // 
+            chatBox.BackColor = Color.Gainsboro;
+            chatBox.BorderStyle = BorderStyle.None;
+            chatBox.Location = new Point(0, 24);
+            chatBox.Name = "chatBox";
+            chatBox.Size = new Size(206, 428);
+            chatBox.TabIndex = 2;
+            chatBox.Text = "";
+            // 
             // HostRoom
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -531,7 +533,7 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
+        private Guna.UI2.WinForms.Guna2TextBox chatInput;
         private Label label1;
         private Label lbWaiting;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbThamGia;

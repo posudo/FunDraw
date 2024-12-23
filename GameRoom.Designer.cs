@@ -28,108 +28,133 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameRoom));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            guna2TextBox1 = new Guna.UI2.WinForms.Guna2TextBox();
-            listBox1 = new ListBox();
+            chatBox = new RichTextBox();
+            chatInput = new Guna.UI2.WinForms.Guna2TextBox();
             canvas = new Guna.UI2.WinForms.Guna2PictureBox();
             label1 = new Label();
-            label2 = new Label();
-            button1 = new Button();
+            timer = new Label();
+            btnPencil = new Button();
             panel1 = new Panel();
-            button3 = new Button();
-            Clear = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
+            btnColourPalette = new Button();
+            btnClear = new Button();
+            btnEraser = new Button();
+            wordHint = new TextBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
             hideTool = new GroupBox();
             wordSelector = new Guna.UI2.WinForms.Guna2GroupBox();
+            label2 = new Label();
             wordSelectorFlow = new FlowLayoutPanel();
-            wordSelectorGroup = new GroupBox();
-            canvasP = new Guna.UI2.WinForms.Guna2PictureBox();
+            hideCanvas = new Guna.UI2.WinForms.Guna2PictureBox();
+            endTurnBox = new Guna.UI2.WinForms.Guna2GroupBox();
+            endTurnText = new TextBox();
+            wordChooseBox = new Guna.UI2.WinForms.Guna2GroupBox();
+            wordChooseText = new TextBox();
+            endGameGroup = new GroupBox();
+            textBox2 = new TextBox();
+            playerRank = new TextBox();
+            mainMenuBtn = new Guna.UI2.WinForms.Guna2Button();
+            podium3 = new Label();
+            pictureBox3 = new PictureBox();
+            podium2 = new Label();
+            pictureBox2 = new PictureBox();
+            podium1 = new Label();
+            pictureBox1 = new PictureBox();
+            label3 = new Label();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)canvas).BeginInit();
             panel1.SuspendLayout();
             wordSelector.SuspendLayout();
-            wordSelectorGroup.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)canvasP).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)hideCanvas).BeginInit();
+            endTurnBox.SuspendLayout();
+            wordChooseBox.SuspendLayout();
+            endGameGroup.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // guna2Panel1
             // 
             guna2Panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
             guna2Panel1.BorderRadius = 20;
-            guna2Panel1.Controls.Add(guna2TextBox1);
-            guna2Panel1.Controls.Add(listBox1);
-            guna2Panel1.CustomizableEdges = customizableEdges3;
+            guna2Panel1.Controls.Add(chatBox);
+            guna2Panel1.Controls.Add(chatInput);
+            guna2Panel1.CustomizableEdges = customizableEdges35;
             guna2Panel1.FillColor = Color.Gainsboro;
             guna2Panel1.ForeColor = SystemColors.AppWorkspace;
             guna2Panel1.Location = new Point(1122, 9);
             guna2Panel1.Margin = new Padding(3, 2, 3, 2);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges36;
             guna2Panel1.Size = new Size(206, 680);
             guna2Panel1.TabIndex = 0;
             // 
-            // guna2TextBox1
+            // chatBox
             // 
-            guna2TextBox1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
-            guna2TextBox1.BorderRadius = 20;
-            customizableEdges1.TopLeft = false;
-            customizableEdges1.TopRight = false;
-            guna2TextBox1.CustomizableEdges = customizableEdges1;
-            guna2TextBox1.DefaultText = "";
-            guna2TextBox1.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            guna2TextBox1.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            guna2TextBox1.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            guna2TextBox1.FillColor = Color.DarkSeaGreen;
-            guna2TextBox1.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            guna2TextBox1.ForeColor = Color.Black;
-            guna2TextBox1.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            guna2TextBox1.Location = new Point(0, 640);
-            guna2TextBox1.Name = "guna2TextBox1";
-            guna2TextBox1.PasswordChar = '\0';
-            guna2TextBox1.PlaceholderForeColor = Color.DarkGray;
-            guna2TextBox1.PlaceholderText = "";
-            guna2TextBox1.SelectedText = "";
-            guna2TextBox1.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            guna2TextBox1.Size = new Size(206, 40);
-            guna2TextBox1.TabIndex = 1;
+            chatBox.BackColor = Color.Gainsboro;
+            chatBox.BorderStyle = BorderStyle.None;
+            chatBox.Location = new Point(0, 24);
+            chatBox.Name = "chatBox";
+            chatBox.Size = new Size(206, 620);
+            chatBox.TabIndex = 2;
+            chatBox.Text = "";
             // 
-            // listBox1
+            // chatInput
             // 
-            listBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            listBox1.BackColor = Color.Gainsboro;
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(0, 24);
-            listBox1.Margin = new Padding(3, 2, 3, 2);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(206, 604);
-            listBox1.TabIndex = 0;
+            chatInput.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            chatInput.BorderRadius = 20;
+            customizableEdges33.TopLeft = false;
+            customizableEdges33.TopRight = false;
+            chatInput.CustomizableEdges = customizableEdges33;
+            chatInput.DefaultText = "";
+            chatInput.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            chatInput.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            chatInput.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            chatInput.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            chatInput.FillColor = Color.DarkSeaGreen;
+            chatInput.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            chatInput.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            chatInput.ForeColor = Color.Black;
+            chatInput.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            chatInput.Location = new Point(0, 640);
+            chatInput.Name = "chatInput";
+            chatInput.PasswordChar = '\0';
+            chatInput.PlaceholderForeColor = Color.DarkGray;
+            chatInput.PlaceholderText = "";
+            chatInput.SelectedText = "";
+            chatInput.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            chatInput.Size = new Size(206, 40);
+            chatInput.TabIndex = 1;
+            chatInput.KeyDown += chatInput_KeyDown;
             // 
             // canvas
             // 
             canvas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             canvas.BackColor = Color.White;
-            canvas.CustomizableEdges = customizableEdges5;
+            canvas.CustomizableEdges = customizableEdges37;
             canvas.ImageRotate = 0F;
             canvas.Location = new Point(203, 33);
             canvas.Margin = new Padding(3, 2, 3, 2);
             canvas.Name = "canvas";
-            canvas.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            canvas.ShadowDecoration.CustomizableEdges = customizableEdges38;
             canvas.Size = new Size(913, 566);
             canvas.TabIndex = 1;
             canvas.TabStop = false;
@@ -149,111 +174,111 @@
             label1.TabIndex = 3;
             label1.Text = "Round";
             // 
-            // label2
+            // timer
             // 
-            label2.AllowDrop = true;
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.ForeColor = Color.Red;
-            label2.Location = new Point(160, 9);
-            label2.Name = "label2";
-            label2.Size = new Size(41, 21);
-            label2.TabIndex = 4;
-            label2.Text = "0:01";
+            timer.AllowDrop = true;
+            timer.AutoSize = true;
+            timer.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            timer.ForeColor = Color.Red;
+            timer.Location = new Point(160, 9);
+            timer.Name = "timer";
+            timer.Size = new Size(41, 21);
+            timer.TabIndex = 4;
+            timer.Text = "0:00";
             // 
-            // button1
+            // btnPencil
             // 
-            button1.Cursor = Cursors.Hand;
-            button1.FlatAppearance.MouseDownBackColor = Color.Maroon;
-            button1.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 0, 0);
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.ForeColor = Color.White;
-            button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.ImageAlign = ContentAlignment.MiddleRight;
-            button1.Location = new Point(404, 12);
-            button1.Name = "button1";
-            button1.Size = new Size(56, 63);
-            button1.TabIndex = 6;
-            button1.Text = "Pencil";
-            button1.TextAlign = ContentAlignment.BottomCenter;
-            button1.UseVisualStyleBackColor = true;
-            button1.Click += button1_Click;
+            btnPencil.Cursor = Cursors.Hand;
+            btnPencil.FlatAppearance.MouseDownBackColor = Color.Maroon;
+            btnPencil.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 0, 0);
+            btnPencil.FlatStyle = FlatStyle.Flat;
+            btnPencil.ForeColor = Color.White;
+            btnPencil.Image = (Image)resources.GetObject("btnPencil.Image");
+            btnPencil.ImageAlign = ContentAlignment.MiddleRight;
+            btnPencil.Location = new Point(404, 12);
+            btnPencil.Name = "btnPencil";
+            btnPencil.Size = new Size(56, 63);
+            btnPencil.TabIndex = 6;
+            btnPencil.Text = "Pencil";
+            btnPencil.TextAlign = ContentAlignment.BottomCenter;
+            btnPencil.UseVisualStyleBackColor = true;
+            btnPencil.Click += pencil_Click;
             // 
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = Color.FromArgb(64, 64, 64);
-            panel1.Controls.Add(button3);
-            panel1.Controls.Add(Clear);
-            panel1.Controls.Add(button2);
-            panel1.Controls.Add(button1);
+            panel1.Controls.Add(btnColourPalette);
+            panel1.Controls.Add(btnClear);
+            panel1.Controls.Add(btnEraser);
+            panel1.Controls.Add(btnPencil);
             panel1.Location = new Point(203, 604);
             panel1.Name = "panel1";
             panel1.Size = new Size(913, 88);
             panel1.TabIndex = 7;
             // 
-            // button3
+            // btnColourPalette
             // 
-            button3.Cursor = Cursors.Hand;
-            button3.FlatAppearance.MouseDownBackColor = Color.Maroon;
-            button3.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 0, 0);
-            button3.FlatStyle = FlatStyle.Flat;
-            button3.ForeColor = Color.White;
-            button3.Image = (Image)resources.GetObject("button3.Image");
-            button3.ImageAlign = ContentAlignment.TopRight;
-            button3.Location = new Point(528, 12);
-            button3.Name = "button3";
-            button3.Size = new Size(58, 63);
-            button3.TabIndex = 12;
-            button3.Text = "Color";
-            button3.TextAlign = ContentAlignment.BottomCenter;
-            button3.UseVisualStyleBackColor = true;
-            button3.Click += button3_Click;
+            btnColourPalette.Cursor = Cursors.Hand;
+            btnColourPalette.FlatAppearance.MouseDownBackColor = Color.Maroon;
+            btnColourPalette.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 0, 0);
+            btnColourPalette.FlatStyle = FlatStyle.Flat;
+            btnColourPalette.ForeColor = Color.White;
+            btnColourPalette.Image = (Image)resources.GetObject("btnColourPalette.Image");
+            btnColourPalette.ImageAlign = ContentAlignment.TopRight;
+            btnColourPalette.Location = new Point(528, 12);
+            btnColourPalette.Name = "btnColourPalette";
+            btnColourPalette.Size = new Size(58, 63);
+            btnColourPalette.TabIndex = 12;
+            btnColourPalette.Text = "Color";
+            btnColourPalette.TextAlign = ContentAlignment.BottomCenter;
+            btnColourPalette.UseVisualStyleBackColor = true;
+            btnColourPalette.Click += colourPalette_Click;
             // 
-            // Clear
+            // btnClear
             // 
-            Clear.FlatAppearance.MouseDownBackColor = Color.Maroon;
-            Clear.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 0, 0);
-            Clear.FlatStyle = FlatStyle.Flat;
-            Clear.ForeColor = Color.White;
-            Clear.ImageAlign = ContentAlignment.MiddleRight;
-            Clear.Location = new Point(342, 12);
-            Clear.Name = "Clear";
-            Clear.Size = new Size(56, 63);
-            Clear.TabIndex = 11;
-            Clear.Text = "Clear";
-            Clear.UseVisualStyleBackColor = true;
-            Clear.Click += Clear_Click;
+            btnClear.FlatAppearance.MouseDownBackColor = Color.Maroon;
+            btnClear.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 0, 0);
+            btnClear.FlatStyle = FlatStyle.Flat;
+            btnClear.ForeColor = Color.White;
+            btnClear.ImageAlign = ContentAlignment.MiddleRight;
+            btnClear.Location = new Point(342, 12);
+            btnClear.Name = "btnClear";
+            btnClear.Size = new Size(56, 63);
+            btnClear.TabIndex = 11;
+            btnClear.Text = "Clear";
+            btnClear.UseVisualStyleBackColor = true;
+            btnClear.Click += Clear_Click;
             // 
-            // button2
+            // btnEraser
             // 
-            button2.Cursor = Cursors.Hand;
-            button2.FlatAppearance.MouseDownBackColor = Color.Maroon;
-            button2.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 0, 0);
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.ForeColor = Color.White;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.ImageAlign = ContentAlignment.TopRight;
-            button2.Location = new Point(466, 12);
-            button2.Name = "button2";
-            button2.Size = new Size(56, 63);
-            button2.TabIndex = 7;
-            button2.Text = "Eraser";
-            button2.TextAlign = ContentAlignment.BottomCenter;
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button2_Click;
+            btnEraser.Cursor = Cursors.Hand;
+            btnEraser.FlatAppearance.MouseDownBackColor = Color.Maroon;
+            btnEraser.FlatAppearance.MouseOverBackColor = Color.FromArgb(64, 0, 0);
+            btnEraser.FlatStyle = FlatStyle.Flat;
+            btnEraser.ForeColor = Color.White;
+            btnEraser.Image = (Image)resources.GetObject("btnEraser.Image");
+            btnEraser.ImageAlign = ContentAlignment.TopRight;
+            btnEraser.Location = new Point(466, 12);
+            btnEraser.Name = "btnEraser";
+            btnEraser.Size = new Size(56, 63);
+            btnEraser.TabIndex = 7;
+            btnEraser.Text = "Eraser";
+            btnEraser.TextAlign = ContentAlignment.BottomCenter;
+            btnEraser.UseVisualStyleBackColor = true;
+            btnEraser.Click += eraser_Click;
             // 
-            // textBox1
+            // wordHint
             // 
-            textBox1.BackColor = SystemColors.ButtonFace;
-            textBox1.BorderStyle = BorderStyle.None;
-            textBox1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(413, 5);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(500, 22);
-            textBox1.TabIndex = 8;
-            textBox1.Text = "T e x t    T e s t";
-            textBox1.TextAlign = HorizontalAlignment.Center;
+            wordHint.BackColor = SystemColors.ButtonFace;
+            wordHint.BorderStyle = BorderStyle.None;
+            wordHint.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            wordHint.Location = new Point(413, 5);
+            wordHint.Name = "wordHint";
+            wordHint.ReadOnly = true;
+            wordHint.Size = new Size(500, 22);
+            wordHint.TabIndex = 8;
+            wordHint.TextAlign = HorizontalAlignment.Center;
             // 
             // flowLayoutPanel1
             // 
@@ -274,55 +299,244 @@
             // wordSelector
             // 
             wordSelector.BackColor = Color.Transparent;
-            wordSelector.BorderRadius = 12;
+            wordSelector.BorderColor = Color.Black;
+            wordSelector.Controls.Add(label2);
             wordSelector.Controls.Add(wordSelectorFlow);
             wordSelector.CustomBorderColor = SystemColors.MenuHighlight;
-            wordSelector.CustomizableEdges = customizableEdges7;
-            wordSelector.FillColor = Color.Transparent;
+            wordSelector.CustomizableEdges = customizableEdges39;
             wordSelector.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             wordSelector.ForeColor = Color.Black;
-            wordSelector.Location = new Point(344, 36);
+            wordSelector.Location = new Point(547, 102);
             wordSelector.Name = "wordSelector";
-            wordSelector.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            wordSelector.ShadowDecoration.CustomizableEdges = customizableEdges40;
             wordSelector.Size = new Size(242, 299);
             wordSelector.TabIndex = 40;
-            wordSelector.Text = "Choose a word";
+            wordSelector.Text = "You are the drawer!";
             wordSelector.TextAlign = HorizontalAlignment.Center;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            label2.Location = new Point(65, 42);
+            label2.Name = "label2";
+            label2.Size = new Size(109, 19);
+            label2.TabIndex = 2;
+            label2.Text = "Choose a word";
             // 
             // wordSelectorFlow
             // 
             wordSelectorFlow.BackColor = SystemColors.ButtonHighlight;
             wordSelectorFlow.BorderStyle = BorderStyle.FixedSingle;
-            wordSelectorFlow.Location = new Point(0, 36);
+            wordSelectorFlow.Location = new Point(0, 64);
             wordSelectorFlow.Name = "wordSelectorFlow";
-            wordSelectorFlow.Size = new Size(242, 263);
+            wordSelectorFlow.Size = new Size(242, 235);
             wordSelectorFlow.TabIndex = 1;
             // 
-            // wordSelectorGroup
+            // hideCanvas
             // 
-            wordSelectorGroup.BackColor = SystemColors.ButtonFace;
-            wordSelectorGroup.Controls.Add(wordSelector);
-            wordSelectorGroup.ForeColor = SystemColors.ControlDark;
-            wordSelectorGroup.Location = new Point(203, 32);
-            wordSelectorGroup.Name = "wordSelectorGroup";
-            wordSelectorGroup.Size = new Size(913, 567);
-            wordSelectorGroup.TabIndex = 41;
-            wordSelectorGroup.TabStop = false;
+            hideCanvas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            hideCanvas.BackColor = Color.White;
+            hideCanvas.CustomizableEdges = customizableEdges41;
+            hideCanvas.FillColor = Color.Silver;
+            hideCanvas.ImageRotate = 0F;
+            hideCanvas.Location = new Point(203, 33);
+            hideCanvas.Margin = new Padding(3, 2, 3, 2);
+            hideCanvas.Name = "hideCanvas";
+            hideCanvas.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            hideCanvas.Size = new Size(911, 566);
+            hideCanvas.TabIndex = 42;
+            hideCanvas.TabStop = false;
             // 
-            // canvasP
+            // endTurnBox
             // 
-            canvasP.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            canvasP.BackColor = Color.White;
-            canvasP.CustomizableEdges = customizableEdges9;
-            canvasP.ImageRotate = 0F;
-            canvasP.Location = new Point(203, 32);
-            canvasP.Margin = new Padding(3, 2, 3, 2);
-            canvasP.Name = "canvasP";
-            canvasP.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            canvasP.Size = new Size(913, 566);
-            canvasP.TabIndex = 42;
-            canvasP.TabStop = false;
-            canvasP.Paint += canvasP_Paint;
+            endTurnBox.Controls.Add(endTurnText);
+            endTurnBox.CustomBorderColor = SystemColors.MenuHighlight;
+            endTurnBox.CustomizableEdges = customizableEdges43;
+            endTurnBox.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            endTurnBox.ForeColor = Color.Black;
+            endTurnBox.Location = new Point(513, 123);
+            endTurnBox.Name = "endTurnBox";
+            endTurnBox.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            endTurnBox.Size = new Size(300, 73);
+            endTurnBox.TabIndex = 43;
+            endTurnBox.Text = "Time is up! ⏰";
+            endTurnBox.TextAlign = HorizontalAlignment.Center;
+            // 
+            // endTurnText
+            // 
+            endTurnText.BorderStyle = BorderStyle.None;
+            endTurnText.Font = new Font("Segoe UI", 11.25F);
+            endTurnText.Location = new Point(3, 43);
+            endTurnText.Name = "endTurnText";
+            endTurnText.Size = new Size(294, 20);
+            endTurnText.TabIndex = 0;
+            endTurnText.Text = "The word was: {word}";
+            endTurnText.TextAlign = HorizontalAlignment.Center;
+            // 
+            // wordChooseBox
+            // 
+            wordChooseBox.Controls.Add(wordChooseText);
+            wordChooseBox.CustomBorderColor = SystemColors.MenuHighlight;
+            wordChooseBox.CustomizableEdges = customizableEdges45;
+            wordChooseBox.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            wordChooseBox.ForeColor = Color.Black;
+            wordChooseBox.Location = new Point(513, 123);
+            wordChooseBox.Name = "wordChooseBox";
+            wordChooseBox.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            wordChooseBox.Size = new Size(300, 73);
+            wordChooseBox.TabIndex = 44;
+            wordChooseBox.Text = "Choosing a word....";
+            wordChooseBox.TextAlign = HorizontalAlignment.Center;
+            // 
+            // wordChooseText
+            // 
+            wordChooseText.BorderStyle = BorderStyle.None;
+            wordChooseText.Font = new Font("Segoe UI", 11.25F);
+            wordChooseText.Location = new Point(3, 43);
+            wordChooseText.Name = "wordChooseText";
+            wordChooseText.Size = new Size(294, 20);
+            wordChooseText.TabIndex = 0;
+            wordChooseText.Text = "{player} is choosing a word...";
+            wordChooseText.TextAlign = HorizontalAlignment.Center;
+            // 
+            // endGameGroup
+            // 
+            endGameGroup.Controls.Add(textBox2);
+            endGameGroup.Controls.Add(playerRank);
+            endGameGroup.Controls.Add(mainMenuBtn);
+            endGameGroup.Controls.Add(podium3);
+            endGameGroup.Controls.Add(pictureBox3);
+            endGameGroup.Controls.Add(podium2);
+            endGameGroup.Controls.Add(pictureBox2);
+            endGameGroup.Controls.Add(podium1);
+            endGameGroup.Controls.Add(pictureBox1);
+            endGameGroup.Controls.Add(label3);
+            endGameGroup.Location = new Point(203, 33);
+            endGameGroup.Name = "endGameGroup";
+            endGameGroup.Size = new Size(913, 566);
+            endGameGroup.TabIndex = 45;
+            endGameGroup.TabStop = false;
+            // 
+            // textBox2
+            // 
+            textBox2.BackColor = SystemColors.ButtonFace;
+            textBox2.BorderStyle = BorderStyle.None;
+            textBox2.Font = new Font("Segoe UI", 11F);
+            textBox2.ForeColor = SystemColors.ControlDark;
+            textBox2.Location = new Point(0, 425);
+            textBox2.Name = "textBox2";
+            textBox2.ReadOnly = true;
+            textBox2.Size = new Size(913, 20);
+            textBox2.TabIndex = 11;
+            textBox2.Text = "Automatically back to main menu in {seconds} seconds.";
+            textBox2.TextAlign = HorizontalAlignment.Center;
+            // 
+            // playerRank
+            // 
+            playerRank.BackColor = SystemColors.ButtonFace;
+            playerRank.BorderStyle = BorderStyle.None;
+            playerRank.Font = new Font("Cascadia Code SemiBold", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            playerRank.ForeColor = SystemColors.ControlDark;
+            playerRank.Location = new Point(0, 332);
+            playerRank.Name = "playerRank";
+            playerRank.ReadOnly = true;
+            playerRank.Size = new Size(913, 32);
+            playerRank.TabIndex = 10;
+            playerRank.Text = "You are #{rank} with score of {score}";
+            playerRank.TextAlign = HorizontalAlignment.Center;
+            // 
+            // mainMenuBtn
+            // 
+            mainMenuBtn.BorderRadius = 12;
+            mainMenuBtn.CustomizableEdges = customizableEdges47;
+            mainMenuBtn.DisabledState.BorderColor = Color.DarkGray;
+            mainMenuBtn.DisabledState.CustomBorderColor = Color.DarkGray;
+            mainMenuBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            mainMenuBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            mainMenuBtn.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            mainMenuBtn.ForeColor = Color.White;
+            mainMenuBtn.Location = new Point(362, 451);
+            mainMenuBtn.Name = "mainMenuBtn";
+            mainMenuBtn.ShadowDecoration.CustomizableEdges = customizableEdges48;
+            mainMenuBtn.Size = new Size(180, 45);
+            mainMenuBtn.TabIndex = 9;
+            mainMenuBtn.Text = "Back to Main Menu";
+            mainMenuBtn.Click += mainMenuBtn_Click;
+            // 
+            // podium3
+            // 
+            podium3.AutoSize = true;
+            podium3.Font = new Font("Cascadia Code", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            podium3.ForeColor = Color.Coral;
+            podium3.Location = new Point(288, 258);
+            podium3.Name = "podium3";
+            podium3.Size = new Size(133, 43);
+            podium3.TabIndex = 6;
+            podium3.Text = "#3 - 0";
+            // 
+            // pictureBox3
+            // 
+            pictureBox3.Image = Properties.Resources.medal3;
+            pictureBox3.Location = new Point(210, 253);
+            pictureBox3.Name = "pictureBox3";
+            pictureBox3.Size = new Size(72, 54);
+            pictureBox3.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox3.TabIndex = 5;
+            pictureBox3.TabStop = false;
+            // 
+            // podium2
+            // 
+            podium2.AutoSize = true;
+            podium2.Font = new Font("Cascadia Code", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            podium2.ForeColor = Color.DarkGray;
+            podium2.Location = new Point(288, 198);
+            podium2.Name = "podium2";
+            podium2.Size = new Size(133, 43);
+            podium2.TabIndex = 4;
+            podium2.Text = "#2 - 0";
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.medal2;
+            pictureBox2.Location = new Point(210, 193);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(72, 54);
+            pictureBox2.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox2.TabIndex = 3;
+            pictureBox2.TabStop = false;
+            // 
+            // podium1
+            // 
+            podium1.AutoSize = true;
+            podium1.Font = new Font("Cascadia Code", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            podium1.ForeColor = Color.Goldenrod;
+            podium1.Location = new Point(288, 138);
+            podium1.Name = "podium1";
+            podium1.Size = new Size(133, 43);
+            podium1.TabIndex = 2;
+            podium1.Text = "#1 - 0";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.medal1;
+            pictureBox1.Location = new Point(210, 133);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(72, 54);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Font = new Font("Cascadia Code", 32F, FontStyle.Bold);
+            label3.ForeColor = SystemColors.ControlDarkDark;
+            label3.Location = new Point(310, 19);
+            label3.Name = "label3";
+            label3.Size = new Size(300, 57);
+            label3.TabIndex = 0;
+            label3.Text = "Game ended!";
             // 
             // GameRoom
             // 
@@ -331,18 +545,22 @@
             BackColor = SystemColors.ButtonFace;
             ClientSize = new Size(1339, 704);
             Controls.Add(flowLayoutPanel1);
-            Controls.Add(textBox1);
-            Controls.Add(label2);
+            Controls.Add(wordHint);
+            Controls.Add(timer);
             Controls.Add(label1);
             Controls.Add(guna2Panel1);
             Controls.Add(hideTool);
             Controls.Add(panel1);
+            Controls.Add(hideCanvas);
             Controls.Add(canvas);
-            Controls.Add(canvasP);
-            Controls.Add(wordSelectorGroup);
+            Controls.Add(wordSelector);
+            Controls.Add(endTurnBox);
+            Controls.Add(wordChooseBox);
+            Controls.Add(endGameGroup);
             ForeColor = SystemColors.ControlDark;
             FormBorderStyle = FormBorderStyle.FixedToolWindow;
             Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
             Name = "GameRoom";
             Text = "Game";
             Load += GameRoom_Load;
@@ -350,8 +568,17 @@
             ((System.ComponentModel.ISupportInitialize)canvas).EndInit();
             panel1.ResumeLayout(false);
             wordSelector.ResumeLayout(false);
-            wordSelectorGroup.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)canvasP).EndInit();
+            wordSelector.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)hideCanvas).EndInit();
+            endTurnBox.ResumeLayout(false);
+            endTurnBox.PerformLayout();
+            wordChooseBox.ResumeLayout(false);
+            wordChooseBox.PerformLayout();
+            endGameGroup.ResumeLayout(false);
+            endGameGroup.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -360,21 +587,36 @@
 
         private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
         private Guna.UI2.WinForms.Guna2PictureBox canvas;
-        private Guna.UI2.WinForms.Guna2TextBox guna2TextBox1;
-        private ListBox listBox1;
+        private Guna.UI2.WinForms.Guna2TextBox chatInput;
         private Label label1;
-        private Label label2;
-        private Button button1;
+        private Label timer;
+        private Button btnPencil;
         private Panel panel1;
-        private Button button2;
-        private Button Clear;
-        private Button button3;
-        private TextBox textBox1;
+        private Button btnEraser;
+        private Button btnClear;
+        private Button btnColourPalette;
+        private TextBox wordHint;
         private FlowLayoutPanel flowLayoutPanel1;
         private GroupBox hideTool;
         private Guna.UI2.WinForms.Guna2GroupBox wordSelector;
         private FlowLayoutPanel wordSelectorFlow;
-        private GroupBox wordSelectorGroup;
-        private Guna.UI2.WinForms.Guna2PictureBox canvasP;
+        private Guna.UI2.WinForms.Guna2PictureBox hideCanvas;
+        private RichTextBox chatBox;
+        private Guna.UI2.WinForms.Guna2GroupBox endTurnBox;
+        private Label label2;
+        private TextBox endTurnText;
+        private Guna.UI2.WinForms.Guna2GroupBox wordChooseBox;
+        private TextBox wordChooseText;
+        private GroupBox endGameGroup;
+        private Label label3;
+        private Label podium1;
+        private PictureBox pictureBox1;
+        private Label podium3;
+        private PictureBox pictureBox3;
+        private Label podium2;
+        private PictureBox pictureBox2;
+        private TextBox playerRank;
+        private Guna.UI2.WinForms.Guna2Button mainMenuBtn;
+        private TextBox textBox2;
     }
 }

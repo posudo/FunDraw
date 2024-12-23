@@ -34,4 +34,15 @@ namespace FunDraw.Types
         public DateTime JoinedDate { get; set; }
         public string Email { get; set; }
     }
+    public class PlayerList
+    {
+        public string id { get; set; }
+        public int score { get; set; }
+    }
+    public enum DrawCommand
+    {
+        CLEAR,
+        PENCIL,
+        ERASER
+    }
 }

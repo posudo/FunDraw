@@ -13,6 +13,7 @@ using SocketIOClient;
 using System.Diagnostics;
 using FunDraw.Components;
 using FunDraw.Types;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 namespace FunDraw
 {
     public partial class HostRoom : Form
@@ -21,7 +22,7 @@ namespace FunDraw
         private int drawTime = 120;
         private int rounds = 3;
         private int wordsCount = 3;
-        private int hints = 2;
+        private int hints = 2;      
 
         public HostRoom()
         {
@@ -29,7 +30,7 @@ namespace FunDraw
             flowLayoutPanel1.Controls.Clear();
 
             cobPlayers.SelectedIndex = 6;
-            cobDrawtime.SelectedIndex = 10;
+            cobDrawtime.SelectedIndex = 0; // 10
             cobRounds.SelectedIndex = 2;
             cobHints.SelectedIndex = 1;
             cobWordsCount.SelectedIndex = 2;
@@ -38,6 +39,7 @@ namespace FunDraw
 
             Gateway.Instance.On("roomInfo", roomInfoHandler);
             Gateway.Instance.On("playerList", updatePlayerList);
+            Gateway.Instance.On("chatMessage", chatMessageHandler);
             Gateway.Instance.On("startGame", startGameHandler);
         }
 
@@ -51,24 +53,30 @@ namespace FunDraw
         {
             var result = response.GetValue<string>();
             var data = JsonConvert.DeserializeObject<JObject>(result);
-            Debug.WriteLine(result);
         }
 
         private void updatePlayerList(SocketIOResponse response)
         {
-            var result = response.GetValue<string>();
-            var players = result.Split(",");
-            Debug.WriteLine(result);
+            PlayerList[] data = response.GetValue<PlayerList[]>();
 
             Invoke((MethodInvoker)(() => flowLayoutPanel1.Controls.Clear()));
 
-            for (int i = 0; i < players.Length; i++)
+            for (int i = 0; i < data.Length; i++)
             {
                 PlayerCard pc = new PlayerCard();
-                pc.PlayerName = $"{players[i]}";
+                pc.PlayerName = $"{data[i].id}";
+                pc.PlayerScore = data[i].score;
 
                 Invoke((MethodInvoker)(() => flowLayoutPanel1.Controls.Add(pc)));
             }
+        }
+
+        private void chatMessageHandler(SocketIOResponse response)
+        {
+            var result = response.GetValue<string>();
+            var data = JsonConvert.DeserializeObject<JObject>(result);
+
+            Invoke((MethodInvoker)(() => chatBox.AppendText($"{data["sender"]}: {data["message"]}\n")));
         }
 
         private void startGameHandler(SocketIOResponse response)
@@ -82,6 +90,7 @@ namespace FunDraw
                 return;
             }
             GameManager.gameStart = true;
+            FormState.GameRoomForm();
             Invoke((MethodInvoker)(() => this.Close()));
         }
 
@@ -142,6 +151,22 @@ namespace FunDraw
         private void cobHints_SelectedIndexChanged(object sender, EventArgs e)
         {
             hints = int.Parse(cobHints.SelectedItem.ToString());
-        }    
+        }
+
+        private void chatInput_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chatInput_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter && chatInput.Focused)
+            {
+                Gateway.Instance.Emit("chatMessage", new { roomId = GameManager.roomId, message = chatInput.Text });
+                chatInput.Clear();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
+        }
     }
 }

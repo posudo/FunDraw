@@ -34,6 +34,7 @@
             lbl_playerName = new Label();
             guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            lbl_playerScore = new Label();
             ((System.ComponentModel.ISupportInitialize)guna2CirclePictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -41,10 +42,11 @@
             // 
             lbl_playerName.AutoSize = true;
             lbl_playerName.BackColor = Color.FromArgb(160, 210, 235);
+            lbl_playerName.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lbl_playerName.ForeColor = SystemColors.ActiveCaptionText;
             lbl_playerName.Location = new Point(59, 6);
             lbl_playerName.Name = "lbl_playerName";
-            lbl_playerName.Size = new Size(39, 15);
+            lbl_playerName.Size = new Size(41, 15);
             lbl_playerName.TabIndex = 11;
             lbl_playerName.Text = "Player";
             // 
@@ -83,11 +85,23 @@
             guna2Button1.TabIndex = 9;
             guna2Button1.TextOffset = new Point(10, 0);
             // 
+            // lbl_playerScore
+            // 
+            lbl_playerScore.AutoSize = true;
+            lbl_playerScore.BackColor = Color.FromArgb(160, 210, 235);
+            lbl_playerScore.ForeColor = SystemColors.ActiveCaptionText;
+            lbl_playerScore.Location = new Point(59, 21);
+            lbl_playerScore.Name = "lbl_playerScore";
+            lbl_playerScore.Size = new Size(48, 15);
+            lbl_playerScore.TabIndex = 12;
+            lbl_playerScore.Text = "Score: 0";
+            // 
             // PlayerCard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.Transparent;
+            Controls.Add(lbl_playerScore);
             Controls.Add(lbl_playerName);
             Controls.Add(guna2CirclePictureBox1);
             Controls.Add(guna2Button1);
@@ -103,5 +117,6 @@
         private Label lbl_playerName;
         private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Label lbl_playerScore;
     }
 }
