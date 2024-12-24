@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using FunDraw;
+using System.Diagnostics;
+using static System.Net.Mime.MediaTypeNames;
 namespace FunDraw
 {
     public partial class Login : Form
@@ -18,6 +20,27 @@ namespace FunDraw
         public Login()
         {
             InitializeComponent();
+            AuthenticateCheck();
+        }
+
+        private async void AuthenticateCheck()
+        {
+            string accessToken = LocalStorage.GetAccessToken();
+            if (accessToken != null && accessToken != string.Empty)
+            {
+                Types.UserProfile profile = await Session.GetUserProfile();
+                if (profile != null)
+                {
+                    Session.username = profile.Username;
+                    Session.accessToken = accessToken;
+
+                    FormState.MainMenuForm();
+                    this.Close();
+                    return;
+                }
+            }
+
+            LocalStorage.SetAccessToken(string.Empty);
         }
 
         private void lbForgetPassword_Click(object sender, EventArgs e)
@@ -28,19 +51,14 @@ namespace FunDraw
 
         private async void btLogin_Click(object sender, EventArgs e)
         {
-            if (await Session.Login(tbUsername.Text, tbPassword.Text))
+            string username = tbUsername.Text;
+            string password = tbPassword.Text;
+
+            bool login = await Session.Login(username, password);
+            if (login)
             {
-                JObject result = await Session.GET("users/profile", "");
-                if (result != null)
-                {
-                    MessageBox.Show("Login successful", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Form1 form1 = new Form1();
-                    form1.ShowDialog();
-                }
-                else
-                {
-                    MessageBox.Show("Login failed", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                FormState.MainMenuForm();
+                this.Close();
             }
             else
             {
@@ -52,6 +70,16 @@ namespace FunDraw
         {
             Register register = new Register();
             register.ShowDialog();
+        }
+
+        private void tbUsername_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tbUsername_Leave(object sender, EventArgs e)
+        {
+
         }
     }
 }

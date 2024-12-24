@@ -58,6 +58,8 @@ namespace FunDraw
             public string drawer { get; set; }
             public string[] words { get; set; }
             public long timeLeft { get; set; }
+            public int round { get; set; }
+            public int totalRounds { get; set; }
         }
 
         private void updatePlayerList(SocketIOResponse response)
@@ -69,7 +71,7 @@ namespace FunDraw
             for (int i = 0; i < data.Length; i++)
             {
                 PlayerCard pc = new PlayerCard();
-                pc.PlayerName = $"{data[i].id}";
+                pc.PlayerName = $"{data[i].name}";
                 pc.PlayerScore = data[i].score;
 
                 Invoke((MethodInvoker)(() => flowLayoutPanel1.Controls.Add(pc)));
@@ -79,7 +81,6 @@ namespace FunDraw
         private void gameProgressHandler(SocketIOResponse response)
         {
             GameProgress data = response.GetValue<GameProgress>();
-            Debug.WriteLine(data.state);
 
             if (data.state == "ending")
             {
@@ -135,6 +136,8 @@ namespace FunDraw
                 int minutes = (int)Math.Floor((float)data.timeLeft / 60);
                 int seconds = data.timeLeft % 60;
 
+                Debug.WriteLine(data.word);
+
                 Invoke((MethodInvoker)(() =>
                 {
                     timer.Text = $"{minutes}:{(seconds < 10 ? "0" : "")}{seconds}";
@@ -151,7 +154,7 @@ namespace FunDraw
             Invoke((MethodInvoker)(() =>
             {
                 hideCanvas.BringToFront();
-                endTurnBox.SendToBack();
+                endTurnBox.SendToBack();         
                 skcanvas.Clear(SKColors.White);
                 canvas.Invalidate();
             }));
@@ -208,6 +211,7 @@ namespace FunDraw
                     }
 
                     wordSelector.BringToFront();
+                    roundLabel.Text = $"Round {result.round}/{result.totalRounds}";
                 }));
                 return;
             } else
@@ -216,6 +220,7 @@ namespace FunDraw
                 {
                     wordChooseText.Text = $"{result.drawer} is choosing a word...";
                     wordChooseBox.BringToFront();
+                    roundLabel.Text = $"Round {result.round}/{result.totalRounds}";
                 }));
             }       
         }

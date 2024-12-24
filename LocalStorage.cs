@@ -73,21 +73,9 @@ namespace FunDraw
             return _accessToken;
         }
 
-        public static string GetRefreshToken()
-        {
-            string _refreshToken = ReadStorage("refreshToken");
-
-            return _refreshToken;
-        }
-
         public static string SetAccessToken(string accessToken)
         {
             return WriteStorage("accessToken", accessToken);
-        }
-
-        public static string SetRefreshToken(string refreshToken)
-        {
-            return WriteStorage("refreshToken", refreshToken);
         }
     }
 }

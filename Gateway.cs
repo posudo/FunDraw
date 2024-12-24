@@ -12,13 +12,19 @@ namespace FunDraw
     {
         private static readonly Lazy<Gateway> _instance = new(() => new Gateway());
         private SocketIOClient.SocketIO _socket;
-        private bool socketState = false;
+        public static bool socketState { get; set; } = false; 
 
         public static Gateway Instance => _instance.Value;
 
         private Gateway()
         {
-            _socket = new SocketIOClient.SocketIO("ws://localhost:3000/game");
+            _socket = new SocketIOClient.SocketIO("ws://localhost:3000/game", new SocketIOOptions
+            {
+                Query = new List<KeyValuePair<string, string>>
+                {
+                    new KeyValuePair<string, string>("token", Session.accessToken),
+                }
+            });
 
             _socket.OnConnected += (sender, e) =>
             {

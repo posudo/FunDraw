@@ -26,6 +26,7 @@ namespace FunDraw
 
             Gateway.Instance.On("playerList", updatePlayerList);
             Gateway.Instance.On("chatMessage", chatMessageHandler);
+            Gateway.Instance.On("roomClosed", gameStateHandler);
             Gateway.Instance.On("startGame", startGameHandler);
         }
 
@@ -43,11 +44,18 @@ namespace FunDraw
             for (int i = 0; i < data.Length; i++)
             {
                 PlayerCard pc = new PlayerCard();
-                pc.PlayerName = $"{data[i].id}";
+                pc.PlayerName = $"{data[i].name}";
                 pc.PlayerScore = data[i].score;
 
                 Invoke((MethodInvoker)(() => flowLayoutPanel1.Controls.Add(pc)));
             }
+        }
+
+        private void gameStateHandler(SocketIOResponse response)
+        {
+            MessageBox.Show("Room is closed because host left the room!", "Room Closed", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            FormState.MainMenuForm();
+            Invoke((MethodInvoker)(() => this.Close()));
         }
 
         private void chatMessageHandler(SocketIOResponse response)

@@ -13,6 +13,9 @@ namespace FunDraw
 {
     public partial class ForgotPassword : Form
     {
+        private string _OTP = "";
+        private string _Email = "";
+
         public ForgotPassword()
         {
             InitializeComponent();
@@ -37,7 +40,9 @@ namespace FunDraw
             {
                 if (await Session.ForgotPassword(user_email))
                 {
-                    MessageBox.Show("Password has been sent to your email. Please check your inbox.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    _Email = user_email;
+                    hideEmail.BringToFront();
+                    hideOTP.SendToBack();
                 }
                 else MessageBox.Show($"Email not found. Please check the email address and try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -47,21 +52,38 @@ namespace FunDraw
             }
         }
 
-        private void tbEmail_Enter(object sender, EventArgs e)
+        private void btnOTP_Click(object sender, EventArgs e)
         {
-            if (tbEmail.Text == "Email")
-            {
-                tbEmail.Text = "";
-                tbEmail.ForeColor = Color.Black;
-            }
+            _OTP = tbOTP.Text.Trim();
+
+            hideOTP.BringToFront();
+            hidePassword.SendToBack();
         }
 
-        private void tbEmail_Leave(object sender, EventArgs e)
+        private async void btnPassword_Click(object sender, EventArgs e)
         {
-            if (tbEmail.Text == "")
+            string password = tbPassword.Text;
+            string confirm_password = tbConfirm.Text;
+
+            if (string.IsNullOrWhiteSpace(password) || string.IsNullOrWhiteSpace(confirm_password))
             {
-                tbEmail.Text = "Email";
-                tbEmail.ForeColor = Color.FromArgb(125, 137, 149);
+                MessageBox.Show("Please enter your new password and confirm it.", "Input Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            if (await Session.PasswordOTP(_Email, _OTP, password, confirm_password))
+            {
+                MessageBox.Show("Password changed successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
+            }
+            else MessageBox.Show("An error occurred. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void tbOTP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
             }
         }
     }

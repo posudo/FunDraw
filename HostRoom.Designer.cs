@@ -50,6 +50,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HostRoom));
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            chatBox = new RichTextBox();
             chatInput = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
             lbWaiting = new Label();
@@ -59,8 +60,6 @@
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            tbCustom = new Guna.UI2.WinForms.Guna2TextBox();
             btInvite = new Guna.UI2.WinForms.Guna2Button();
             btStart = new Guna.UI2.WinForms.Guna2Button();
             cbCustomWords = new Guna.UI2.WinForms.Guna2CheckBox();
@@ -72,7 +71,6 @@
             cobWordsCount = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2PictureBox1 = new Guna.UI2.WinForms.Guna2PictureBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            chatBox = new RichTextBox();
             guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)guna2PictureBox1).BeginInit();
             SuspendLayout();
@@ -92,6 +90,16 @@
             guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Panel1.Size = new Size(206, 487);
             guna2Panel1.TabIndex = 0;
+            // 
+            // chatBox
+            // 
+            chatBox.BackColor = Color.Gainsboro;
+            chatBox.BorderStyle = BorderStyle.None;
+            chatBox.Location = new Point(0, 24);
+            chatBox.Name = "chatBox";
+            chatBox.Size = new Size(206, 428);
+            chatBox.TabIndex = 2;
+            chatBox.Text = "";
             // 
             // chatInput
             // 
@@ -217,57 +225,13 @@
             guna2HtmlLabel5.TabIndex = 22;
             guna2HtmlLabel5.Text = "Hints";
             // 
-            // guna2HtmlLabel6
-            // 
-            guna2HtmlLabel6.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
-            guna2HtmlLabel6.BackColor = Color.FromArgb(224, 224, 224);
-            guna2HtmlLabel6.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2HtmlLabel6.ForeColor = Color.Black;
-            guna2HtmlLabel6.Location = new Point(215, 195);
-            guna2HtmlLabel6.Margin = new Padding(4, 3, 4, 3);
-            guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            guna2HtmlLabel6.Size = new Size(101, 20);
-            guna2HtmlLabel6.TabIndex = 23;
-            guna2HtmlLabel6.Text = "Custom words";
-            // 
-            // tbCustom
-            // 
-            tbCustom.Anchor = AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            tbCustom.BackColor = Color.FromArgb(250, 250, 250);
-            tbCustom.BorderColor = Color.FromArgb(250, 250, 250);
-            tbCustom.BorderRadius = 5;
-            tbCustom.Cursor = Cursors.IBeam;
-            tbCustom.CustomizableEdges = customizableEdges5;
-            tbCustom.DefaultText = "Minimum of 10 words. 1-32 characters per word! 20000 characters maximum. Separated by a, (comma)";
-            tbCustom.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            tbCustom.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            tbCustom.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            tbCustom.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            tbCustom.FillColor = Color.FromArgb(250, 250, 250);
-            tbCustom.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbCustom.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            tbCustom.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbCustom.Location = new Point(215, 223);
-            tbCustom.Margin = new Padding(4, 5, 4, 5);
-            tbCustom.Multiline = true;
-            tbCustom.Name = "tbCustom";
-            tbCustom.PasswordChar = '\0';
-            tbCustom.PlaceholderForeColor = Color.Gainsboro;
-            tbCustom.PlaceholderText = "";
-            tbCustom.SelectedText = "";
-            tbCustom.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            tbCustom.Size = new Size(594, 211);
-            tbCustom.TabIndex = 25;
-            tbCustom.Enter += tbCustom_Enter;
-            tbCustom.Leave += tbCustom_Leave;
-            // 
             // btInvite
             // 
             btInvite.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             btInvite.Animated = true;
             btInvite.BackColor = Color.FromArgb(224, 224, 224);
             btInvite.BorderRadius = 12;
-            btInvite.CustomizableEdges = customizableEdges7;
+            btInvite.CustomizableEdges = customizableEdges5;
             btInvite.DisabledState.BorderColor = Color.DarkGray;
             btInvite.DisabledState.CustomBorderColor = Color.DarkGray;
             btInvite.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -278,7 +242,7 @@
             btInvite.Location = new Point(614, 442);
             btInvite.Margin = new Padding(4, 3, 4, 3);
             btInvite.Name = "btInvite";
-            btInvite.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btInvite.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btInvite.Size = new Size(195, 38);
             btInvite.TabIndex = 26;
             btInvite.Text = "Invite";
@@ -290,7 +254,7 @@
             btStart.Animated = true;
             btStart.BackColor = Color.FromArgb(224, 224, 224);
             btStart.BorderRadius = 12;
-            btStart.CustomizableEdges = customizableEdges9;
+            btStart.CustomizableEdges = customizableEdges7;
             btStart.DisabledState.BorderColor = Color.DarkGray;
             btStart.DisabledState.CustomBorderColor = Color.DarkGray;
             btStart.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -301,7 +265,7 @@
             btStart.Location = new Point(215, 442);
             btStart.Margin = new Padding(4, 3, 4, 3);
             btStart.Name = "btStart";
-            btStart.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btStart.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btStart.Size = new Size(396, 38);
             btStart.TabIndex = 27;
             btStart.Text = "Start!";
@@ -334,7 +298,7 @@
             // 
             cobPlayers.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cobPlayers.BackColor = Color.Transparent;
-            cobPlayers.CustomizableEdges = customizableEdges11;
+            cobPlayers.CustomizableEdges = customizableEdges9;
             cobPlayers.DrawMode = DrawMode.OwnerDrawFixed;
             cobPlayers.DropDownStyle = ComboBoxStyle.DropDownList;
             cobPlayers.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -346,7 +310,7 @@
             cobPlayers.Location = new Point(479, 43);
             cobPlayers.Margin = new Padding(4, 3, 4, 3);
             cobPlayers.Name = "cobPlayers";
-            cobPlayers.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            cobPlayers.ShadowDecoration.CustomizableEdges = customizableEdges10;
             cobPlayers.Size = new Size(330, 24);
             cobPlayers.TabIndex = 19;
             cobPlayers.SelectedIndexChanged += cobPlayers_SelectedIndexChanged;
@@ -355,7 +319,7 @@
             // 
             cobDrawtime.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cobDrawtime.BackColor = Color.Transparent;
-            cobDrawtime.CustomizableEdges = customizableEdges13;
+            cobDrawtime.CustomizableEdges = customizableEdges11;
             cobDrawtime.DrawMode = DrawMode.OwnerDrawFixed;
             cobDrawtime.DropDownStyle = ComboBoxStyle.DropDownList;
             cobDrawtime.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -367,7 +331,7 @@
             cobDrawtime.Location = new Point(479, 69);
             cobDrawtime.Margin = new Padding(4, 3, 4, 3);
             cobDrawtime.Name = "cobDrawtime";
-            cobDrawtime.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            cobDrawtime.ShadowDecoration.CustomizableEdges = customizableEdges12;
             cobDrawtime.Size = new Size(330, 24);
             cobDrawtime.TabIndex = 30;
             cobDrawtime.SelectedIndexChanged += cobDrawtime_SelectedIndexChanged;
@@ -376,7 +340,7 @@
             // 
             cobRounds.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cobRounds.BackColor = Color.Transparent;
-            cobRounds.CustomizableEdges = customizableEdges15;
+            cobRounds.CustomizableEdges = customizableEdges13;
             cobRounds.DrawMode = DrawMode.OwnerDrawFixed;
             cobRounds.DropDownStyle = ComboBoxStyle.DropDownList;
             cobRounds.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -388,7 +352,7 @@
             cobRounds.Location = new Point(479, 95);
             cobRounds.Margin = new Padding(4, 3, 4, 3);
             cobRounds.Name = "cobRounds";
-            cobRounds.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            cobRounds.ShadowDecoration.CustomizableEdges = customizableEdges14;
             cobRounds.Size = new Size(330, 24);
             cobRounds.TabIndex = 31;
             cobRounds.SelectedIndexChanged += cobRounds_SelectedIndexChanged;
@@ -397,7 +361,7 @@
             // 
             cobGameMode.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cobGameMode.BackColor = Color.Transparent;
-            cobGameMode.CustomizableEdges = customizableEdges17;
+            cobGameMode.CustomizableEdges = customizableEdges15;
             cobGameMode.DrawMode = DrawMode.OwnerDrawFixed;
             cobGameMode.DropDownStyle = ComboBoxStyle.DropDownList;
             cobGameMode.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -409,7 +373,7 @@
             cobGameMode.Location = new Point(479, 121);
             cobGameMode.Margin = new Padding(4, 3, 4, 3);
             cobGameMode.Name = "cobGameMode";
-            cobGameMode.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            cobGameMode.ShadowDecoration.CustomizableEdges = customizableEdges16;
             cobGameMode.Size = new Size(330, 24);
             cobGameMode.TabIndex = 32;
             // 
@@ -417,7 +381,7 @@
             // 
             cobHints.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             cobHints.BackColor = Color.Transparent;
-            cobHints.CustomizableEdges = customizableEdges19;
+            cobHints.CustomizableEdges = customizableEdges17;
             cobHints.DrawMode = DrawMode.OwnerDrawFixed;
             cobHints.DropDownStyle = ComboBoxStyle.DropDownList;
             cobHints.FocusedColor = Color.FromArgb(94, 148, 255);
@@ -429,7 +393,7 @@
             cobHints.Location = new Point(479, 147);
             cobHints.Margin = new Padding(4, 3, 4, 3);
             cobHints.Name = "cobHints";
-            cobHints.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            cobHints.ShadowDecoration.CustomizableEdges = customizableEdges18;
             cobHints.Size = new Size(330, 24);
             cobHints.TabIndex = 33;
             // 
@@ -459,13 +423,13 @@
             guna2PictureBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             guna2PictureBox1.BackColor = SystemColors.ButtonFace;
             guna2PictureBox1.BorderRadius = 15;
-            guna2PictureBox1.CustomizableEdges = customizableEdges5;
+            guna2PictureBox1.CustomizableEdges = customizableEdges19;
             guna2PictureBox1.FillColor = Color.FromArgb(224, 224, 224);
             guna2PictureBox1.ImageRotate = 0F;
             guna2PictureBox1.Location = new Point(203, 33);
             guna2PictureBox1.Margin = new Padding(3, 2, 3, 2);
             guna2PictureBox1.Name = "guna2PictureBox1";
-            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            guna2PictureBox1.ShadowDecoration.CustomizableEdges = customizableEdges20;
             guna2PictureBox1.Size = new Size(616, 463);
             guna2PictureBox1.TabIndex = 36;
             guna2PictureBox1.TabStop = false;
@@ -477,16 +441,6 @@
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(185, 463);
             flowLayoutPanel1.TabIndex = 38;
-            // 
-            // chatBox
-            // 
-            chatBox.BackColor = Color.Gainsboro;
-            chatBox.BorderStyle = BorderStyle.None;
-            chatBox.Location = new Point(0, 24);
-            chatBox.Name = "chatBox";
-            chatBox.Size = new Size(206, 428);
-            chatBox.TabIndex = 2;
-            chatBox.Text = "";
             // 
             // HostRoom
             // 
@@ -503,8 +457,6 @@
             Controls.Add(cobPlayers);
             Controls.Add(btStart);
             Controls.Add(btInvite);
-            Controls.Add(tbCustom);
-            Controls.Add(guna2HtmlLabel6);
             Controls.Add(guna2HtmlLabel5);
             Controls.Add(guna2HtmlLabel4);
             Controls.Add(guna2HtmlLabel3);
@@ -542,8 +494,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
-        private Guna.UI2.WinForms.Guna2TextBox tbCustom;
         private Guna.UI2.WinForms.Guna2Button btInvite;
         private Guna.UI2.WinForms.Guna2Button btStart;
         private Guna.UI2.WinForms.Guna2CheckBox cbCustomWords;

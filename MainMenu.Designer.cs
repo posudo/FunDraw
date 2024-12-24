@@ -29,35 +29,36 @@ namespace FunDraw
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             shPlayer = new Guna.UI2.WinForms.Guna2Shapes();
             btThamGia = new Guna.UI2.WinForms.Guna2Button();
-            btHoSo = new Guna.UI2.WinForms.Guna2Button();
+            profileBtn = new Guna.UI2.WinForms.Guna2Button();
             tbMaPhong = new Guna.UI2.WinForms.Guna2TextBox();
             btDangXuat = new Guna.UI2.WinForms.Guna2Button();
             btTaoPhong = new Guna.UI2.WinForms.Guna2Button();
-            cpbLogo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             cpbAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             panel_main = new Panel();
-            lbPlayer = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            pictureBox1 = new PictureBox();
+            gatewayStatusLb = new Label();
+            gatewayLb = new Label();
+            lbPlayer = new TextBox();
             lbDangChoi = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lbThamGia = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            ((System.ComponentModel.ISupportInitialize)cpbLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)cpbAvatar).BeginInit();
             panel_main.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // shPlayer
@@ -72,7 +73,7 @@ namespace FunDraw
             shPlayer.Name = "shPlayer";
             shPlayer.PolygonSkip = 1;
             shPlayer.Rotate = 0F;
-            shPlayer.RoundedEdges = customizableEdges14;
+            shPlayer.RoundedEdges = customizableEdges1;
             shPlayer.Shape = Guna.UI2.WinForms.Enums.ShapeType.Rounded;
             shPlayer.Size = new Size(233, 378);
             shPlayer.TabIndex = 10;
@@ -85,7 +86,7 @@ namespace FunDraw
             btThamGia.Anchor = AnchorStyles.None;
             btThamGia.Animated = true;
             btThamGia.BorderRadius = 12;
-            btThamGia.CustomizableEdges = customizableEdges15;
+            btThamGia.CustomizableEdges = customizableEdges2;
             btThamGia.DisabledState.BorderColor = Color.DarkGray;
             btThamGia.DisabledState.CustomBorderColor = Color.DarkGray;
             btThamGia.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -96,40 +97,41 @@ namespace FunDraw
             btThamGia.Location = new Point(372, 378);
             btThamGia.Margin = new Padding(4, 3, 4, 3);
             btThamGia.Name = "btThamGia";
-            btThamGia.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btThamGia.ShadowDecoration.CustomizableEdges = customizableEdges3;
             btThamGia.Size = new Size(174, 42);
             btThamGia.TabIndex = 1;
             btThamGia.Text = "Join";
             btThamGia.Click += btThamGia_Click;
             // 
-            // btHoSo
+            // profileBtn
             // 
-            btHoSo.Anchor = AnchorStyles.None;
-            btHoSo.Animated = true;
-            btHoSo.BackColor = Color.FromArgb(224, 224, 224);
-            btHoSo.BorderRadius = 12;
-            btHoSo.CustomizableEdges = customizableEdges17;
-            btHoSo.DisabledState.BorderColor = Color.DarkGray;
-            btHoSo.DisabledState.CustomBorderColor = Color.DarkGray;
-            btHoSo.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btHoSo.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btHoSo.FillColor = Color.FromArgb(160, 210, 235);
-            btHoSo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btHoSo.ForeColor = Color.Black;
-            btHoSo.Location = new Point(44, 329);
-            btHoSo.Margin = new Padding(4, 3, 4, 3);
-            btHoSo.Name = "btHoSo";
-            btHoSo.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            btHoSo.Size = new Size(144, 39);
-            btHoSo.TabIndex = 2;
-            btHoSo.Text = "Profile";
+            profileBtn.Anchor = AnchorStyles.None;
+            profileBtn.Animated = true;
+            profileBtn.BackColor = Color.FromArgb(224, 224, 224);
+            profileBtn.BorderRadius = 12;
+            profileBtn.CustomizableEdges = customizableEdges4;
+            profileBtn.DisabledState.BorderColor = Color.DarkGray;
+            profileBtn.DisabledState.CustomBorderColor = Color.DarkGray;
+            profileBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            profileBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            profileBtn.FillColor = Color.FromArgb(160, 210, 235);
+            profileBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            profileBtn.ForeColor = Color.Black;
+            profileBtn.Location = new Point(44, 329);
+            profileBtn.Margin = new Padding(4, 3, 4, 3);
+            profileBtn.Name = "profileBtn";
+            profileBtn.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            profileBtn.Size = new Size(144, 39);
+            profileBtn.TabIndex = 2;
+            profileBtn.Text = "Profile";
+            profileBtn.Click += profileBtn_Click;
             // 
             // tbMaPhong
             // 
             tbMaPhong.Anchor = AnchorStyles.None;
             tbMaPhong.BorderRadius = 12;
             tbMaPhong.Cursor = Cursors.IBeam;
-            tbMaPhong.CustomizableEdges = customizableEdges19;
+            tbMaPhong.CustomizableEdges = customizableEdges6;
             tbMaPhong.DefaultText = "Room code";
             tbMaPhong.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbMaPhong.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -146,7 +148,7 @@ namespace FunDraw
             tbMaPhong.PlaceholderForeColor = Color.Gainsboro;
             tbMaPhong.PlaceholderText = "";
             tbMaPhong.SelectedText = "";
-            tbMaPhong.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            tbMaPhong.ShadowDecoration.CustomizableEdges = customizableEdges7;
             tbMaPhong.Size = new Size(174, 39);
             tbMaPhong.TabIndex = 8;
             tbMaPhong.TextChanged += tbMaPhong_TextChanged;
@@ -159,7 +161,7 @@ namespace FunDraw
             btDangXuat.Animated = true;
             btDangXuat.BackColor = Color.FromArgb(224, 224, 224);
             btDangXuat.BorderRadius = 12;
-            btDangXuat.CustomizableEdges = customizableEdges21;
+            btDangXuat.CustomizableEdges = customizableEdges8;
             btDangXuat.DisabledState.BorderColor = Color.DarkGray;
             btDangXuat.DisabledState.CustomBorderColor = Color.DarkGray;
             btDangXuat.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -170,7 +172,7 @@ namespace FunDraw
             btDangXuat.Location = new Point(44, 375);
             btDangXuat.Margin = new Padding(4, 3, 4, 3);
             btDangXuat.Name = "btDangXuat";
-            btDangXuat.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btDangXuat.ShadowDecoration.CustomizableEdges = customizableEdges9;
             btDangXuat.Size = new Size(144, 39);
             btDangXuat.TabIndex = 3;
             btDangXuat.Text = "Logout";
@@ -181,7 +183,7 @@ namespace FunDraw
             btTaoPhong.Anchor = AnchorStyles.None;
             btTaoPhong.Animated = true;
             btTaoPhong.BorderRadius = 12;
-            btTaoPhong.CustomizableEdges = customizableEdges23;
+            btTaoPhong.CustomizableEdges = customizableEdges10;
             btTaoPhong.DisabledState.BorderColor = Color.DarkGray;
             btTaoPhong.DisabledState.CustomBorderColor = Color.DarkGray;
             btTaoPhong.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -192,27 +194,11 @@ namespace FunDraw
             btTaoPhong.Location = new Point(372, 226);
             btTaoPhong.Margin = new Padding(4, 3, 4, 3);
             btTaoPhong.Name = "btTaoPhong";
-            btTaoPhong.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            btTaoPhong.ShadowDecoration.CustomizableEdges = customizableEdges11;
             btTaoPhong.Size = new Size(174, 49);
             btTaoPhong.TabIndex = 0;
             btTaoPhong.Text = "Create Room";
             btTaoPhong.Click += btTaoPhong_Click;
-            // 
-            // cpbLogo
-            // 
-            cpbLogo.Anchor = AnchorStyles.None;
-            cpbLogo.BackColor = Color.FromArgb(250, 250, 250);
-            cpbLogo.FillColor = Color.Gainsboro;
-            cpbLogo.Image = (Image)resources.GetObject("cpbLogo.Image");
-            cpbLogo.ImageRotate = 0F;
-            cpbLogo.Location = new Point(372, 26);
-            cpbLogo.Margin = new Padding(4, 3, 4, 3);
-            cpbLogo.Name = "cpbLogo";
-            cpbLogo.ShadowDecoration.CustomizableEdges = customizableEdges25;
-            cpbLogo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            cpbLogo.Size = new Size(174, 164);
-            cpbLogo.TabIndex = 9;
-            cpbLogo.TabStop = false;
             // 
             // cpbAvatar
             // 
@@ -223,7 +209,7 @@ namespace FunDraw
             cpbAvatar.Location = new Point(65, 156);
             cpbAvatar.Margin = new Padding(4, 3, 4, 3);
             cpbAvatar.Name = "cpbAvatar";
-            cpbAvatar.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            cpbAvatar.ShadowDecoration.CustomizableEdges = customizableEdges12;
             cpbAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             cpbAvatar.Size = new Size(102, 97);
             cpbAvatar.TabIndex = 11;
@@ -231,15 +217,17 @@ namespace FunDraw
             // 
             // panel_main
             // 
+            panel_main.Controls.Add(pictureBox1);
+            panel_main.Controls.Add(gatewayStatusLb);
+            panel_main.Controls.Add(gatewayLb);
             panel_main.Controls.Add(lbPlayer);
             panel_main.Controls.Add(lbDangChoi);
             panel_main.Controls.Add(lbThamGia);
             panel_main.Controls.Add(cpbAvatar);
-            panel_main.Controls.Add(cpbLogo);
             panel_main.Controls.Add(btTaoPhong);
             panel_main.Controls.Add(btDangXuat);
             panel_main.Controls.Add(tbMaPhong);
-            panel_main.Controls.Add(btHoSo);
+            panel_main.Controls.Add(profileBtn);
             panel_main.Controls.Add(btThamGia);
             panel_main.Controls.Add(shPlayer);
             panel_main.Dock = DockStyle.Fill;
@@ -249,18 +237,48 @@ namespace FunDraw
             panel_main.Size = new Size(908, 555);
             panel_main.TabIndex = 12;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.fundrawLogo;
+            pictureBox1.Location = new Point(392, 52);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(134, 132);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 18;
+            pictureBox1.TabStop = false;
+            // 
+            // gatewayStatusLb
+            // 
+            gatewayStatusLb.AutoSize = true;
+            gatewayStatusLb.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gatewayStatusLb.Location = new Point(100, 531);
+            gatewayStatusLb.Name = "gatewayStatusLb";
+            gatewayStatusLb.Size = new Size(48, 15);
+            gatewayStatusLb.TabIndex = 17;
+            gatewayStatusLb.Text = "{status}";
+            // 
+            // gatewayLb
+            // 
+            gatewayLb.AutoSize = true;
+            gatewayLb.BackColor = Color.Transparent;
+            gatewayLb.Location = new Point(12, 531);
+            gatewayLb.Name = "gatewayLb";
+            gatewayLb.RightToLeft = RightToLeft.No;
+            gatewayLb.Size = new Size(89, 15);
+            gatewayLb.TabIndex = 16;
+            gatewayLb.Text = "Gateway status:";
+            // 
             // lbPlayer
             // 
-            lbPlayer.Anchor = AnchorStyles.None;
             lbPlayer.BackColor = Color.FromArgb(224, 224, 224);
-            lbPlayer.Font = new Font("Microsoft Sans Serif", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbPlayer.Location = new Point(90, 259);
-            lbPlayer.Margin = new Padding(4, 3, 4, 3);
+            lbPlayer.BorderStyle = BorderStyle.None;
+            lbPlayer.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbPlayer.Location = new Point(24, 267);
             lbPlayer.Name = "lbPlayer";
-            lbPlayer.Size = new Size(50, 22);
-            lbPlayer.TabIndex = 14;
-            lbPlayer.Text = "Player";
-            lbPlayer.TextAlignment = ContentAlignment.MiddleCenter;
+            lbPlayer.Size = new Size(183, 22);
+            lbPlayer.TabIndex = 15;
+            lbPlayer.Text = "{playername}";
+            lbPlayer.TextAlign = HorizontalAlignment.Center;
             // 
             // lbDangChoi
             // 
@@ -295,28 +313,32 @@ namespace FunDraw
             BackColor = Color.FromArgb(250, 250, 250);
             ClientSize = new Size(908, 555);
             Controls.Add(panel_main);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
+            MaximizeBox = false;
             Name = "MainMenu";
             Text = "Main Menu";
-            ((System.ComponentModel.ISupportInitialize)cpbLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)cpbAvatar).EndInit();
             panel_main.ResumeLayout(false);
             panel_main.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
         private Guna.UI2.WinForms.Guna2Shapes shPlayer;
         private Guna.UI2.WinForms.Guna2Button btThamGia;
-        private Guna.UI2.WinForms.Guna2Button btHoSo;
+        private Guna.UI2.WinForms.Guna2Button profileBtn;
         private Guna.UI2.WinForms.Guna2TextBox tbMaPhong;
         private Guna.UI2.WinForms.Guna2Button btDangXuat;
         private Guna.UI2.WinForms.Guna2Button btTaoPhong;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox cpbLogo;
         private Guna.UI2.WinForms.Guna2CirclePictureBox cpbAvatar;
         private System.Windows.Forms.Panel panel_main;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbThamGia;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbDangChoi;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbPlayer;
+        private TextBox lbPlayer;
+        private Label gatewayLb;
+        private Label gatewayStatusLb;
+        private PictureBox pictureBox1;
     }
 }

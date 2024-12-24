@@ -22,12 +22,17 @@ namespace FunDraw
         public MainMenu()
         {
             InitializeComponent();
+
             this.MinimumSize = new Size(883, 500);
+            lbPlayer.Text = Session.username;
+
             Gateway.Instance.Connect();
 
+            Gateway.Instance.On("ping", gatewayStatusHandler);
             Gateway.Instance.On("roomCreated", createRoomEvent);
             Gateway.Instance.On("joinRoom", joinRoomEvent);
         }
+
         private void createRoomEvent(SocketIOResponse response)
         {
             var data = response.GetValue<string>();
@@ -78,17 +83,15 @@ namespace FunDraw
             }
         }
 
+
         private async void btDangXuat_Click(object sender, EventArgs e)
         {
-            if (await Session.Logout())
+            if (!await Session.Logout())
             {
-                MessageBox.Show("Đăng xuất thành công", "Thành công", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Close();
+                MessageBox.Show("Something went wrong!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-            {
-                MessageBox.Show("Đăng xuất thất bại", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            FormState.LoginForm();
+            this.Close();
         }
 
         private void btTaoPhong_Click(object sender, EventArgs e)
@@ -111,6 +114,21 @@ namespace FunDraw
             {
                 MessageBox.Show("Invalid Room code!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void gatewayStatusHandler(SocketIOResponse response)
+        {
+            Invoke((MethodInvoker)(() =>
+            {
+                gatewayStatusLb.ForeColor = Gateway.socketState ? Color.Green : Color.Red;
+                gatewayStatusLb.Text = Gateway.socketState ? "Connected" : "Disconnected";
+            }));
+        }
+
+        private void profileBtn_Click(object sender, EventArgs e)
+        {
+            PlayerProfile pp = new PlayerProfile();
+            pp.ShowDialog();
         }
     }
 }
