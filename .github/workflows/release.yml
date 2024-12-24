@@ -3,7 +3,7 @@ name: .NET WinForms Build and Release
 on: workflow_dispatch
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
