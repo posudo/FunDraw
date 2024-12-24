@@ -17,10 +17,9 @@ namespace FunDraw
         public Session()
         {
             accessToken = LocalStorage.GetAccessToken();
-            refreshToken = LocalStorage.GetRefreshToken();
         }
         public static string accessToken { get; set; } = "";
-        public static string refreshToken { get; set; } = "";
+        public static string username { get; set; } = "";
 
         public static async Task<bool> Login(string username, string password)
         {
@@ -33,10 +32,11 @@ namespace FunDraw
             JObject response = await HTTPClient.PostFormUrlEncodedAsync($"{AppConfig.APP_API_HOST}/auth/login", userCredentials);
             if (response.ContainsKey("error")) return false;
             var data = JsonConvert.DeserializeObject<Types.Login>(response.ToString());
-            if (data?.data?.accessToken != null && data?.data?.refreshToken != null)
+            if (data?.data?.accessToken != null)
             {
+                Session.accessToken = data.data.accessToken;
+                Session.username = data.data.user.username;
                 LocalStorage.SetAccessToken(data.data.accessToken);
-                LocalStorage.SetRefreshToken(data.data.refreshToken);
                 return true;
             }
             return false;
@@ -44,11 +44,14 @@ namespace FunDraw
 
         public static async Task<bool> Logout()
         {
-            string refreshToken = LocalStorage.GetRefreshToken();
-            JObject response = await HTTPClient.PostAsync($"{AppConfig.APP_API_HOST}/auth/logout", $"refreshToken={refreshToken}");
-            if (response.ContainsKey("error")) return false;
+            string accessToken = LocalStorage.GetAccessToken();
+            JObject response = await HTTPClient.PostAsync($"{AppConfig.APP_API_HOST}/auth/logout", $"accessToken={accessToken}");
             LocalStorage.SetAccessToken(string.Empty);
-            LocalStorage.SetRefreshToken(string.Empty);
+            if (Gateway.socketState)
+            {
+                Gateway.Instance.Disconnect();
+            }
+            if (response.ContainsKey("error")) return false;
             return true;
         }
 
@@ -58,21 +61,12 @@ namespace FunDraw
             {
                 { "username", username },
                 { "password", password },
+                { "confirm_password", password },
                 { "email", email }
             };
 
             JObject response = await HTTPClient.PostFormUrlEncodedAsync($"{AppConfig.APP_API_HOST}/auth/register", userCredentials);
             return !response.ContainsKey("error");
-        }
-
-        public static async Task RefreshToken()
-        {
-            string refreshToken = LocalStorage.GetRefreshToken();
-            JObject response = await HTTPClient.PostAsync($"{AppConfig.APP_API_HOST}/auth/refresh-token", $"refreshToken={refreshToken}");
-            if (response.ContainsKey("Error")) return;
-            var data = JsonConvert.DeserializeObject<Types.Login>(response.ToString());
-            LocalStorage.SetAccessToken(data.data.accessToken);
-            LocalStorage.SetRefreshToken(data.data.refreshToken);
         }
 
         public static async Task<bool> RefreshTokenForFeature(string path, Dictionary<string, string> requestData)
@@ -90,7 +84,7 @@ namespace FunDraw
 
                 while (response.ContainsKey("error") && retryCount < maxRetries)
                 {
-                    await RefreshToken();
+                    // await RefreshToken();
 
                     headers["Authorization"] = $"Bearer {accessToken}";
                     response = await HTTPClient.PostFormUrlEncodedAsync($"{AppConfig.APP_API_HOST}{path}", requestData, headers);
@@ -126,13 +120,18 @@ namespace FunDraw
         {
             try
             {
+                Dictionary<string, string> headers = new Dictionary<string, string>
+                {
+                   { "Authorization", $"Bearer {accessToken}" }
+                };
                 var requestData = new Dictionary<string, string>
                 {
                    { "password", new_pass },
                    { "confirm_password", new_pass }
                 };
 
-                if (await RefreshTokenForFeature("/users/reset-password", requestData))
+                JObject response = await HTTPClient.PostFormUrlEncodedAsync($"{AppConfig.APP_API_HOST}/users/change-password", requestData, headers);
+                if (!response.ContainsKey("error"))
                 {
                     Debug.WriteLine("Changed Password Successfully");
                     return true;
@@ -152,7 +151,7 @@ namespace FunDraw
             {
                 var requestData = new Dictionary<string, string>
                 {
-                { "email", email }
+                    { "email", email }
                 };
 
                 JObject response = await HTTPClient.PostFormUrlEncodedAsync($"{AppConfig.APP_API_HOST}/users/reset-password", requestData);
@@ -171,24 +170,52 @@ namespace FunDraw
                 return false;
             }
         }
+
+        public static async Task<bool> PasswordOTP(string email, string otp, string password, string confirm_password)
+        {
+            try
+            {
+                var requestData = new Dictionary<string, string>
+                {
+                    { "email", email },
+                    { "otp", otp },
+                    { "password", password },
+                    { "confirm_password", confirm_password }
+                };
+
+                JObject response = await HTTPClient.PostFormUrlEncodedAsync($"{AppConfig.APP_API_HOST}/users/reset-otp", requestData);
+
+                if (response.ContainsKey("error"))
+                {
+                    return false;
+                }
+
+                Debug.WriteLine("Successfully changed user password!");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("An error occurred: " + ex.Message);
+                return false;
+            }
+        }
+
         public static async Task<Types.UserProfile> GetUserProfile()
         {
             string accessToken = LocalStorage.GetAccessToken();
             Dictionary<string, string> headers = new Dictionary<string, string>
-    {
-        { "Authorization", $"Bearer {accessToken}" }
-    };
+            {
+                { "Authorization", $"Bearer {accessToken}" }
+            };
 
             JObject response = await HTTPClient.GetAsync($"{AppConfig.APP_API_HOST}/users/profile", "", headers);
 
             if (response.ContainsKey("error"))
             {
-                throw new Exception("Unable to fetch user profile");
+                return null;
             }
-            var profile = JsonConvert.DeserializeObject<Types.UserProfile>(response.ToString());
+            UserProfile profile = JsonConvert.DeserializeObject<UserProfile>(response["data"].ToString());
             return profile;
         }
-
-
     }
 }

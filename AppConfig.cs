@@ -8,6 +8,7 @@ namespace FunDraw
 {
     public class AppConfig
     {
-        public static string APP_API_HOST = "https://fundraw.lt.id.vn";
+        public static string APP_API_HOST = "http://localhost:3000";
+        public static string WS_API_HOST = "ws://localhost:3000/game";
     }
 }

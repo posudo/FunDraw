@@ -1,7 +1,7 @@
 ﻿
 namespace FunDraw
 {
-    partial class main_menu
+    partial class MainMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -41,22 +41,24 @@ namespace FunDraw
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             shPlayer = new Guna.UI2.WinForms.Guna2Shapes();
             btThamGia = new Guna.UI2.WinForms.Guna2Button();
-            btHoSo = new Guna.UI2.WinForms.Guna2Button();
+            profileBtn = new Guna.UI2.WinForms.Guna2Button();
             tbMaPhong = new Guna.UI2.WinForms.Guna2TextBox();
             btDangXuat = new Guna.UI2.WinForms.Guna2Button();
             btTaoPhong = new Guna.UI2.WinForms.Guna2Button();
-            cpbLogo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             cpbAvatar = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             panel_main = new Panel();
-            lbPlayer = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            pictureBox1 = new PictureBox();
+            gatewayStatusLb = new Label();
+            gatewayLb = new Label();
+            lbPlayer = new TextBox();
             lbDangChoi = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lbThamGia = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            ((System.ComponentModel.ISupportInitialize)cpbLogo).BeginInit();
             ((System.ComponentModel.ISupportInitialize)cpbAvatar).BeginInit();
             panel_main.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // shPlayer
@@ -98,29 +100,31 @@ namespace FunDraw
             btThamGia.ShadowDecoration.CustomizableEdges = customizableEdges3;
             btThamGia.Size = new Size(174, 42);
             btThamGia.TabIndex = 1;
-            btThamGia.Text = "Tham gia";
+            btThamGia.Text = "Join";
+            btThamGia.Click += btThamGia_Click;
             // 
-            // btHoSo
+            // profileBtn
             // 
-            btHoSo.Anchor = AnchorStyles.None;
-            btHoSo.Animated = true;
-            btHoSo.BackColor = Color.FromArgb(224, 224, 224);
-            btHoSo.BorderRadius = 12;
-            btHoSo.CustomizableEdges = customizableEdges4;
-            btHoSo.DisabledState.BorderColor = Color.DarkGray;
-            btHoSo.DisabledState.CustomBorderColor = Color.DarkGray;
-            btHoSo.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btHoSo.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btHoSo.FillColor = Color.FromArgb(160, 210, 235);
-            btHoSo.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            btHoSo.ForeColor = Color.Black;
-            btHoSo.Location = new Point(44, 329);
-            btHoSo.Margin = new Padding(4, 3, 4, 3);
-            btHoSo.Name = "btHoSo";
-            btHoSo.ShadowDecoration.CustomizableEdges = customizableEdges5;
-            btHoSo.Size = new Size(144, 39);
-            btHoSo.TabIndex = 2;
-            btHoSo.Text = "Hồ sơ";
+            profileBtn.Anchor = AnchorStyles.None;
+            profileBtn.Animated = true;
+            profileBtn.BackColor = Color.FromArgb(224, 224, 224);
+            profileBtn.BorderRadius = 12;
+            profileBtn.CustomizableEdges = customizableEdges4;
+            profileBtn.DisabledState.BorderColor = Color.DarkGray;
+            profileBtn.DisabledState.CustomBorderColor = Color.DarkGray;
+            profileBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            profileBtn.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            profileBtn.FillColor = Color.FromArgb(160, 210, 235);
+            profileBtn.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            profileBtn.ForeColor = Color.Black;
+            profileBtn.Location = new Point(44, 329);
+            profileBtn.Margin = new Padding(4, 3, 4, 3);
+            profileBtn.Name = "profileBtn";
+            profileBtn.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            profileBtn.Size = new Size(144, 39);
+            profileBtn.TabIndex = 2;
+            profileBtn.Text = "Profile";
+            profileBtn.Click += profileBtn_Click;
             // 
             // tbMaPhong
             // 
@@ -128,7 +132,7 @@ namespace FunDraw
             tbMaPhong.BorderRadius = 12;
             tbMaPhong.Cursor = Cursors.IBeam;
             tbMaPhong.CustomizableEdges = customizableEdges6;
-            tbMaPhong.DefaultText = "Mã phòng";
+            tbMaPhong.DefaultText = "Room code";
             tbMaPhong.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbMaPhong.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             tbMaPhong.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
@@ -147,6 +151,7 @@ namespace FunDraw
             tbMaPhong.ShadowDecoration.CustomizableEdges = customizableEdges7;
             tbMaPhong.Size = new Size(174, 39);
             tbMaPhong.TabIndex = 8;
+            tbMaPhong.TextChanged += tbMaPhong_TextChanged;
             tbMaPhong.Enter += tbMaPhong_Enter;
             tbMaPhong.Leave += tbMaPhong_Leave;
             // 
@@ -170,7 +175,7 @@ namespace FunDraw
             btDangXuat.ShadowDecoration.CustomizableEdges = customizableEdges9;
             btDangXuat.Size = new Size(144, 39);
             btDangXuat.TabIndex = 3;
-            btDangXuat.Text = "Đăng xuất";
+            btDangXuat.Text = "Logout";
             btDangXuat.Click += btDangXuat_Click;
             // 
             // btTaoPhong
@@ -192,22 +197,8 @@ namespace FunDraw
             btTaoPhong.ShadowDecoration.CustomizableEdges = customizableEdges11;
             btTaoPhong.Size = new Size(174, 49);
             btTaoPhong.TabIndex = 0;
-            btTaoPhong.Text = "Tạo phòng";
-            // 
-            // cpbLogo
-            // 
-            cpbLogo.Anchor = AnchorStyles.None;
-            cpbLogo.BackColor = Color.FromArgb(250, 250, 250);
-            cpbLogo.FillColor = Color.Gainsboro;
-            cpbLogo.ImageRotate = 0F;
-            cpbLogo.Location = new Point(372, 26);
-            cpbLogo.Margin = new Padding(4, 3, 4, 3);
-            cpbLogo.Name = "cpbLogo";
-            cpbLogo.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            cpbLogo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            cpbLogo.Size = new Size(174, 164);
-            cpbLogo.TabIndex = 9;
-            cpbLogo.TabStop = false;
+            btTaoPhong.Text = "Create Room";
+            btTaoPhong.Click += btTaoPhong_Click;
             // 
             // cpbAvatar
             // 
@@ -218,7 +209,7 @@ namespace FunDraw
             cpbAvatar.Location = new Point(65, 156);
             cpbAvatar.Margin = new Padding(4, 3, 4, 3);
             cpbAvatar.Name = "cpbAvatar";
-            cpbAvatar.ShadowDecoration.CustomizableEdges = customizableEdges13;
+            cpbAvatar.ShadowDecoration.CustomizableEdges = customizableEdges12;
             cpbAvatar.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             cpbAvatar.Size = new Size(102, 97);
             cpbAvatar.TabIndex = 11;
@@ -226,15 +217,17 @@ namespace FunDraw
             // 
             // panel_main
             // 
+            panel_main.Controls.Add(pictureBox1);
+            panel_main.Controls.Add(gatewayStatusLb);
+            panel_main.Controls.Add(gatewayLb);
             panel_main.Controls.Add(lbPlayer);
             panel_main.Controls.Add(lbDangChoi);
             panel_main.Controls.Add(lbThamGia);
             panel_main.Controls.Add(cpbAvatar);
-            panel_main.Controls.Add(cpbLogo);
             panel_main.Controls.Add(btTaoPhong);
             panel_main.Controls.Add(btDangXuat);
             panel_main.Controls.Add(tbMaPhong);
-            panel_main.Controls.Add(btHoSo);
+            panel_main.Controls.Add(profileBtn);
             panel_main.Controls.Add(btThamGia);
             panel_main.Controls.Add(shPlayer);
             panel_main.Dock = DockStyle.Fill;
@@ -244,30 +237,60 @@ namespace FunDraw
             panel_main.Size = new Size(908, 555);
             panel_main.TabIndex = 12;
             // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.fundrawLogo;
+            pictureBox1.Location = new Point(392, 52);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(134, 132);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 18;
+            pictureBox1.TabStop = false;
+            // 
+            // gatewayStatusLb
+            // 
+            gatewayStatusLb.AutoSize = true;
+            gatewayStatusLb.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            gatewayStatusLb.Location = new Point(100, 531);
+            gatewayStatusLb.Name = "gatewayStatusLb";
+            gatewayStatusLb.Size = new Size(48, 15);
+            gatewayStatusLb.TabIndex = 17;
+            gatewayStatusLb.Text = "{status}";
+            // 
+            // gatewayLb
+            // 
+            gatewayLb.AutoSize = true;
+            gatewayLb.BackColor = Color.Transparent;
+            gatewayLb.Location = new Point(12, 531);
+            gatewayLb.Name = "gatewayLb";
+            gatewayLb.RightToLeft = RightToLeft.No;
+            gatewayLb.Size = new Size(89, 15);
+            gatewayLb.TabIndex = 16;
+            gatewayLb.Text = "Gateway status:";
+            // 
             // lbPlayer
             // 
-            lbPlayer.Anchor = AnchorStyles.None;
             lbPlayer.BackColor = Color.FromArgb(224, 224, 224);
-            lbPlayer.Font = new Font("Microsoft Sans Serif", 12.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbPlayer.Location = new Point(90, 259);
-            lbPlayer.Margin = new Padding(4, 3, 4, 3);
+            lbPlayer.BorderStyle = BorderStyle.None;
+            lbPlayer.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lbPlayer.Location = new Point(24, 267);
             lbPlayer.Name = "lbPlayer";
-            lbPlayer.Size = new Size(50, 22);
-            lbPlayer.TabIndex = 14;
-            lbPlayer.Text = "Player";
-            lbPlayer.TextAlignment = ContentAlignment.MiddleCenter;
+            lbPlayer.Size = new Size(183, 22);
+            lbPlayer.TabIndex = 15;
+            lbPlayer.Text = "{playername}";
+            lbPlayer.TextAlign = HorizontalAlignment.Center;
             // 
             // lbDangChoi
             // 
             lbDangChoi.Anchor = AnchorStyles.None;
             lbDangChoi.BackColor = Color.Transparent;
             lbDangChoi.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lbDangChoi.Location = new Point(357, 440);
+            lbDangChoi.Location = new Point(365, 438);
             lbDangChoi.Margin = new Padding(4, 3, 4, 3);
             lbDangChoi.Name = "lbDangChoi";
-            lbDangChoi.Size = new Size(210, 20);
+            lbDangChoi.Size = new Size(191, 20);
             lbDangChoi.TabIndex = 13;
-            lbDangChoi.Text = "Hiện đang có 0 người đang chơi";
+            lbDangChoi.Text = "0 Players is currently playing!";
             lbDangChoi.TextAlignment = ContentAlignment.MiddleCenter;
             // 
             // lbThamGia
@@ -280,38 +303,42 @@ namespace FunDraw
             lbThamGia.Name = "lbThamGia";
             lbThamGia.Size = new Size(99, 20);
             lbThamGia.TabIndex = 12;
-            lbThamGia.Text = "Hoặc tham gia";
+            lbThamGia.Text = "Or join a room";
             lbThamGia.TextAlignment = ContentAlignment.MiddleCenter;
             // 
-            // main_menu
+            // MainMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(250, 250, 250);
             ClientSize = new Size(908, 555);
             Controls.Add(panel_main);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
-            Name = "main_menu";
+            MaximizeBox = false;
+            Name = "MainMenu";
             Text = "Main Menu";
-            ((System.ComponentModel.ISupportInitialize)cpbLogo).EndInit();
             ((System.ComponentModel.ISupportInitialize)cpbAvatar).EndInit();
             panel_main.ResumeLayout(false);
             panel_main.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
         private Guna.UI2.WinForms.Guna2Shapes shPlayer;
         private Guna.UI2.WinForms.Guna2Button btThamGia;
-        private Guna.UI2.WinForms.Guna2Button btHoSo;
+        private Guna.UI2.WinForms.Guna2Button profileBtn;
         private Guna.UI2.WinForms.Guna2TextBox tbMaPhong;
         private Guna.UI2.WinForms.Guna2Button btDangXuat;
         private Guna.UI2.WinForms.Guna2Button btTaoPhong;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox cpbLogo;
         private Guna.UI2.WinForms.Guna2CirclePictureBox cpbAvatar;
         private System.Windows.Forms.Panel panel_main;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbThamGia;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbDangChoi;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lbPlayer;
+        private TextBox lbPlayer;
+        private Label gatewayLb;
+        private Label gatewayStatusLb;
+        private PictureBox pictureBox1;
     }
 }

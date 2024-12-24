@@ -63,9 +63,49 @@ namespace FunDraw.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap dsadsad {
+        internal static System.Drawing.Bitmap fundrawLogo {
             get {
-                object obj = ResourceManager.GetObject("dsadsad", resourceCulture);
+                object obj = ResourceManager.GetObject("fundrawLogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap logo {
+            get {
+                object obj = ResourceManager.GetObject("logo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap medal1 {
+            get {
+                object obj = ResourceManager.GetObject("medal1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap medal2 {
+            get {
+                object obj = ResourceManager.GetObject("medal2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap medal3 {
+            get {
+                object obj = ResourceManager.GetObject("medal3", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

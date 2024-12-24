@@ -39,39 +39,24 @@ namespace FunDraw
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            cpbLogo = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             tbUsername = new Guna.UI2.WinForms.Guna2TextBox();
             tbPassword = new Guna.UI2.WinForms.Guna2TextBox();
             tbComfirmPassword = new Guna.UI2.WinForms.Guna2TextBox();
             tbEmail = new Guna.UI2.WinForms.Guna2TextBox();
             btRegister = new Guna.UI2.WinForms.Guna2Button();
             lbLogin = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            ((System.ComponentModel.ISupportInitialize)cpbLogo).BeginInit();
+            pictureBox1 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
-            // 
-            // cpbLogo
-            // 
-            cpbLogo.Anchor = AnchorStyles.None;
-            cpbLogo.BackColor = SystemColors.ButtonHighlight;
-            cpbLogo.FillColor = Color.Gainsboro;
-            cpbLogo.ImageRotate = 0F;
-            cpbLogo.Location = new Point(367, 44);
-            cpbLogo.Margin = new Padding(4, 3, 4, 3);
-            cpbLogo.Name = "cpbLogo";
-            cpbLogo.ShadowDecoration.CustomizableEdges = customizableEdges1;
-            cpbLogo.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            cpbLogo.Size = new Size(174, 141);
-            cpbLogo.TabIndex = 11;
-            cpbLogo.TabStop = false;
             // 
             // tbUsername
             // 
             tbUsername.Anchor = AnchorStyles.None;
             tbUsername.BorderRadius = 12;
             tbUsername.Cursor = Cursors.IBeam;
-            tbUsername.CustomizableEdges = customizableEdges2;
-            tbUsername.DefaultText = "Tên đăng nhập";
+            tbUsername.CustomizableEdges = customizableEdges1;
+            tbUsername.DefaultText = "Username";
             tbUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             tbUsername.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
@@ -87,7 +72,7 @@ namespace FunDraw
             tbUsername.PlaceholderForeColor = Color.Gainsboro;
             tbUsername.PlaceholderText = "";
             tbUsername.SelectedText = "";
-            tbUsername.ShadowDecoration.CustomizableEdges = customizableEdges3;
+            tbUsername.ShadowDecoration.CustomizableEdges = customizableEdges2;
             tbUsername.Size = new Size(289, 39);
             tbUsername.TabIndex = 12;
             // 
@@ -96,8 +81,8 @@ namespace FunDraw
             tbPassword.Anchor = AnchorStyles.None;
             tbPassword.BorderRadius = 12;
             tbPassword.Cursor = Cursors.IBeam;
-            tbPassword.CustomizableEdges = customizableEdges4;
-            tbPassword.DefaultText = "Mật khẩu";
+            tbPassword.CustomizableEdges = customizableEdges3;
+            tbPassword.DefaultText = "Password";
             tbPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             tbPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
@@ -113,7 +98,7 @@ namespace FunDraw
             tbPassword.PlaceholderForeColor = Color.Gainsboro;
             tbPassword.PlaceholderText = "";
             tbPassword.SelectedText = "";
-            tbPassword.ShadowDecoration.CustomizableEdges = customizableEdges5;
+            tbPassword.ShadowDecoration.CustomizableEdges = customizableEdges4;
             tbPassword.Size = new Size(289, 39);
             tbPassword.TabIndex = 13;
             // 
@@ -122,8 +107,8 @@ namespace FunDraw
             tbComfirmPassword.Anchor = AnchorStyles.None;
             tbComfirmPassword.BorderRadius = 12;
             tbComfirmPassword.Cursor = Cursors.IBeam;
-            tbComfirmPassword.CustomizableEdges = customizableEdges6;
-            tbComfirmPassword.DefaultText = "Xác nhận mật khẩu";
+            tbComfirmPassword.CustomizableEdges = customizableEdges5;
+            tbComfirmPassword.DefaultText = "Confirm Password";
             tbComfirmPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbComfirmPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             tbComfirmPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
@@ -139,7 +124,7 @@ namespace FunDraw
             tbComfirmPassword.PlaceholderForeColor = Color.Gainsboro;
             tbComfirmPassword.PlaceholderText = "";
             tbComfirmPassword.SelectedText = "";
-            tbComfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges7;
+            tbComfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges6;
             tbComfirmPassword.Size = new Size(289, 39);
             tbComfirmPassword.TabIndex = 14;
             // 
@@ -148,7 +133,7 @@ namespace FunDraw
             tbEmail.Anchor = AnchorStyles.None;
             tbEmail.BorderRadius = 12;
             tbEmail.Cursor = Cursors.IBeam;
-            tbEmail.CustomizableEdges = customizableEdges8;
+            tbEmail.CustomizableEdges = customizableEdges7;
             tbEmail.DefaultText = "Email";
             tbEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -165,7 +150,7 @@ namespace FunDraw
             tbEmail.PlaceholderForeColor = Color.Gainsboro;
             tbEmail.PlaceholderText = "";
             tbEmail.SelectedText = "";
-            tbEmail.ShadowDecoration.CustomizableEdges = customizableEdges9;
+            tbEmail.ShadowDecoration.CustomizableEdges = customizableEdges8;
             tbEmail.Size = new Size(289, 39);
             tbEmail.TabIndex = 15;
             // 
@@ -174,7 +159,7 @@ namespace FunDraw
             btRegister.Anchor = AnchorStyles.None;
             btRegister.Animated = true;
             btRegister.BorderRadius = 12;
-            btRegister.CustomizableEdges = customizableEdges10;
+            btRegister.CustomizableEdges = customizableEdges9;
             btRegister.DisabledState.BorderColor = Color.DarkGray;
             btRegister.DisabledState.CustomBorderColor = Color.DarkGray;
             btRegister.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -185,10 +170,10 @@ namespace FunDraw
             btRegister.Location = new Point(367, 426);
             btRegister.Margin = new Padding(4, 3, 4, 3);
             btRegister.Name = "btRegister";
-            btRegister.ShadowDecoration.CustomizableEdges = customizableEdges11;
+            btRegister.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btRegister.Size = new Size(166, 40);
             btRegister.TabIndex = 16;
-            btRegister.Text = "Đăng ký";
+            btRegister.Text = "Submit";
             btRegister.Click += btRegister_Click;
             // 
             // lbLogin
@@ -197,14 +182,24 @@ namespace FunDraw
             lbLogin.BackColor = Color.Transparent;
             lbLogin.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbLogin.ForeColor = SystemColors.Highlight;
-            lbLogin.Location = new Point(376, 478);
+            lbLogin.Location = new Point(406, 478);
             lbLogin.Margin = new Padding(4, 3, 4, 3);
             lbLogin.Name = "lbLogin";
-            lbLogin.Size = new Size(128, 20);
+            lbLogin.Size = new Size(89, 20);
             lbLogin.TabIndex = 17;
-            lbLogin.Text = "Quay lại đăng nhập";
+            lbLogin.Text = "Back to login";
             lbLogin.TextAlignment = ContentAlignment.MiddleCenter;
             lbLogin.Click += lbLogin_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.fundrawLogo;
+            pictureBox1.Location = new Point(310, 47);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(283, 133);
+            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox1.TabIndex = 18;
+            pictureBox1.TabStop = false;
             // 
             // Register
             // 
@@ -212,29 +207,30 @@ namespace FunDraw
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
             ClientSize = new Size(898, 507);
+            Controls.Add(pictureBox1);
             Controls.Add(lbLogin);
             Controls.Add(btRegister);
             Controls.Add(tbEmail);
             Controls.Add(tbComfirmPassword);
             Controls.Add(tbPassword);
             Controls.Add(tbUsername);
-            Controls.Add(cpbLogo);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
+            MaximizeBox = false;
             Name = "Register";
             Text = "Register";
-            ((System.ComponentModel.ISupportInitialize)cpbLogo).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Guna.UI2.WinForms.Guna2CirclePictureBox cpbLogo;
         private Guna.UI2.WinForms.Guna2TextBox tbUsername;
         private Guna.UI2.WinForms.Guna2TextBox tbPassword;
         private Guna.UI2.WinForms.Guna2TextBox tbComfirmPassword;
         private Guna.UI2.WinForms.Guna2TextBox tbEmail;
         private Guna.UI2.WinForms.Guna2Button btRegister;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbLogin;
+        private PictureBox pictureBox1;
     }
 }
