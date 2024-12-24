@@ -47,6 +47,10 @@ namespace FunDraw
             btRegister = new Guna.UI2.WinForms.Guna2Button();
             lbLogin = new Guna.UI2.WinForms.Guna2HtmlLabel();
             pictureBox1 = new PictureBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -56,7 +60,7 @@ namespace FunDraw
             tbUsername.BorderRadius = 12;
             tbUsername.Cursor = Cursors.IBeam;
             tbUsername.CustomizableEdges = customizableEdges1;
-            tbUsername.DefaultText = "Username";
+            tbUsername.DefaultText = "";
             tbUsername.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbUsername.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             tbUsername.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
@@ -64,8 +68,9 @@ namespace FunDraw
             tbUsername.FillColor = Color.FromArgb(224, 224, 224);
             tbUsername.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbUsername.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbUsername.ForeColor = Color.Black;
             tbUsername.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbUsername.Location = new Point(304, 216);
+            tbUsername.Location = new Point(304, 207);
             tbUsername.Margin = new Padding(4, 5, 4, 5);
             tbUsername.Name = "tbUsername";
             tbUsername.PasswordChar = '\0';
@@ -82,7 +87,7 @@ namespace FunDraw
             tbPassword.BorderRadius = 12;
             tbPassword.Cursor = Cursors.IBeam;
             tbPassword.CustomizableEdges = customizableEdges3;
-            tbPassword.DefaultText = "Password";
+            tbPassword.DefaultText = "";
             tbPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             tbPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
@@ -90,11 +95,12 @@ namespace FunDraw
             tbPassword.FillColor = Color.FromArgb(224, 224, 224);
             tbPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbPassword.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbPassword.ForeColor = Color.Black;
             tbPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbPassword.Location = new Point(304, 266);
+            tbPassword.Location = new Point(304, 271);
             tbPassword.Margin = new Padding(4, 5, 4, 5);
             tbPassword.Name = "tbPassword";
-            tbPassword.PasswordChar = '\0';
+            tbPassword.PasswordChar = '●';
             tbPassword.PlaceholderForeColor = Color.Gainsboro;
             tbPassword.PlaceholderText = "";
             tbPassword.SelectedText = "";
@@ -108,7 +114,7 @@ namespace FunDraw
             tbComfirmPassword.BorderRadius = 12;
             tbComfirmPassword.Cursor = Cursors.IBeam;
             tbComfirmPassword.CustomizableEdges = customizableEdges5;
-            tbComfirmPassword.DefaultText = "Confirm Password";
+            tbComfirmPassword.DefaultText = "";
             tbComfirmPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbComfirmPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             tbComfirmPassword.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
@@ -116,11 +122,12 @@ namespace FunDraw
             tbComfirmPassword.FillColor = Color.FromArgb(224, 224, 224);
             tbComfirmPassword.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbComfirmPassword.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbComfirmPassword.ForeColor = Color.Black;
             tbComfirmPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbComfirmPassword.Location = new Point(304, 315);
+            tbComfirmPassword.Location = new Point(304, 335);
             tbComfirmPassword.Margin = new Padding(4, 5, 4, 5);
             tbComfirmPassword.Name = "tbComfirmPassword";
-            tbComfirmPassword.PasswordChar = '\0';
+            tbComfirmPassword.PasswordChar = '●';
             tbComfirmPassword.PlaceholderForeColor = Color.Gainsboro;
             tbComfirmPassword.PlaceholderText = "";
             tbComfirmPassword.SelectedText = "";
@@ -134,7 +141,7 @@ namespace FunDraw
             tbEmail.BorderRadius = 12;
             tbEmail.Cursor = Cursors.IBeam;
             tbEmail.CustomizableEdges = customizableEdges7;
-            tbEmail.DefaultText = "Email";
+            tbEmail.DefaultText = "";
             tbEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             tbEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
             tbEmail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
@@ -142,8 +149,9 @@ namespace FunDraw
             tbEmail.FillColor = Color.FromArgb(224, 224, 224);
             tbEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             tbEmail.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            tbEmail.ForeColor = Color.Black;
             tbEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            tbEmail.Location = new Point(304, 364);
+            tbEmail.Location = new Point(304, 399);
             tbEmail.Margin = new Padding(4, 5, 4, 5);
             tbEmail.Name = "tbEmail";
             tbEmail.PasswordChar = '\0';
@@ -167,7 +175,7 @@ namespace FunDraw
             btRegister.FillColor = Color.FromArgb(160, 210, 235);
             btRegister.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btRegister.ForeColor = Color.Black;
-            btRegister.Location = new Point(367, 426);
+            btRegister.Location = new Point(367, 461);
             btRegister.Margin = new Padding(4, 3, 4, 3);
             btRegister.Name = "btRegister";
             btRegister.ShadowDecoration.CustomizableEdges = customizableEdges10;
@@ -182,7 +190,7 @@ namespace FunDraw
             lbLogin.BackColor = Color.Transparent;
             lbLogin.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             lbLogin.ForeColor = SystemColors.Highlight;
-            lbLogin.Location = new Point(406, 478);
+            lbLogin.Location = new Point(406, 513);
             lbLogin.Margin = new Padding(4, 3, 4, 3);
             lbLogin.Name = "lbLogin";
             lbLogin.Size = new Size(89, 20);
@@ -201,12 +209,54 @@ namespace FunDraw
             pictureBox1.TabIndex = 18;
             pictureBox1.TabStop = false;
             // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(310, 379);
+            label1.Name = "label1";
+            label1.Size = new Size(36, 15);
+            label1.TabIndex = 19;
+            label1.Text = "Email";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(310, 315);
+            label2.Name = "label2";
+            label2.RightToLeft = RightToLeft.No;
+            label2.Size = new Size(104, 15);
+            label2.TabIndex = 20;
+            label2.Text = "Confirm Password";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(310, 251);
+            label3.Name = "label3";
+            label3.Size = new Size(57, 15);
+            label3.TabIndex = 21;
+            label3.Text = "Password";
+            label3.Click += label3_Click;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(310, 187);
+            label4.Name = "label4";
+            label4.Size = new Size(60, 15);
+            label4.TabIndex = 22;
+            label4.Text = "Username";
+            // 
             // Register
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlLightLight;
-            ClientSize = new Size(898, 507);
+            ClientSize = new Size(898, 577);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(lbLogin);
             Controls.Add(btRegister);
@@ -232,5 +282,9 @@ namespace FunDraw
         private Guna.UI2.WinForms.Guna2Button btRegister;
         private Guna.UI2.WinForms.Guna2HtmlLabel lbLogin;
         private PictureBox pictureBox1;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
     }
 }

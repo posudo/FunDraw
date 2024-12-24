@@ -253,9 +253,9 @@ namespace FunDraw
             gatewayStatusLb.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             gatewayStatusLb.Location = new Point(100, 531);
             gatewayStatusLb.Name = "gatewayStatusLb";
-            gatewayStatusLb.Size = new Size(48, 15);
+            gatewayStatusLb.Size = new Size(61, 15);
             gatewayStatusLb.TabIndex = 17;
-            gatewayStatusLb.Text = "{status}";
+            gatewayStatusLb.Text = "Unknown";
             // 
             // gatewayLb
             // 

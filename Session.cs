@@ -210,6 +210,8 @@ namespace FunDraw
 
             JObject response = await HTTPClient.GetAsync($"{AppConfig.APP_API_HOST}/users/profile", "", headers);
 
+            Debug.WriteLine(response);
+
             if (response.ContainsKey("error"))
             {
                 return null;

@@ -18,7 +18,7 @@ namespace FunDraw
 
         private Gateway()
         {
-            _socket = new SocketIOClient.SocketIO("ws://localhost:3000/game", new SocketIOOptions
+            _socket = new SocketIOClient.SocketIO(AppConfig.WS_API_HOST, new SocketIOOptions
             {
                 Query = new List<KeyValuePair<string, string>>
                 {
@@ -42,6 +42,7 @@ namespace FunDraw
         {
             try
             {
+                Debug.WriteLine($"Trying to connect to Websocket server at {AppConfig.WS_API_HOST}");
                 await _socket.ConnectAsync();
             }
             catch (Exception ex)
