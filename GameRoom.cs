@@ -131,6 +131,7 @@ namespace FunDraw
 
         private void mainMenuBtn_Click(object sender, EventArgs e)
         {
+            isQuit = true;
             FormState.MainMenuForm();
             this.Close();
         }

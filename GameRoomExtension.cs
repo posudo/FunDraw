@@ -23,6 +23,7 @@ namespace FunDraw
         private SKPoint? lastPoint = null;
         private DrawCommand command;
         private static System.Timers.Timer _timer = new System.Timers.Timer(1000);
+        private bool isQuit = false;
 
         private class PointData
         {
@@ -90,15 +91,21 @@ namespace FunDraw
                     Label[] podium = new Label[] { podium1, podium2, podium3 };
                     for (int i = 0; i < data.players.Length; i++)
                     {
-                        podium[i].Text = $"{data.players[i].id} - {data.players[i].score}";
+                        if (Session.username == data.players[i].name)
+                        {
+                            playerRank.Text = $"You are #{i + 1} with score of {data.players[i].score}";
+                        }
+                        if (i > 2) return;
+                        podium[i].Text = $"{data.players[i].name} - {data.players[i].score}";
                     }
                     
-                    endGameGroup.BringToFront();                 
+                    endGameGroup.BringToFront();      
                 }));
             }
 
             if (data.state == "end")
             {
+                if (isQuit) return;
                 GameManager.roomId = "";
                 GameManager.isHost = false;
                 GameManager.gameStart = false;
@@ -141,7 +148,7 @@ namespace FunDraw
                 Invoke((MethodInvoker)(() =>
                 {
                     timer.Text = $"{minutes}:{(seconds < 10 ? "0" : "")}{seconds}";
-                    wordHint.Text = data.word;
+                    wordHint.Text = string.Join("  ", data.word.ToCharArray()) + "   (" + data.word.Length + ")";
                 }));
                 return;
             }

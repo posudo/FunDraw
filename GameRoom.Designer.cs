@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameRoom));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             chatBox = new RichTextBox();
             chatInput = new Guna.UI2.WinForms.Guna2TextBox();
@@ -97,13 +97,13 @@
             guna2Panel1.BorderRadius = 20;
             guna2Panel1.Controls.Add(chatBox);
             guna2Panel1.Controls.Add(chatInput);
-            guna2Panel1.CustomizableEdges = customizableEdges19;
+            guna2Panel1.CustomizableEdges = customizableEdges35;
             guna2Panel1.FillColor = Color.Gainsboro;
             guna2Panel1.ForeColor = SystemColors.AppWorkspace;
             guna2Panel1.Location = new Point(1122, 9);
             guna2Panel1.Margin = new Padding(3, 2, 3, 2);
             guna2Panel1.Name = "guna2Panel1";
-            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            guna2Panel1.ShadowDecoration.CustomizableEdges = customizableEdges36;
             guna2Panel1.Size = new Size(206, 680);
             guna2Panel1.TabIndex = 0;
             // 
@@ -121,9 +121,9 @@
             // 
             chatInput.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             chatInput.BorderRadius = 20;
-            customizableEdges17.TopLeft = false;
-            customizableEdges17.TopRight = false;
-            chatInput.CustomizableEdges = customizableEdges17;
+            customizableEdges33.TopLeft = false;
+            customizableEdges33.TopRight = false;
+            chatInput.CustomizableEdges = customizableEdges33;
             chatInput.DefaultText = "";
             chatInput.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             chatInput.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -140,7 +140,7 @@
             chatInput.PlaceholderForeColor = Color.DarkGray;
             chatInput.PlaceholderText = "";
             chatInput.SelectedText = "";
-            chatInput.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            chatInput.ShadowDecoration.CustomizableEdges = customizableEdges34;
             chatInput.Size = new Size(206, 40);
             chatInput.TabIndex = 1;
             chatInput.KeyDown += chatInput_KeyDown;
@@ -149,12 +149,12 @@
             // 
             canvas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             canvas.BackColor = Color.White;
-            canvas.CustomizableEdges = customizableEdges21;
+            canvas.CustomizableEdges = customizableEdges37;
             canvas.ImageRotate = 0F;
             canvas.Location = new Point(203, 33);
             canvas.Margin = new Padding(3, 2, 3, 2);
             canvas.Name = "canvas";
-            canvas.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            canvas.ShadowDecoration.CustomizableEdges = customizableEdges38;
             canvas.Size = new Size(913, 566);
             canvas.TabIndex = 1;
             canvas.TabStop = false;
@@ -303,12 +303,12 @@
             wordSelector.Controls.Add(label2);
             wordSelector.Controls.Add(wordSelectorFlow);
             wordSelector.CustomBorderColor = SystemColors.MenuHighlight;
-            wordSelector.CustomizableEdges = customizableEdges23;
+            wordSelector.CustomizableEdges = customizableEdges39;
             wordSelector.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             wordSelector.ForeColor = Color.Black;
             wordSelector.Location = new Point(547, 102);
             wordSelector.Name = "wordSelector";
-            wordSelector.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            wordSelector.ShadowDecoration.CustomizableEdges = customizableEdges40;
             wordSelector.Size = new Size(242, 299);
             wordSelector.TabIndex = 40;
             wordSelector.Text = "You are the drawer!";
@@ -337,13 +337,13 @@
             // 
             hideCanvas.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             hideCanvas.BackColor = Color.White;
-            hideCanvas.CustomizableEdges = customizableEdges25;
+            hideCanvas.CustomizableEdges = customizableEdges41;
             hideCanvas.FillColor = Color.Silver;
             hideCanvas.ImageRotate = 0F;
             hideCanvas.Location = new Point(203, 33);
             hideCanvas.Margin = new Padding(3, 2, 3, 2);
             hideCanvas.Name = "hideCanvas";
-            hideCanvas.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            hideCanvas.ShadowDecoration.CustomizableEdges = customizableEdges42;
             hideCanvas.Size = new Size(911, 566);
             hideCanvas.TabIndex = 42;
             hideCanvas.TabStop = false;
@@ -352,12 +352,12 @@
             // 
             endTurnBox.Controls.Add(endTurnText);
             endTurnBox.CustomBorderColor = SystemColors.MenuHighlight;
-            endTurnBox.CustomizableEdges = customizableEdges27;
+            endTurnBox.CustomizableEdges = customizableEdges43;
             endTurnBox.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             endTurnBox.ForeColor = Color.Black;
             endTurnBox.Location = new Point(513, 123);
             endTurnBox.Name = "endTurnBox";
-            endTurnBox.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            endTurnBox.ShadowDecoration.CustomizableEdges = customizableEdges44;
             endTurnBox.Size = new Size(300, 73);
             endTurnBox.TabIndex = 43;
             endTurnBox.Text = "Time is up! ⏰";
@@ -378,12 +378,12 @@
             // 
             wordChooseBox.Controls.Add(wordChooseText);
             wordChooseBox.CustomBorderColor = SystemColors.MenuHighlight;
-            wordChooseBox.CustomizableEdges = customizableEdges29;
+            wordChooseBox.CustomizableEdges = customizableEdges45;
             wordChooseBox.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             wordChooseBox.ForeColor = Color.Black;
             wordChooseBox.Location = new Point(513, 123);
             wordChooseBox.Name = "wordChooseBox";
-            wordChooseBox.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            wordChooseBox.ShadowDecoration.CustomizableEdges = customizableEdges46;
             wordChooseBox.Size = new Size(300, 73);
             wordChooseBox.TabIndex = 44;
             wordChooseBox.Text = "Choosing a word....";
@@ -429,7 +429,7 @@
             textBox2.ReadOnly = true;
             textBox2.Size = new Size(913, 20);
             textBox2.TabIndex = 11;
-            textBox2.Text = "Automatically back to main menu in {seconds} seconds.";
+            textBox2.Text = "Automatically back to main menu in 15 seconds.";
             textBox2.TextAlign = HorizontalAlignment.Center;
             // 
             // playerRank
@@ -449,7 +449,7 @@
             // mainMenuBtn
             // 
             mainMenuBtn.BorderRadius = 12;
-            mainMenuBtn.CustomizableEdges = customizableEdges31;
+            mainMenuBtn.CustomizableEdges = customizableEdges47;
             mainMenuBtn.DisabledState.BorderColor = Color.DarkGray;
             mainMenuBtn.DisabledState.CustomBorderColor = Color.DarkGray;
             mainMenuBtn.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -458,7 +458,7 @@
             mainMenuBtn.ForeColor = Color.White;
             mainMenuBtn.Location = new Point(362, 451);
             mainMenuBtn.Name = "mainMenuBtn";
-            mainMenuBtn.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            mainMenuBtn.ShadowDecoration.CustomizableEdges = customizableEdges48;
             mainMenuBtn.Size = new Size(180, 45);
             mainMenuBtn.TabIndex = 9;
             mainMenuBtn.Text = "Back to Main Menu";
